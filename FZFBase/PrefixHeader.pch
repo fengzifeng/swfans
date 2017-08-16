@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  FZFBase
+//
+//  Created by fengzifeng on 16/6/2.
+//  Copyright © 2016年 fengzifeng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "MCViewController.h"
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "MacroToolHeader.h"
+#import "UserDefaultKey.h"
+#import "HLConfig.h"
+#import "GlobalHeader.h"
+#import "NotificationName.h"
+#import "DataHash.h"
+#import "ApplicationContext.h"
+#import "NLCoreData.h"
+#import "DataManager.h"
+
+
+#endif /* PrefixHeader_pch */
