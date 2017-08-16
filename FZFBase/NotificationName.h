@@ -19,9 +19,6 @@
 #define Notification_LoginSuccess                               @"loginSuccess"                         //用户登录成功，可以开始刷新其他界面数据
 #define Notification_LogoutSuccess                              @"LogoutSuccess"                        //用户退出登录
 
-#define Notification_ChatUploadProgress                         @"uploadProgress"                       //聊天上传进度通知
-
-#define Notification_RefreshMyTimeLine                          @"RefreshMyTimeLine"                    //刷新我的TimeLine
 #define Notification_RefreshUserInfo                            @"RefreshUserInfo"                      //刷新用户信息
 
 #define Notification_UpdateAlbum                                @"updateAlbum"                          //更新相册

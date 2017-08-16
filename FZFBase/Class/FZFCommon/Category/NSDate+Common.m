@@ -10,14 +10,6 @@
 
 @implementation NSDate (Common)
 
-/** 服务器端当前的时间 */
-+ (instancetype)serverDate
-{
-    double difference = [[userDefaults objectForKey:UserDefaultKey_timeDifference] doubleValue]/1000;
-    
-    return [[NSDate date] dateByAddingTimeInterval:difference];
-}
-
 //获取天数索引
 - (int)dayIndexSince1970
 {

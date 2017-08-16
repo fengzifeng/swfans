@@ -104,7 +104,7 @@
         
         currentViewController = [navArray objectAtIndex:index];
         [self addChildViewController:currentViewController];
-        [self.view insertSubview:currentViewController.view belowSubview:_tabBarView];
+        [self.view insertSubview:currentViewController.view belowSubview:_tabLineLabel];
         [currentViewController.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
         
         [currentViewController initNavigationBar];

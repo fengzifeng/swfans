@@ -10,9 +10,6 @@
 
 @interface NSDate (Common)
 
-//服务器端时间
-+ (instancetype)serverDate;
-
 //获取天数索引
 - (int)dayIndexSince1970;
 - (int)dayIndexSinceNow;
