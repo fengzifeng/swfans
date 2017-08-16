@@ -192,12 +192,12 @@
 		3765A9A21F44312800496299 /* main_tabBar_plate_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3765A99B1F44312800496299 /* main_tabBar_plate_highlight.png */; };
 		3765A9A31F44312800496299 /* main_tabBar_plate_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3765A99C1F44312800496299 /* main_tabBar_plate_normal.png */; };
 		3765A9A51F44314D00496299 /* main_tabBar_redpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 3765A9A41F44314D00496299 /* main_tabBar_redpoint.png */; };
-		3765A9A91F44489200496299 /* FFNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765A9A71F44489200496299 /* FFNewViewController.m */; };
-		3765A9AA1F44489200496299 /* FFNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765A9A81F44489200496299 /* FFNewViewController.xib */; };
-		3765A9AE1F4448A800496299 /* FFPlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765A9AC1F4448A800496299 /* FFPlateViewController.m */; };
-		3765A9AF1F4448A800496299 /* FFPlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765A9AD1F4448A800496299 /* FFPlateViewController.xib */; };
-		3765A9B31F4448DD00496299 /* FFActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765A9B11F4448DD00496299 /* FFActivityViewController.m */; };
-		3765A9B41F4448DD00496299 /* FFActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765A9B21F4448DD00496299 /* FFActivityViewController.xib */; };
+		3765A9D21F4457DE00496299 /* FFActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765A9D01F4457DE00496299 /* FFActivityViewController.m */; };
+		3765A9D31F4457DE00496299 /* FFActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765A9D11F4457DE00496299 /* FFActivityViewController.xib */; };
+		3765A9D71F4457EC00496299 /* FFNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765A9D51F4457EC00496299 /* FFNewViewController.m */; };
+		3765A9D81F4457EC00496299 /* FFNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765A9D61F4457EC00496299 /* FFNewViewController.xib */; };
+		3765A9DC1F4457F500496299 /* FFPlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765A9DA1F4457F500496299 /* FFPlateViewController.m */; };
+		3765A9DD1F4457F500496299 /* FFPlateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765A9DB1F4457F500496299 /* FFPlateViewController.xib */; };
 		379A7ECB1D2BB64300757F36 /* USNavDelegateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7EC71D2BB64300757F36 /* USNavDelegateHandler.m */; };
 		379A7ECC1D2BB64300757F36 /* USTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7EC91D2BB64300757F36 /* USTransitionAnimator.m */; };
 		379A7ECF1D2BBA1F00757F36 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7ECE1D2BBA1F00757F36 /* ApplicationContext.m */; };
@@ -555,15 +555,15 @@
 		3765A99B1F44312800496299 /* main_tabBar_plate_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_tabBar_plate_highlight.png; sourceTree = "<group>"; };
 		3765A99C1F44312800496299 /* main_tabBar_plate_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_tabBar_plate_normal.png; sourceTree = "<group>"; };
 		3765A9A41F44314D00496299 /* main_tabBar_redpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_tabBar_redpoint.png; sourceTree = "<group>"; };
-		3765A9A61F44489200496299 /* FFNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFNewViewController.h; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFNewViewController.h; sourceTree = "<group>"; };
-		3765A9A71F44489200496299 /* FFNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFNewViewController.m; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFNewViewController.m; sourceTree = "<group>"; };
-		3765A9A81F44489200496299 /* FFNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FFNewViewController.xib; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFNewViewController.xib; sourceTree = "<group>"; };
-		3765A9AB1F4448A800496299 /* FFPlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFPlateViewController.h; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFPlateViewController.h; sourceTree = "<group>"; };
-		3765A9AC1F4448A800496299 /* FFPlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFPlateViewController.m; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFPlateViewController.m; sourceTree = "<group>"; };
-		3765A9AD1F4448A800496299 /* FFPlateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FFPlateViewController.xib; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFPlateViewController.xib; sourceTree = "<group>"; };
-		3765A9B01F4448DD00496299 /* FFActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFActivityViewController.h; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFActivityViewController.h; sourceTree = "<group>"; };
-		3765A9B11F4448DD00496299 /* FFActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFActivityViewController.m; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFActivityViewController.m; sourceTree = "<group>"; };
-		3765A9B21F4448DD00496299 /* FFActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FFActivityViewController.xib; path = ../../../../Desktop/jxedt_project/jxedt/Driver_4.6/Driver/Details/ClassBus/FFActivityViewController.xib; sourceTree = "<group>"; };
+		3765A9CF1F4457DE00496299 /* FFActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFActivityViewController.h; sourceTree = "<group>"; };
+		3765A9D01F4457DE00496299 /* FFActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFActivityViewController.m; sourceTree = "<group>"; };
+		3765A9D11F4457DE00496299 /* FFActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFActivityViewController.xib; sourceTree = "<group>"; };
+		3765A9D41F4457EC00496299 /* FFNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNewViewController.h; sourceTree = "<group>"; };
+		3765A9D51F4457EC00496299 /* FFNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNewViewController.m; sourceTree = "<group>"; };
+		3765A9D61F4457EC00496299 /* FFNewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFNewViewController.xib; sourceTree = "<group>"; };
+		3765A9D91F4457F500496299 /* FFPlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPlateViewController.h; sourceTree = "<group>"; };
+		3765A9DA1F4457F500496299 /* FFPlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPlateViewController.m; sourceTree = "<group>"; };
+		3765A9DB1F4457F500496299 /* FFPlateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPlateViewController.xib; sourceTree = "<group>"; };
 		379A7EC61D2BB64300757F36 /* USNavDelegateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USNavDelegateHandler.h; sourceTree = "<group>"; };
 		379A7EC71D2BB64300757F36 /* USNavDelegateHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USNavDelegateHandler.m; sourceTree = "<group>"; };
 		379A7EC81D2BB64300757F36 /* USTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTransitionAnimator.h; sourceTree = "<group>"; };
@@ -686,9 +686,9 @@
 		373757351CFFFF9F00582ECD /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				3755A0EB1D3E18EE0078C374 /* New */,
-				3755A0EA1D3E18CA0078C374 /* Plate */,
-				37559F571D33A8550078C374 /* Activity */,
+				3765A9CE1F4457A600496299 /* Activity */,
+				3765A9CD1F44578D00496299 /* Plate */,
+				3765A9CC1F44577000496299 /* New */,
 				374C6F391D2E7414003577CA /* AboutMe */,
 				37E5CB881D2E662B00842A51 /* login */,
 				373757781D00001200582ECD /* FZFCommon */,
@@ -1198,39 +1198,6 @@
 			path = Share;
 			sourceTree = "<group>";
 		};
-		37559F571D33A8550078C374 /* Activity */ = {
-			isa = PBXGroup;
-			children = (
-				3765A9B01F4448DD00496299 /* FFActivityViewController.h */,
-				3765A9B11F4448DD00496299 /* FFActivityViewController.m */,
-				3765A9B21F4448DD00496299 /* FFActivityViewController.xib */,
-			);
-			name = Activity;
-			path = News;
-			sourceTree = "<group>";
-		};
-		3755A0EA1D3E18CA0078C374 /* Plate */ = {
-			isa = PBXGroup;
-			children = (
-				3765A9AB1F4448A800496299 /* FFPlateViewController.h */,
-				3765A9AC1F4448A800496299 /* FFPlateViewController.m */,
-				3765A9AD1F4448A800496299 /* FFPlateViewController.xib */,
-			);
-			name = Plate;
-			path = EAST;
-			sourceTree = "<group>";
-		};
-		3755A0EB1D3E18EE0078C374 /* New */ = {
-			isa = PBXGroup;
-			children = (
-				3765A9A61F44489200496299 /* FFNewViewController.h */,
-				3765A9A71F44489200496299 /* FFNewViewController.m */,
-				3765A9A81F44489200496299 /* FFNewViewController.xib */,
-			);
-			name = New;
-			path = Live;
-			sourceTree = "<group>";
-		};
 		3755A12B1D40C76F0078C374 /* TBPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1358,6 +1325,36 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		3765A9CC1F44577000496299 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				3765A9D41F4457EC00496299 /* FFNewViewController.h */,
+				3765A9D51F4457EC00496299 /* FFNewViewController.m */,
+				3765A9D61F4457EC00496299 /* FFNewViewController.xib */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		3765A9CD1F44578D00496299 /* Plate */ = {
+			isa = PBXGroup;
+			children = (
+				3765A9D91F4457F500496299 /* FFPlateViewController.h */,
+				3765A9DA1F4457F500496299 /* FFPlateViewController.m */,
+				3765A9DB1F4457F500496299 /* FFPlateViewController.xib */,
+			);
+			path = Plate;
+			sourceTree = "<group>";
+		};
+		3765A9CE1F4457A600496299 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				3765A9CF1F4457DE00496299 /* FFActivityViewController.h */,
+				3765A9D01F4457DE00496299 /* FFActivityViewController.m */,
+				3765A9D11F4457DE00496299 /* FFActivityViewController.xib */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		379A7EC31D2BB64300757F36 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1476,6 +1473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3765A9D31F4457DE00496299 /* FFActivityViewController.xib in Resources */,
 				374C6FA81D2F70F4003577CA /* USPicker-Checkmark-Selected@2x.png in Resources */,
 				3765A99D1F44312800496299 /* main_tabBar_add.png in Resources */,
 				373757D11D00001200582ECD /* MCRootViewController.xib in Resources */,
@@ -1484,6 +1482,7 @@
 				3765A99E1F44312800496299 /* main_tabBar_me_highlight.png in Resources */,
 				3755A13D1D40CCA70078C374 /* icon_play_hl@3x.png in Resources */,
 				37559F081D3342380078C374 /* MCSettingViewController.xib in Resources */,
+				3765A9D81F4457EC00496299 /* FFNewViewController.xib in Resources */,
 				374C6FA61D2F70F4003577CA /* USPicker-Checkbox@2x.png in Resources */,
 				3755A1411D40CCB00078C374 /* icon_pause@3x.png in Resources */,
 				3755A1491D40CCDF0078C374 /* quanping@3x.png in Resources */,
@@ -1498,9 +1497,6 @@
 				37559F2F1D3362D10078C374 /* MCFeedbackViewController.xib in Resources */,
 				37E5CB631D2E63FE00842A51 /* MCHomeViewController.xib in Resources */,
 				374C6FA91D2F70F4003577CA /* USPicker-Checkmark-Selected@3x.png in Resources */,
-				3765A9AA1F44489200496299 /* FFNewViewController.xib in Resources */,
-				3765A9B41F4448DD00496299 /* FFActivityViewController.xib in Resources */,
-				3765A9AF1F4448A800496299 /* FFPlateViewController.xib in Resources */,
 				373757281CFFFD5700582ECD /* Assets.xcassets in Resources */,
 				37E5CB7A1D2E650800842A51 /* main_tabBar_circle_highlight@3x.png in Resources */,
 				374C6FAE1D2F70F4003577CA /* USAssetGroupViewController.xib in Resources */,
@@ -1520,6 +1516,7 @@
 				37E5CB8D1D2E663500842A51 /* USAuthViewController.xib in Resources */,
 				374C6FA51D2F70F4003577CA /* USPicker-Assets-Locked@2x.png in Resources */,
 				3765A9951F442E5A00496299 /* main_tabBar_activity_normal.png in Resources */,
+				3765A9DD1F4457F500496299 /* FFPlateViewController.xib in Resources */,
 				3765A9A01F44312800496299 /* main_tabBar_new_highlight.png in Resources */,
 				3765A9A51F44314D00496299 /* main_tabBar_redpoint.png in Resources */,
 				37559EDC1D2FA5AC0078C374 /* USEditUserInfoCell.xib in Resources */,
@@ -1538,6 +1535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				373758531D0005AF00582ECD /* MJRefreshGifHeader.m in Sources */,
+				3765A9D21F4457DE00496299 /* FFActivityViewController.m in Sources */,
 				373757C81D00001200582ECD /* MCViewController.m in Sources */,
 				373758AF1D000C1800582ECD /* NSString+Emoji.m in Sources */,
 				373758621D0005CC00582ECD /* MatchParser.m in Sources */,
@@ -1576,7 +1574,6 @@
 				373757D01D00001200582ECD /* MCRootViewController.m in Sources */,
 				3765A9821F3C356000496299 /* SDWebImageDownloaderOperation.m in Sources */,
 				3765A98E1F3C356000496299 /* UIView+WebCacheOperation.m in Sources */,
-				3765A9AE1F4448A800496299 /* FFPlateViewController.m in Sources */,
 				3765A97A1F3C356000496299 /* MKAnnotationView+WebCache.m in Sources */,
 				373757C91D00001200582ECD /* TCShortAlertView.m in Sources */,
 				3765A9911F3C399F00496299 /* DrBaseWebViewController.m in Sources */,
@@ -1631,6 +1628,7 @@
 				3748F8A21D59D4C900BF7EE8 /* NLCoreData.m in Sources */,
 				3765A9841F3C356000496299 /* SDWebImageManager.m in Sources */,
 				37559F3D1D3363100078C374 /* UMFeedbackViewController.m in Sources */,
+				3765A9DC1F4457F500496299 /* FFPlateViewController.m in Sources */,
 				3765A9421F3C32AC00496299 /* UIProgressView+AFNetworking.m in Sources */,
 				37E5CB8C1D2E663500842A51 /* USAuthViewController.m in Sources */,
 				3765A9431F3C32AC00496299 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1642,9 +1640,9 @@
 				3765A9371F3C32AC00496299 /* AFNetworkReachabilityManager.m in Sources */,
 				3765A9891F3C356000496299 /* UIImage+WebP.m in Sources */,
 				3748F8A71D59D4C900BF7EE8 /* NSManagedObjectContext+NLCoreData.m in Sources */,
-				3765A9A91F44489200496299 /* FFNewViewController.m in Sources */,
 				3748F8BF1D5AFCC900BF7EE8 /* Model.xcdatamodeld in Sources */,
 				37559EE81D2FA7CE0078C374 /* USActionSheet.m in Sources */,
+				3765A9D71F4457EC00496299 /* FFNewViewController.m in Sources */,
 				3765A94D1F3C338000496299 /* DrBaseNetworkManager+NetworkTool.m in Sources */,
 				3765A97D1F3C356000496299 /* SDImageCache.m in Sources */,
 				37559EFF1D2FBA850078C374 /* USEditUserInfoViewController.m in Sources */,
@@ -1661,7 +1659,6 @@
 				379A7ECB1D2BB64300757F36 /* USNavDelegateHandler.m in Sources */,
 				379A7F061D2E2FD000757F36 /* OpenUDID.m in Sources */,
 				373758661D00093600582ECD /* DataHash.m in Sources */,
-				3765A9B31F4448DD00496299 /* FFActivityViewController.m in Sources */,
 				3765A9871F3C356000496299 /* UIImage+GIF.m in Sources */,
 				374C6FAA1D2F70F4003577CA /* USAssetCollectionCell.m in Sources */,
 				3737584D1D0005AF00582ECD /* MJRefreshAutoNormalFooter.m in Sources */,

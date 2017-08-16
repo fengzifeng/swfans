@@ -15,7 +15,7 @@
 
 @interface MCHomeViewController ()
 {
-    NSArray *navArray ;
+    NSArray *navArray;
 }
 @end
 

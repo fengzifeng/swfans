@@ -1,18 +1,18 @@
 //
-//  MCFindViewController.m
+//  FFNewViewController.m
 //  FZFBase
 //
-//  Created by fengzifeng on 16/7/7.
-//  Copyright © 2016年 fengzifeng. All rights reserved.
+//  Created by fengzifeng on 2017/8/16.
+//  Copyright © 2017年 fengzifeng. All rights reserved.
 //
 
-#import "MCLiveViewController.h"
+#import "FFNewViewController.h"
 
-@interface MCLiveViewController ()
+@interface FFNewViewController ()
 
 @end
 
-@implementation MCLiveViewController
+@implementation FFNewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,10 +22,10 @@
 }
 
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.parentViewController.title = @"直播";
+    self.parentViewController.title = @"最新";
 }
 
 
@@ -41,5 +41,4 @@
     }];
     
 }
-
 @end
