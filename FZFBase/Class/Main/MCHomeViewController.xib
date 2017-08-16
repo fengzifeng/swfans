@@ -14,10 +14,11 @@
                 <outlet property="_tabLineLabel" destination="QfG-fB-d2M" id="yg4-R4-eMT"/>
                 <outlet property="tabBarView" destination="5xz-vX-e5j" id="d3h-FQ-P7G"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="tabButtonCollection" destination="MaT-MA-YCZ" id="mFn-Gu-qe5"/>
-                <outletCollection property="tabButtonCollection" destination="XyE-V2-0JB" id="lGw-8h-Q9w"/>
-                <outletCollection property="tabButtonCollection" destination="5Y0-d0-Rxb" id="gTV-Pn-b9k"/>
-                <outletCollection property="tabButtonCollection" destination="bG1-bZ-pFv" id="fgU-Oe-yLo"/>
+                <outletCollection property="tabButtonCollection" destination="MaT-MA-YCZ" id="Pvs-W1-jjO"/>
+                <outletCollection property="tabButtonCollection" destination="fiL-ry-Tbq" id="K19-Mt-1D4"/>
+                <outletCollection property="tabButtonCollection" destination="XyE-V2-0JB" id="tc0-kD-Zwm"/>
+                <outletCollection property="tabButtonCollection" destination="5Y0-d0-Rxb" id="TY7-7h-B4J"/>
+                <outletCollection property="tabButtonCollection" destination="64W-A1-2eB" id="uhm-wj-ZlG"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,6 +26,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfG-fB-d2M">
+                    <rect key="frame" x="0.0" y="617" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="NjS-zS-HRW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.78431372549019607" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xz-vX-e5j">
                     <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                     <subviews>
@@ -38,15 +49,15 @@
                                         <constraint firstAttribute="height" constant="49" id="meh-Na-oAh"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="新闻" image="main_tabBar_circle.png">
+                                    <state key="normal" title="最新" image="main_tabBar_new_normal.png">
                                         <color key="titleColor" red="0.60271793603897095" green="0.602699875831604" blue="0.60271012783050537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="selected" image="main_tabBar_circle_highlight.png">
-                                        <color key="titleColor" red="0.056979894638061523" green="0.22496539354324341" blue="0.44209745526313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="selected" image="main_tabBar_new_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="highlighted" image="main_tabBar_circle_highlight.png">
-                                        <color key="titleColor" red="0.056979894638061523" green="0.22496539354324341" blue="0.44209745526313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="highlighted" image="main_tabBar_new_highlight.png">
+                                        <color key="titleColor" red="0.66666666666666663" green="0.1764705882352941" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="Kaw-pL-Ueu"/>
@@ -63,22 +74,22 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcs-sR-TNJ">
                             <rect key="frame" x="75" y="0.0" width="75" height="49"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiL-ry-Tbq" customClass="MCHVButton">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiL-ry-Tbq" customClass="MCHVButton">
                                     <rect key="frame" x="5.5" y="0.0" width="64" height="49"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="64" id="TbM-4R-xKO"/>
                                         <constraint firstAttribute="height" constant="49" id="uYH-6b-aMI"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="新闻" image="main_tabBar_circle.png">
+                                    <state key="normal" title="板块" image="main_tabBar_plate_normal.png">
                                         <color key="titleColor" red="0.60271793600000001" green="0.60269987579999995" blue="0.6027101278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="selected" image="main_tabBar_circle_highlight.png">
-                                        <color key="titleColor" red="0.056979894640000001" green="0.2249653935" blue="0.4420974553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="selected" image="main_tabBar_plate_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="highlighted" image="main_tabBar_circle_highlight.png">
-                                        <color key="titleColor" red="0.056979894640000001" green="0.2249653935" blue="0.4420974553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="highlighted" image="main_tabBar_plate_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="aEK-7m-yAd"/>
@@ -95,21 +106,21 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6T-lt-85J">
                             <rect key="frame" x="150" y="0.0" width="75" height="49"/>
                             <subviews>
-                                <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-V2-0JB" customClass="uib">
-                                    <rect key="frame" x="-2.5" y="0.0" width="80" height="49"/>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-V2-0JB" customClass="MCHVButton">
+                                    <rect key="frame" x="16" y="-4" width="43" height="43"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="80" id="N9d-Ev-h95"/>
-                                        <constraint firstAttribute="height" constant="49" id="vTD-9k-Pmo"/>
+                                        <constraint firstAttribute="width" constant="43" id="N9d-Ev-h95"/>
+                                        <constraint firstAttribute="height" constant="43" id="vTD-9k-Pmo"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="EAST" image="main_tabBar_find.png">
+                                    <state key="normal" image="main_tabBar_add.png">
                                         <color key="titleColor" red="0.60271793603897095" green="0.602699875831604" blue="0.60271012783050537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="selected" image="main_tabBar_find_highlight.png">
+                                    <state key="selected" image="main_tabBar_add.png">
                                         <color key="titleColor" red="0.056979894638061523" green="0.22496539354324341" blue="0.44209745526313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="highlighted" image="main_tabBar_find_highlight.png">
+                                    <state key="highlighted" image="main_tabBar_add.png">
                                         <color key="titleColor" red="0.056979894638061523" green="0.22496539354324341" blue="0.44209745526313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
@@ -120,29 +131,29 @@
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="49" id="6FO-oc-9Uk"/>
-                                <constraint firstAttribute="bottom" secondItem="XyE-V2-0JB" secondAttribute="bottom" id="NHv-q5-pz4"/>
+                                <constraint firstAttribute="bottom" secondItem="XyE-V2-0JB" secondAttribute="bottom" constant="10" id="NHv-q5-pz4"/>
                                 <constraint firstItem="XyE-V2-0JB" firstAttribute="centerX" secondItem="q6T-lt-85J" secondAttribute="centerX" id="cxh-kk-itg"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iqd-4l-Vqb">
                             <rect key="frame" x="225" y="0.0" width="75" height="49"/>
                             <subviews>
-                                <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y0-d0-Rxb" customClass="MCHVButton">
-                                    <rect key="frame" x="-2.5" y="0.0" width="80" height="49"/>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y0-d0-Rxb" customClass="MCHVButton">
+                                    <rect key="frame" x="5.5" y="0.0" width="64" height="49"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="49" id="bEA-iR-3bD"/>
-                                        <constraint firstAttribute="width" constant="80" id="hsS-98-g86"/>
+                                        <constraint firstAttribute="width" constant="64" id="hsS-98-g86"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="直播" image="main_tabBar_msg.png">
+                                    <state key="normal" title="活动" image="main_tabBar_activity_normal.png">
                                         <color key="titleColor" red="0.60271793603897095" green="0.602699875831604" blue="0.60271012783050537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="selected" image="main_tabBar_msg_highlight.png">
-                                        <color key="titleColor" red="0.056979894638061523" green="0.22496539354324341" blue="0.44209745526313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="selected" image="main_tabBar_activity_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="highlighted" image="main_tabBar_msg_highlight.png">
-                                        <color key="titleColor" red="0.056979894638061523" green="0.22496539354324341" blue="0.44209745526313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="highlighted" image="main_tabBar_activity_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="8jM-vc-cPm"/>
@@ -159,33 +170,33 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mep-we-1wi">
                             <rect key="frame" x="300" y="0.0" width="75" height="49"/>
                             <subviews>
-                                <button opaque="NO" tag="3" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bG1-bZ-pFv" customClass="MCHVButton">
-                                    <rect key="frame" x="-2.5" y="0.0" width="80" height="49"/>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64W-A1-2eB" customClass="MCHVButton">
+                                    <rect key="frame" x="5" y="0.0" width="64" height="49"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="80" id="DOz-Yj-BGd"/>
-                                        <constraint firstAttribute="height" constant="49" id="p5w-yh-YY6"/>
+                                        <constraint firstAttribute="width" constant="64" id="May-ee-DzD"/>
+                                        <constraint firstAttribute="height" constant="49" id="tgK-Hg-eim"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="我" image="main_tabBar_my.png">
-                                        <color key="titleColor" red="0.60271793603897095" green="0.602699875831604" blue="0.60271012783050537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="主页" image="main_tabBar_me_normal.png">
+                                        <color key="titleColor" red="0.60271793600000001" green="0.60269987579999995" blue="0.6027101278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="selected" image="main_tabBar_my_highlight.png">
-                                        <color key="titleColor" red="0.056979894638061523" green="0.22496539354324341" blue="0.44209745526313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="selected" image="main_tabBar_me_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <state key="highlighted" image="main_tabBar_my_highlight.png">
-                                        <color key="titleColor" red="0.056979894638061523" green="0.22496539354324341" blue="0.44209745526313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="highlighted" image="main_tabBar_me_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="jhV-dI-pWc"/>
+                                        <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="uAd-wg-z6S"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="49" id="B0V-0M-Qkk"/>
-                                <constraint firstItem="bG1-bZ-pFv" firstAttribute="centerX" secondItem="Mep-we-1wi" secondAttribute="centerX" id="MQY-3g-L4B"/>
-                                <constraint firstAttribute="bottom" secondItem="bG1-bZ-pFv" secondAttribute="bottom" id="boN-R9-77D"/>
+                                <constraint firstItem="64W-A1-2eB" firstAttribute="centerX" secondItem="Mep-we-1wi" secondAttribute="centerX" id="MPR-lD-IOk"/>
+                                <constraint firstAttribute="bottom" secondItem="64W-A1-2eB" secondAttribute="bottom" id="NjY-Yk-mDL"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -213,16 +224,6 @@
                         <constraint firstItem="q6T-lt-85J" firstAttribute="centerY" secondItem="5xz-vX-e5j" secondAttribute="centerY" id="wBt-DV-FNq"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfG-fB-d2M">
-                    <rect key="frame" x="0.0" y="617" width="375" height="1"/>
-                    <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="NjS-zS-HRW"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.78431372549019607" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -236,14 +237,15 @@
         </view>
     </objects>
     <resources>
-        <image name="main_tabBar_circle.png" width="32" height="32"/>
-        <image name="main_tabBar_circle_highlight.png" width="32" height="32"/>
-        <image name="main_tabBar_find.png" width="32" height="32"/>
-        <image name="main_tabBar_find_highlight.png" width="32" height="32"/>
-        <image name="main_tabBar_msg.png" width="32" height="32"/>
-        <image name="main_tabBar_msg_highlight.png" width="32" height="32"/>
-        <image name="main_tabBar_my.png" width="32" height="32"/>
-        <image name="main_tabBar_my_highlight.png" width="32" height="32"/>
+        <image name="main_tabBar_activity_highlight.png" width="20" height="43"/>
+        <image name="main_tabBar_activity_normal.png" width="20" height="43"/>
+        <image name="main_tabBar_add.png" width="92" height="92"/>
+        <image name="main_tabBar_me_highlight.png" width="46" height="45"/>
+        <image name="main_tabBar_me_normal.png" width="46" height="45"/>
+        <image name="main_tabBar_new_highlight.png" width="46" height="39"/>
+        <image name="main_tabBar_new_normal.png" width="46" height="39"/>
+        <image name="main_tabBar_plate_highlight.png" width="42" height="42"/>
+        <image name="main_tabBar_plate_normal.png" width="42" height="42"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

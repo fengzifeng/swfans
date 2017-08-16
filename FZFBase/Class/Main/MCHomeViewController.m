@@ -7,10 +7,11 @@
 //
 
 #import "MCHomeViewController.h"
-#import "MCEastViewController.h"
 #import "MCAboutMeViewController.h"
-#import "MCLiveViewController.h"
-#import "MCNewsViewController.h"
+#import "FFNewViewController.h"
+#import "FFPlateViewController.h"
+#import "FFActivityViewController.h"
+#import "MCHVButton.h"
 
 @interface MCHomeViewController ()
 {
@@ -28,9 +29,10 @@
 
         
         _selectedIndex = -1;
-        navArray = @[[self viewControllerWithClass:[MCNewsViewController class]],  //
-                     [self viewControllerWithClass:[MCLiveViewController class]],    //
-                     [self viewControllerWithClass:[MCEastViewController class]], //
+        navArray = @[[self viewControllerWithClass:[FFNewViewController class]],  //
+                     [self viewControllerWithClass:[FFPlateViewController class]],    //
+                     @"",
+                     [self viewControllerWithClass:[FFActivityViewController class]], //
                      [self viewControllerWithClass:[MCAboutMeViewController class]], //
                      ];
     }
@@ -41,6 +43,33 @@
 {
     [super viewDidLoad];
     
+    int i = 0;
+    for (MCHVButton *item in _tabButtonCollection) {
+        
+        switch (i) {
+            case 0:
+                item.image_size = CGSizeMake(23, 19.5);
+                break;
+            case 1:
+                item.image_size = CGSizeMake(21, 21);
+                break;
+
+            case 2:
+                item.image_size = CGSizeMake(43, 43);
+                break;
+            case 3:
+                item.image_size = CGSizeMake(10, 21.5);
+
+                break;
+            case 4:
+                item.image_size = CGSizeMake(23, 22.5);
+                break;
+        }
+        
+        i++;
+    }
+    
+
     
     [_tabBarView setBlurColor:[UIColor whiteColor]];
     [_tabLineLabel autoSetDimension:ALDimensionHeight toSize:0.5];
@@ -60,21 +89,27 @@
         return;
     }
     
-    [currentViewController.view removeFromSuperview];
-    [currentViewController removeFromParentViewController];
     
-    _selectedIndex = index;
-    
-    currentViewController = [navArray objectAtIndex:index];
-    [self addChildViewController:currentViewController];
-    [self.view insertSubview:currentViewController.view belowSubview:_tabBarView];
-    [currentViewController.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-    
-    [currentViewController initNavigationBar];
-
     for (UIButton *item in _tabButtonCollection) {
         item.selected = index==item.tag;
     }
+    
+    if (index == 2) {
+        return;
+    } else {
+        [currentViewController.view removeFromSuperview];
+        [currentViewController removeFromParentViewController];
+        
+        _selectedIndex = index;
+        
+        currentViewController = [navArray objectAtIndex:index];
+        [self addChildViewController:currentViewController];
+        [self.view insertSubview:currentViewController.view belowSubview:_tabBarView];
+        [currentViewController.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+        
+        [currentViewController initNavigationBar];
+    }
+
 }
 
 - (IBAction)tabButtonAction:(UIButton *)sender

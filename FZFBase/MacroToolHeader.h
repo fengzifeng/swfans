@@ -50,7 +50,7 @@
 #define RGBACOLOR(r,g,b,a)  [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]       //RGBA进制颜色值
 #define HexColor(hexValue)  [UIColor colorWithRed:((float)(((hexValue) & 0xFF0000) >> 16))/255.0 green:((float)(((hexValue) & 0xFF00) >> 8))/255.0 blue:((float)((hexValue) & 0xFF))/255.0 alpha:1]   //16进制颜色值，如：#000000 , 注意：在使用的时候hexValue写成：0x000000
 
-#define ThemColor            HexColor(0x096096)
+#define ThemColor            HexColor(0xaa2d1b)
 #define KY_TINT_COLOR          HexColor(0xffab18)   /* 纯黄色 */
 
 //获取随机数

@@ -11,7 +11,6 @@
 #import "USEditUserInfoViewController.h"
 #import "MCSettingViewController.h"
 #import "USActShareView.h"
-#import "MCNewsBaseViewController.h"
 
 @interface MCAboutMeViewController ()
 {
@@ -35,10 +34,10 @@
     _titleArray = @[@"个人信息",@"我的首页",@"推荐好友",@"我的收藏",@"设置"];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.parentViewController.title = @"我";
+    self.parentViewController.title = @"主页";
 }
 
 
@@ -75,8 +74,6 @@
     } else if (indexPath.row == 2) {
         [USActShareView showShareApp];
     } else if (indexPath.row == 3) {
-        MCNewsBaseViewController *vc = [MCNewsBaseViewController viewController];
-        [self.navigationController pushViewController:vc animated:YES];
     }
 
 }
