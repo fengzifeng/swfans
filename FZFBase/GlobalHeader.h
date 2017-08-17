@@ -29,13 +29,12 @@
 #import "USActionSheet.h"
 
 #import "AppDelegate.h"
-#import "AuthData.h"
 #import "MCLog.h"
 #import "USImagePickerController.h"
 #import "USAlertView.h"
 #import "HLTool.h"
 #import "MJRefresh.h"
-#import "HBCoreLabel.h"
+#import "NSObject+MJKeyValue.h"
 
 
 

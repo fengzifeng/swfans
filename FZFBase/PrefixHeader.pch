@@ -20,7 +20,6 @@
 #import "NotificationName.h"
 #import "DataHash.h"
 #import "ApplicationContext.h"
-#import "NLCoreData.h"
 #import "DataManager.h"
 
 

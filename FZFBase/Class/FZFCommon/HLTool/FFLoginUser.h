@@ -1,14 +1,14 @@
 //
-//  DBBaseUser.h
-//  MCFriends
+//  FFLoginUser.h
+//  FZFBase
 //
-//  Created by 马汝军 on 15/7/19.
-//  Copyright (c) 2015年 marujun. All rights reserved.
+//  Created by fengzifeng on 2017/8/17.
+//  Copyright © 2017年 fengzifeng. All rights reserved.
 //
 
-#import "DBObject.h"
+#import <Foundation/Foundation.h>
 
-@interface DBBaseUser : DBObject
+@interface FFLoginUser : NSObject
 
 @property (nonatomic, retain) NSString * avatar;
 @property (nonatomic, retain) NSString * birthday;
@@ -18,5 +18,7 @@
 @property (nonatomic, retain) NSString * uid;
 @property (nonatomic, retain) NSString * signature;
 @property (nonatomic, retain) NSString * photoNumber;
+
+- (void)synchronize;
 
 @end

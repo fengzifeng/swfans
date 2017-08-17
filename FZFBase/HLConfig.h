@@ -14,7 +14,6 @@
 
 #define _loginUser            [AuthData loginUser]
 #define NetManager            [DrHttpManager defaultManager]
-#define XmppManager           [MCXmppManager defaultManager]
 #define TaskManager           [MCTaskManager defaultManager]
 #define Location(titude)      [[userDefaults valueForKey:titude] floatValue]
 #define FaceBookAvatarUlr(faceBookUserId)    [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large",faceBookUserId]

@@ -10,4 +10,6 @@
 
 @interface FFNewViewController : MCViewController
 
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
 @end

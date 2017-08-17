@@ -237,15 +237,15 @@
         </view>
     </objects>
     <resources>
-        <image name="main_tabBar_activity_highlight.png" width="20" height="43"/>
-        <image name="main_tabBar_activity_normal.png" width="20" height="43"/>
+        <image name="main_tabBar_activity_highlight.png" width="46" height="45"/>
+        <image name="main_tabBar_activity_normal.png" width="46" height="45"/>
         <image name="main_tabBar_add.png" width="92" height="92"/>
         <image name="main_tabBar_me_highlight.png" width="46" height="45"/>
         <image name="main_tabBar_me_normal.png" width="46" height="45"/>
-        <image name="main_tabBar_new_highlight.png" width="46" height="39"/>
-        <image name="main_tabBar_new_normal.png" width="46" height="39"/>
-        <image name="main_tabBar_plate_highlight.png" width="42" height="42"/>
-        <image name="main_tabBar_plate_normal.png" width="42" height="42"/>
+        <image name="main_tabBar_new_highlight.png" width="46" height="45"/>
+        <image name="main_tabBar_new_normal.png" width="46" height="45"/>
+        <image name="main_tabBar_plate_highlight.png" width="46" height="45"/>
+        <image name="main_tabBar_plate_normal.png" width="46" height="45"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

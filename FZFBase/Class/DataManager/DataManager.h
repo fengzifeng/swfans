@@ -6,9 +6,7 @@
 //  Copyright (c) 2014年 马汝军. All rights reserved.
 //
 
-#import "DBObject.h"
 #import "DataHash.h"
-#import "NLCoreData.h"
 #import "MacroToolHeader.h"
 
 #import "NSObject+Common.h"
@@ -28,3 +26,6 @@
 #import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
 #import "SDImageCache.h"
+#import "HBCoreLabel.h"
+#import "FFLoginUser.h"
+#import "AuthData.h"

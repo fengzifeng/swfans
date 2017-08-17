@@ -7,6 +7,7 @@
 //
 
 #import "FFNewViewController.h"
+#import "FFNewListCell.h"
 
 @interface FFNewViewController ()
 
@@ -21,11 +22,27 @@
     
 }
 
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     self.parentViewController.title = @"最新";
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellID = @"FFNewListCell";
+    FFNewListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[NSBundle mainBundle] loadNibNamed:cellID owner:self options:nil].lastObject;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
+    return cell;
 }
 
 

@@ -46,26 +46,11 @@
     int i = 0;
     for (MCHVButton *item in _tabButtonCollection) {
         
-        switch (i) {
-            case 0:
-                item.image_size = CGSizeMake(23, 19.5);
-                break;
-            case 1:
-                item.image_size = CGSizeMake(21, 21);
-                break;
-
-            case 2:
-                item.image_size = CGSizeMake(43, 43);
-                break;
-            case 3:
-                item.image_size = CGSizeMake(10, 21.5);
-
-                break;
-            case 4:
-                item.image_size = CGSizeMake(23, 22.5);
-                break;
-        }
-        
+        if (i == 2) {
+            item.image_size = CGSizeMake(43, 43);
+        } else {
+            item.image_size = CGSizeMake(23, 22.5);
+        }        
         i++;
     }
     
