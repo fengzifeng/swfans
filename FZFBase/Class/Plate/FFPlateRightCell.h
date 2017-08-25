@@ -10,4 +10,6 @@
 
 @interface FFPlateRightCell : UITableViewCell
 
++ (CGFloat)getCellHeight;
+
 @end

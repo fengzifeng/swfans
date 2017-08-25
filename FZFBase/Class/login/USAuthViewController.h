@@ -10,7 +10,9 @@
 
 @interface USAuthViewController : MCViewController
 {
-    IBOutlet UIButton *logButton;
+    IBOutlet UITableView *_tableView;
 }
+
+@property (nonatomic, assign) BOOL isLogin;
 
 @end

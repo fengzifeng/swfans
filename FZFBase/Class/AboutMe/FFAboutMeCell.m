@@ -6,9 +6,9 @@
 //  Copyright © 2016年 fengzifeng. All rights reserved.
 //
 
-#import "MCAboutMeCell.h"
+#import "FFAboutMeCell.h"
 
-@implementation MCAboutMeCell
+@implementation FFAboutMeCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -23,10 +23,5 @@
 
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

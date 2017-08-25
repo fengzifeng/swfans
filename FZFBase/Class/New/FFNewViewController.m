@@ -8,6 +8,8 @@
 
 #import "FFNewViewController.h"
 #import "FFNewListCell.h"
+#import "FFPlateDetailViewController.h"
+#import "FFPostDetailViewController.h"
 
 @interface FFNewViewController ()
 
@@ -18,14 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self requestData];
-    
+    [self requestData];    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     self.parentViewController.title = @"最新";
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -45,10 +47,17 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FFPostDetailViewController *vc = [FFPostDetailViewController viewController];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+
+    
+}
 
 - (void)requestData
 {
-    
     NSString *requestUrl = [NSString stringWithFormat:@"http://businessapitest.58v5.cn/jxbus/list"];
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:@{@"jxid":@"869846979897745408"} complete:^(BOOL successed, HttpResponse *response) {
         if (successed) {

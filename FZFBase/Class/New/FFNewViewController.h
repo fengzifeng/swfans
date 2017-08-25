@@ -11,5 +11,8 @@
 @interface FFNewViewController : MCViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topConstraint;
+
+- (void)requestData;
 
 @end

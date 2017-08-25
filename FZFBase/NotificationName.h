@@ -22,6 +22,8 @@
 #define Notification_RefreshUserInfo                            @"RefreshUserInfo"                      //刷新用户信息
 
 #define Notification_UpdateAlbum                                @"updateAlbum"                          //更新相册
+#define Notification_LoginRegSwitch                              @"loginRegSwitch"                       //登录注册切换
+
 
 
 #endif

@@ -18,6 +18,10 @@
 @property (nonatomic, retain) NSString * uid;
 @property (nonatomic, retain) NSString * signature;
 @property (nonatomic, retain) NSString * photoNumber;
+@property (nonatomic, retain) NSString * email;
+@property (nonatomic, retain) NSString * password;
+
+
 
 - (void)synchronize;
 

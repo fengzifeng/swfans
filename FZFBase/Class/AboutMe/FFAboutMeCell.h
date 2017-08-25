@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCAboutMeCell : UITableViewCell
+@interface FFAboutMeCell : UITableViewCell
 {
-    IBOutlet UIImageView *_imageView;
     IBOutlet UILabel *_titleLabel;
     IBOutlet UILabel *_lineLabel;
 }

@@ -10,4 +10,6 @@
 
 @interface FFActivityViewController : MCViewController
 
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
 @end

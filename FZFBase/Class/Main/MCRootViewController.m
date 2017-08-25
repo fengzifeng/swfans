@@ -51,10 +51,10 @@
     _rootNavigationController.delegate = handler;
     _rootNavigationController.interactivePopGestureRecognizer.delegate = handler;
 
-    if(!_loginUser){
-        USAuthViewController *authViewController = [USAuthViewController viewController];
-        [_applicationContext presentNavigationController:authViewController animated:NO completion:nil];
-    }
+//    if(!_loginUser){
+//        USAuthViewController *authViewController = [USAuthViewController viewController];
+//        [_applicationContext presentNavigationController:authViewController animated:NO completion:nil];
+//    }
 }
 
 //横屏

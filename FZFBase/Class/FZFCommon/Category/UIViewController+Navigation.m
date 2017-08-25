@@ -2,7 +2,7 @@
 //  UIViewController+Navigation.m
 //  HLSNS
 //
-//  Created by 刘波 on 12-12-4.
+//  Created by fengzifeng on 12-12-4.
 //  Copyright (c) 2012年 hoolai. All rights reserved.
 //
 
@@ -64,15 +64,9 @@
     
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
     
-    // 调整 leftBarButtonItem 在 iOS6 下面的位置
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    if([[[UIDevice currentDevice] systemVersion] floatValue]<7.0){
-        negativeSpacer.width = 5;  //向右移动5个像素
-    }else{
-        negativeSpacer.width = -6;  //向左移动6个像素
-    }
-//    self.navigationItem.leftBarButtonItems = @[negativeSpacer, buttonItem];
-    
+    negativeSpacer.width = 5;  //向右移动5个像素
+
     if ([self respondsToSelector:@selector(myNavigationItem)]) {
         ((MCViewController *)self).myNavigationItem.leftBarButtonItems = @[negativeSpacer, buttonItem];
     }else{
@@ -88,14 +82,8 @@
     
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
     
-    // 调整 rightBarButtonItem 在 iOS6 下面的位置
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    if([[[UIDevice currentDevice] systemVersion] floatValue]<7.0){
-        negativeSpacer.width = 5;  //向左移动5个像素
-    }else{
-        negativeSpacer.width = -5;  //向右移动5个像素
-    }
-//    self.navigationItem.rightBarButtonItems = @[negativeSpacer, buttonItem];
+    negativeSpacer.width = 5;  //向右移动5个像素
     
     if ([self respondsToSelector:@selector(myNavigationItem)]) {
         ((MCViewController *)self).myNavigationItem.rightBarButtonItems = @[negativeSpacer, buttonItem];

@@ -8,14 +8,6 @@
 
 #import "MCViewController.h"
 
-@interface FFPlateViewController : MCViewController <UITableViewDataSource, UITableViewDelegate>
-{
-    NSArray *_dataArray;
-    BOOL _isRelate;
-}
-
-@property (nonatomic, strong) UITableView *leftTableView;
-@property (nonatomic, strong) UITableView *rightTableView;
-
+@interface FFPlateViewController : MCViewController
 
 @end
