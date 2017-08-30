@@ -220,6 +220,11 @@
 		3765AA511F4EF46F00496299 /* FFPostDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765AA4F1F4EF46F00496299 /* FFPostDetailCell.xib */; };
 		3765AA541F4EFE2400496299 /* ZYPAttributeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765AA531F4EFE2400496299 /* ZYPAttributeLabel.m */; };
 		3765AA571F4EFE6C00496299 /* ImageAttributeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765AA561F4EFE6C00496299 /* ImageAttributeModel.m */; };
+		37986D951F512B3B005ADAEB /* new_icon_send.png in Resources */ = {isa = PBXBuildFile; fileRef = 37986D941F512B3B005ADAEB /* new_icon_send.png */; };
+		37986D991F513112005ADAEB /* FFInputePostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37986D971F513112005ADAEB /* FFInputePostViewController.m */; };
+		37986D9A1F513112005ADAEB /* FFInputePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37986D981F513112005ADAEB /* FFInputePostViewController.xib */; };
+		37986D9E1F558250005ADAEB /* FFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37986D9C1F558250005ADAEB /* FFCommentCell.m */; };
+		37986D9F1F558251005ADAEB /* FFCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37986D9D1F558250005ADAEB /* FFCommentCell.xib */; };
 		379A7ECB1D2BB64300757F36 /* USNavDelegateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7EC71D2BB64300757F36 /* USNavDelegateHandler.m */; };
 		379A7ECC1D2BB64300757F36 /* USTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7EC91D2BB64300757F36 /* USTransitionAnimator.m */; };
 		379A7ECF1D2BBA1F00757F36 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7ECE1D2BBA1F00757F36 /* ApplicationContext.m */; };
@@ -622,6 +627,13 @@
 		3765AA531F4EFE2400496299 /* ZYPAttributeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPAttributeLabel.m; sourceTree = "<group>"; };
 		3765AA551F4EFE6C00496299 /* ImageAttributeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAttributeModel.h; sourceTree = "<group>"; };
 		3765AA561F4EFE6C00496299 /* ImageAttributeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAttributeModel.m; sourceTree = "<group>"; };
+		37986D941F512B3B005ADAEB /* new_icon_send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_icon_send.png; sourceTree = "<group>"; };
+		37986D961F513112005ADAEB /* FFInputePostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFInputePostViewController.h; sourceTree = "<group>"; };
+		37986D971F513112005ADAEB /* FFInputePostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFInputePostViewController.m; sourceTree = "<group>"; };
+		37986D981F513112005ADAEB /* FFInputePostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFInputePostViewController.xib; sourceTree = "<group>"; };
+		37986D9B1F558250005ADAEB /* FFCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCommentCell.h; sourceTree = "<group>"; };
+		37986D9C1F558250005ADAEB /* FFCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCommentCell.m; sourceTree = "<group>"; };
+		37986D9D1F558250005ADAEB /* FFCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFCommentCell.xib; sourceTree = "<group>"; };
 		379A7EC61D2BB64300757F36 /* USNavDelegateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USNavDelegateHandler.h; sourceTree = "<group>"; };
 		379A7EC71D2BB64300757F36 /* USNavDelegateHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USNavDelegateHandler.m; sourceTree = "<group>"; };
 		379A7EC81D2BB64300757F36 /* USTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTransitionAnimator.h; sourceTree = "<group>"; };
@@ -1354,6 +1366,9 @@
 				3765AA4D1F4EF46F00496299 /* FFPostDetailCell.h */,
 				3765AA4E1F4EF46F00496299 /* FFPostDetailCell.m */,
 				3765AA4F1F4EF46F00496299 /* FFPostDetailCell.xib */,
+				37986D9B1F558250005ADAEB /* FFCommentCell.h */,
+				37986D9C1F558250005ADAEB /* FFCommentCell.m */,
+				37986D9D1F558250005ADAEB /* FFCommentCell.xib */,
 				3765AA521F4EFE2400496299 /* ZYPAttributeLabel.h */,
 				3765AA531F4EFE2400496299 /* ZYPAttributeLabel.m */,
 				3765AA551F4EFE6C00496299 /* ImageAttributeModel.h */,
@@ -1427,6 +1442,7 @@
 			isa = PBXGroup;
 			children = (
 				3765AA161F4586F600496299 /* new_post_bg.png */,
+				37986D941F512B3B005ADAEB /* new_icon_send.png */,
 			);
 			path = new;
 			sourceTree = "<group>";
@@ -1501,6 +1517,9 @@
 				3765AA481F4EB10100496299 /* FFLoginCell.h */,
 				3765AA491F4EB10100496299 /* FFLoginCell.m */,
 				3765AA4A1F4EB10100496299 /* FFLoginCell.xib */,
+				37986D961F513112005ADAEB /* FFInputePostViewController.h */,
+				37986D971F513112005ADAEB /* FFInputePostViewController.m */,
+				37986D981F513112005ADAEB /* FFInputePostViewController.xib */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -1596,6 +1615,7 @@
 				373757281CFFFD5700582ECD /* Assets.xcassets in Resources */,
 				3765AA511F4EF46F00496299 /* FFPostDetailCell.xib in Resources */,
 				37E5CB7A1D2E650800842A51 /* main_tabBar_circle_highlight@3x.png in Resources */,
+				37986D9A1F513112005ADAEB /* FFInputePostViewController.xib in Resources */,
 				374C6FAE1D2F70F4003577CA /* USAssetGroupViewController.xib in Resources */,
 				3755A1441D40CCD60078C374 /* icon_play@2x.png in Resources */,
 				3755A1401D40CCB00078C374 /* icon_pause@2x.png in Resources */,
@@ -1624,9 +1644,11 @@
 				3765AA3F1F4EAFFE00496299 /* login_close.png in Resources */,
 				3765A9941F442E5A00496299 /* main_tabBar_activity_highlight.png in Resources */,
 				3765A9A31F44312800496299 /* main_tabBar_plate_normal.png in Resources */,
+				37986D9F1F558251005ADAEB /* FFCommentCell.xib in Resources */,
 				374C6FAB1D2F70F4003577CA /* USAssetCollectionCell.xib in Resources */,
 				3755A0FC1D3E1B170078C374 /* pub_nav_white_back@2x.png in Resources */,
 				3765AA3B1F4EA32900496299 /* FFAboutDownHeadView.xib in Resources */,
+				37986D951F512B3B005ADAEB /* new_icon_send.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1678,6 +1700,7 @@
 				373758581D0005AF00582ECD /* MJRefreshConst.m in Sources */,
 				373757C71D00001200582ECD /* MCHVButton.m in Sources */,
 				373757D01D00001200582ECD /* MCRootViewController.m in Sources */,
+				37986D9E1F558250005ADAEB /* FFCommentCell.m in Sources */,
 				3765A9821F3C356000496299 /* SDWebImageDownloaderOperation.m in Sources */,
 				3765A98E1F3C356000496299 /* UIView+WebCacheOperation.m in Sources */,
 				3765A97A1F3C356000496299 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1793,6 +1816,7 @@
 				3765A9361F3C32AC00496299 /* AFHTTPSessionManager.m in Sources */,
 				3765A9861F3C356000496299 /* UIButton+WebCache.m in Sources */,
 				3765AA1B1F458ECA00496299 /* FFPlateLeftCell.m in Sources */,
+				37986D991F513112005ADAEB /* FFInputePostViewController.m in Sources */,
 				3737584A1D0005AE00582ECD /* MJRefreshFooter.m in Sources */,
 				379A7F021D2E2F6300757F36 /* UIDevice+Common.m in Sources */,
 			);

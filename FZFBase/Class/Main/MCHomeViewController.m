@@ -12,6 +12,7 @@
 #import "FFPlateViewController.h"
 #import "FFActivityViewController.h"
 #import "MCHVButton.h"
+#import "FFInputePostViewController.h"
 
 @interface MCHomeViewController ()
 {
@@ -80,7 +81,8 @@
     }
     
     if (index == 2) {
-        return;
+        FFInputePostViewController *vc = [FFInputePostViewController viewController];
+        [self presentViewController:vc animated:YES completion:nil];
     } else {
         [currentViewController.view removeFromSuperview];
         [currentViewController removeFromParentViewController];

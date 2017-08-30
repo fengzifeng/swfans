@@ -61,4 +61,20 @@
     return rightButton;
 }
 
++ (UIButton *)newCloseButtonWithTarget:(id)target action:(SEL)action
+{
+    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 46, 44)];
+    [rightButton setTitleColor:RGBCOLOR(255, 255, 255) forState:UIControlStateNormal];
+    rightButton.titleLabel.font = [UIFont systemFontOfSize:16];
+    [rightButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
+    
+    [rightButton setImage:[UIImage imageNamed:(@"new_icon_send.png")] forState:UIControlStateNormal];
+    [rightButton setTitleColor:RGBCOLOR(136, 136, 136) forState:UIControlStateHighlighted];
+    if (action && target) {
+        [rightButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    }
+    return rightButton;
+
+}
+
 @end

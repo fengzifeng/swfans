@@ -19,4 +19,6 @@
 //更多按钮
 + (UIButton *)newMoreButtonWithTarget:(id)target action:(SEL)action;
 
++ (UIButton *)newCloseButtonWithTarget:(id)target action:(SEL)action;
+
 @end

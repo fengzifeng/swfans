@@ -51,9 +51,7 @@
 {
     FFPostDetailViewController *vc = [FFPostDetailViewController viewController];
     [self.navigationController pushViewController:vc animated:YES];
-    
 
-    
 }
 
 - (void)requestData
