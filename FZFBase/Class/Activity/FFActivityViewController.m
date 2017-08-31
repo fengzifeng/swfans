@@ -8,6 +8,7 @@
 
 #import "FFActivityViewController.h"
 #import "FFActivityListCell.h"
+#import "FFActivityModel.h"
 
 @interface FFActivityViewController ()
 
@@ -17,7 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self requestData];
+
+}
+
+- (void)requestData
+{
+    NSString *requestUrl = @"http://attendee.solidworks.com.cn/api/articles/1";
+    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        if (successed) {
+
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated

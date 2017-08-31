@@ -226,6 +226,7 @@
 		37E5CB7A1D2E650800842A51 /* main_tabBar_circle_highlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E5CB691D2E650800842A51 /* main_tabBar_circle_highlight@3x.png */; };
 		37E5CB8C1D2E663500842A51 /* USAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E5CB8A1D2E663500842A51 /* USAuthViewController.m */; };
 		37E5CB8D1D2E663500842A51 /* USAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E5CB8B1D2E663500842A51 /* USAuthViewController.xib */; };
+		9F36DD221F5854CB000D76F7 /* FFActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F36DD211F5854CB000D76F7 /* FFActivityModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -619,6 +620,8 @@
 		37E5CB891D2E663500842A51 /* USAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAuthViewController.h; sourceTree = "<group>"; };
 		37E5CB8A1D2E663500842A51 /* USAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAuthViewController.m; sourceTree = "<group>"; };
 		37E5CB8B1D2E663500842A51 /* USAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USAuthViewController.xib; sourceTree = "<group>"; };
+		9F36DD201F5854CB000D76F7 /* FFActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFActivityModel.h; sourceTree = "<group>"; };
+		9F36DD211F5854CB000D76F7 /* FFActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFActivityModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1277,6 +1280,8 @@
 				3765AA221F4E805900496299 /* FFActivityListCell.h */,
 				3765AA231F4E805900496299 /* FFActivityListCell.m */,
 				3765AA241F4E805900496299 /* FFActivityListCell.xib */,
+				9F36DD201F5854CB000D76F7 /* FFActivityModel.h */,
+				9F36DD211F5854CB000D76F7 /* FFActivityModel.m */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -1610,6 +1615,7 @@
 				3765A98C1F3C356000496299 /* UIImageView+WebCache.m in Sources */,
 				37559F2E1D3362D10078C374 /* MCFeedbackViewController.m in Sources */,
 				3765A9391F3C32AC00496299 /* AFURLRequestSerialization.m in Sources */,
+				9F36DD221F5854CB000D76F7 /* FFActivityModel.m in Sources */,
 				37986DD21F57C738005ADAEB /* UIScrollView+MJExtension.m in Sources */,
 				370B4F491D0820E2000D12FF /* SwitchView.m in Sources */,
 				37E5CB5C1D2E61D500842A51 /* MCHomeViewController.m in Sources */,
