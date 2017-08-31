@@ -13,6 +13,7 @@
 #import "FFActivityViewController.h"
 #import "MCHVButton.h"
 #import "FFInputePostViewController.h"
+#import "FFPlateDetailViewController.h"
 
 @interface MCHomeViewController ()
 {
@@ -31,7 +32,7 @@
         
         _selectedIndex = -1;
         navArray = @[[self viewControllerWithClass:[FFNewViewController class]],  //
-                     [self viewControllerWithClass:[FFPlateViewController class]],    //
+                     [self viewControllerWithClass:[FFPlateDetailViewController class]],    //
                      @"",
                      [self viewControllerWithClass:[FFActivityViewController class]], //
                      [self viewControllerWithClass:[MCAboutMeViewController class]], //

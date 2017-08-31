@@ -23,7 +23,7 @@
     [MobClick setAppVersion:version];
     NSLog(@"已开启友盟统计");
     [UMFeedback setLogEnabled:NO];
-    [application setStatusBarHidden:YES];//启动时隐藏状态栏
+//    [application setStatusBarHidden:YES];//启动时隐藏状态栏
 
     //添加友盟渠道统计(UMtrack)
     NSString * deviceName = [[[UIDevice currentDevice] name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

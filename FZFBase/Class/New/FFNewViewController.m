@@ -20,8 +20,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self requestData];    
+    
+    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+    [_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+//    [_tableView headerBeginRefreshing];
+    
+    [self requestData];
 }
+
+-(void)headerRereshing{
+    [self requestData];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 刷新表格
+//        [_commentListView.commentTable reloadData];
+//        // (最好在刷新表格后调用)调用headerEndRefreshing可以结束刷新状态
+//        [_commentListView.commentTable headerEndRefreshing];
+//    });
+}
+
+- (void)footerRereshing
+{
+    [self requestData];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 刷新表格
+//        [_commentListView.commentTable reloadData];
+//        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+//        [_commentListView.commentTable footerEndRefreshing];
+//    });
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {

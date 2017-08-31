@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class FFPlateSectionModel;
 
 @interface FFPlateRightCell : UITableViewCell
 
-+ (CGFloat)getCellHeight;
++ (CGFloat)getCellHeight:(FFPlateSectionModel *)model;
 
+- (void)updateCell:(FFPlateSectionModel *)model;
 @end
