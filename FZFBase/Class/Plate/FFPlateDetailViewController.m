@@ -9,6 +9,7 @@
 #import "FFPlateDetailViewController.h"
 #import "FFPlateLeftCell.h"
 #import "FFPlateRightCell.h"
+#import "FFPlateModel.h"
 
 @interface FFPlateDetailViewController ()
 
@@ -25,11 +26,28 @@
     viewBounds.size.height = ([[UIScreen mainScreen] bounds].size.height) - navBarHeight;
     self.view.bounds = viewBounds;
     
-    [self loadData];
     [self leftTableView];
     [self rightTableView];
+    [self requestData];
+
     
     _isRelate = YES;
+}
+
+- (void)requestData
+{
+    NSString *requestUrl = @"http://attendee.solidworks.com.cn/api/structed_groups";
+    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        if (successed) {
+            _leftTableView.hidden = NO;
+            _rightTableView.hidden = NO;
+            FFPlateModel *model = [FFPlateModel objectWithKeyValues:response.payload];
+            _dataArray = model.data;
+            [_leftTableView reloadData];
+            [_rightTableView reloadData];
+        }
+    }];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -38,35 +56,16 @@
     self.parentViewController.title = @"板块";
 }
 
-- (void)loadData {
-    _dataArray = @[
-                   @{@"title" : @"活动巡展区",
-                     @"list" : @[@"Soldier"]
-                     },
-                   @{@"title" : @"技术交流区",
-                     @"list" : @[@"Soldier"]
-                     },
-                   @{@"title" : @"产品讨论区",
-                     @"list" : @[@"Soldier"]
-                     },
-                   @{@"title" : @"下载专区",
-                     @"list" : @[@"Soldier"]
-                     },
-                   @{@"title" : @"综合讨论区",
-                     @"list" : @[@"Soldier"]
-                     }];
-}
-
 - (UITableView *)leftTableView {
     if (nil == _leftTableView){
-        _leftTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 100, SCREEN_HEIGHT - 64)];
+        _leftTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 100, SCREEN_HEIGHT - 64 - 49)];
         _leftTableView.backgroundColor = [UIColor whiteColor];
         _leftTableView.delegate = self;
         _leftTableView.dataSource = self;
         _leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _leftTableView.showsVerticalScrollIndicator = NO;
         _leftTableView.backgroundColor = RGBCOLOR(217, 217, 217);
-        
+        _leftTableView.hidden = YES;
         [self.view addSubview:_leftTableView];
     }
     return _leftTableView;
@@ -74,10 +73,11 @@
 
 - (UITableView *)rightTableView{
     if (nil == _rightTableView){
-        _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(100, 64, SCREEN_WIDTH - 100, SCREEN_HEIGHT - 64)];
+        _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(100, 64, SCREEN_WIDTH - 100, SCREEN_HEIGHT - 64 - 49)];
         _rightTableView.backgroundColor = [UIColor whiteColor];
         _rightTableView.delegate = self;
         _rightTableView.dataSource = self;
+        _rightTableView.hidden = YES;
         _rightTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_rightTableView];
     }
@@ -95,11 +95,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSDictionary *item = [_dataArray objectAtIndex:section];
+    FFPlateSectionModel *model = [_dataArray objectAtIndex:section];
     if (tableView == self.leftTableView) {
-        return [_dataArray count];
+        return _dataArray.count;
     } else {
-        return [[item objectForKey:@"list"] count];
+        return 1;
     }
 }
 
@@ -118,7 +118,8 @@
             [selectedBackgroundView addSubview:liner];
         }
         
-        cell.titleLabel.text = [_dataArray[indexPath.row] objectForKey:@"title"];
+        FFPlateSectionModel *model = [_dataArray objectAtIndex:indexPath.row];
+        cell.titleLabel.text = model.name;
         return cell;
         
     } else {
@@ -127,7 +128,10 @@
         if (cell == nil) {
             cell = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil][0];
         }
-        
+        FFPlateSectionModel *model = [_dataArray objectAtIndex:indexPath.section];
+
+        [cell updateCell:model];
+
         return cell;
     }
     
@@ -139,7 +143,8 @@
     if (tableView == self.leftTableView) {
         return 50;
     } else {
-        return [FFPlateRightCell getCellHeight];
+        FFPlateSectionModel *model = [_dataArray objectAtIndex:indexPath.section];
+        return [FFPlateRightCell getCellHeight:model];
     }
 }
 
@@ -166,9 +171,8 @@
         view.backgroundColor = RGBACOLOR(217, 217, 217, 0.7);
         
         UILabel *lable = [[UILabel alloc]initWithFrame:view.bounds];
-        NSDictionary *item = [_dataArray objectAtIndex:section];
-        NSString *title = [item objectForKey:@"title"];
-        lable.text = [NSString stringWithFormat:@"   %@", title];
+        FFPlateSectionModel *model = [_dataArray objectAtIndex:section];
+        lable.text = [NSString stringWithFormat:@"   %@", model.name];
         [view addSubview:lable];
         return view;
         

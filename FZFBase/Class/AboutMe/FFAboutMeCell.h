@@ -16,4 +16,5 @@
 
 - (void)updateCell:(NSString *)titleStr;
 
+
 @end

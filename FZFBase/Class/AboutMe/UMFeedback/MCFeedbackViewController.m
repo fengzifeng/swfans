@@ -15,7 +15,6 @@
     
     UIView *maskView;
     NSTimer *timer;
-    MJRefreshHeader *_header;
 }
 
 @property(nonatomic, assign)BOOL scrollToBottom;
