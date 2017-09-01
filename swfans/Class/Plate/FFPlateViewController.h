@@ -1,0 +1,15 @@
+//
+//  FFPlateViewController.h
+//  FZFBase
+//
+//  Created by fengzifeng on 2017/8/16.
+//  Copyright © 2017年 fengzifeng. All rights reserved.
+//
+
+#import "MCViewController.h"
+
+@interface FFPlateViewController : MCViewController
+
+@property (nonatomic, copy) NSString *forum_id;
+
+@end
