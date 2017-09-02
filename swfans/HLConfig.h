@@ -43,7 +43,11 @@
 #define url_latestthreads           GeneralUrl(@"latest_threads/page/")
 #define url_threads                 GeneralUrl(@"threads/")
 #define url_articles                GeneralUrl(@"articles/page/")
-
+#define url_threadlist              GeneralUrl(@"thread/list/")
+#define url_submitpost              GeneralUrl(@"submit_post/")
+#define url_register                GeneralUrl(@"register/")
+#define url_login                   GeneralUrl(@"login/")
+#define url_submitarticle           GeneralUrl(@"submit_article/")
 
 #define NAVBAR_TAG 100109
 

@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ZYPAttributeLabel.h"
+@class FFPostItemModel;
 
 @interface FFPostDetailCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet ZYPAttributeLabel *contLabel;
 
-- (void)updateCell;
+- (void)updateCell:(FFPostItemModel *)model;
 
-+ (CGFloat)getCellHeight;
++ (CGFloat)getCellHeight:(FFPostItemModel *)model;
 
 @end

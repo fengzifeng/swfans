@@ -24,6 +24,11 @@
     return @{@"forums" : [FFPlateItemModel class]};
 }
 
+- (void)setName:(NSString *)name
+{
+    _name = [[name componentsSeparatedByString:@" "] lastObject];
+}
+
 @end
 
 @implementation FFPlateItemModel
@@ -32,7 +37,10 @@
 {
     _name = name;
     self.upName = [[name componentsSeparatedByString:@" "] firstObject];
-    self.downName = [[name componentsSeparatedByString:@" "] lastObject];
+
+    if ([name rangeOfString:@" "].length) {
+        self.downName = [[name componentsSeparatedByString:@" "] lastObject];
+    }
 }
 
 - (void)setHeight:(CGFloat)height

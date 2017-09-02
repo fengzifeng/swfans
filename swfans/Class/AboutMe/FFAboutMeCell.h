@@ -13,6 +13,7 @@
     IBOutlet UILabel *_titleLabel;
     IBOutlet UILabel *_lineLabel;
 }
+@property (nonatomic, weak) IBOutlet UILabel *contLabel;
 
 - (void)updateCell:(NSString *)titleStr;
 

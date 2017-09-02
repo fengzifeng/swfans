@@ -148,9 +148,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (tableView == self.leftTableView) {
-        return 30;
+        return CGFLOAT_MIN;
     } else {
-        return 30;
+        return 50;
     }
 }
 
@@ -165,10 +165,11 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (tableView == self.rightTableView) {
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 30)];
-        view.backgroundColor = RGBACOLOR(217, 217, 217, 0.7);
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 50)];
+        view.backgroundColor = [UIColor whiteColor];;
         
         UILabel *lable = [[UILabel alloc]initWithFrame:view.bounds];
+        lable.font = [UIFont systemFontOfSize:12];
         FFPlateSectionModel *model = [_dataArray objectAtIndex:section];
         lable.text = [NSString stringWithFormat:@"   %@", model.name];
         [view addSubview:lable];

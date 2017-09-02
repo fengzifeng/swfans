@@ -68,7 +68,9 @@
     rightButton.titleLabel.font = [UIFont systemFontOfSize:16];
     [rightButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
     
-    [rightButton setImage:[UIImage imageNamed:(@"new_icon_send.png")] forState:UIControlStateNormal];
+    UIImage *image = [UIImage imageNamed:@"new_icon_send.png"];
+    [rightButton setImage:[image imageScaledToSize:CGSizeMake(19, 18.5)]  forState:UIControlStateNormal];
+
     [rightButton setTitleColor:RGBCOLOR(136, 136, 136) forState:UIControlStateHighlighted];
     if (action && target) {
         [rightButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];

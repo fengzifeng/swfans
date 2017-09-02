@@ -69,15 +69,15 @@
     NSInteger rankCount = 3;
     NSInteger side = 10*WindowZoomScale;
     _currentModel = model;
-    
+    CGFloat itemHeight = 100;
+
     for (int i = 0; i <= count/rankCount ; i++) {
 
         NSInteger lineCount = count/(i+1)>=rankCount?rankCount:count%rankCount;
-        
         for (int j = 0; j<lineCount; j++) {
             FFPlateItemModel *itemModel = model.forums[i*3 + j];
-
-            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(side + j*(SCREEN_WIDTH - 100 - side*2)/3.0, 20 + i*115, (SCREEN_WIDTH - 100 - side*2)/3.0, 90)];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(side + j*(SCREEN_WIDTH - 100 - side*2)/3.0, 20 + i*itemHeight, (SCREEN_WIDTH - 100 - side*2)/3.0, 90)];
+            if (itemModel.downName.length) itemHeight = 115;
             button.tag = i*3 + j;
             [button addTarget:self action:@selector(clcickBtn:) forControlEvents:UIControlEventTouchUpInside];
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((button.width - 45)/2.0, 10, 45, 45)];
@@ -100,9 +100,13 @@
             [button addSubview:imageView];
             [button addSubview:upLabel];
             [button addSubview:downLabel];
-            
         }
+        
     }
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(7.5, [[self class] getCellHeight:model] - 0.5, SCREEN_WIDTH - 100 - 15, 0.5)];
+    label.backgroundColor = HexColor(0x93969b);
+    [self.contentView addSubview:label];
 }
 
 - (void)clcickBtn:(UIButton *)button

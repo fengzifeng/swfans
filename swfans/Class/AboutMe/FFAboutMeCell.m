@@ -20,6 +20,12 @@
 - (void)updateCell:(NSString *)titleStr
 {
     _titleLabel.text = titleStr;
+    if ([titleStr isEqualToString:@"退出登录"]) {
+        _contLabel.hidden = YES;
+    } else {
+        _contLabel.hidden = NO;;
+
+    }
 
 }
 

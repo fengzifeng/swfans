@@ -24,7 +24,7 @@
 {
     _titleLabel.text = titleStr;
     if ([_titleLabel.text isEqualToString:@"昵称"]) {
-        _contnetLabel.text = _loginUser.nickname;
+        _contnetLabel.text = _loginUser.username;
     } else if ([_titleLabel.text isEqualToString:@"性别"]) {
         switch (_loginUser.gender) {
             case 0:
@@ -39,9 +39,9 @@
         }
         _contnetLabel.text = [@(_loginUser.gender) stringValue] ;
     } else if ([_titleLabel.text isEqualToString:@"签名"]) {
-        _contnetLabel.text = _loginUser.signature;
+//        _contnetLabel.text = _loginUser.signature;
     } else if ([_titleLabel.text isEqualToString:@"手机号"]) {
-        _contnetLabel.text = _loginUser.photoNumber;
+//        _contnetLabel.text = _loginUser.photoNumber;
     }
     
     [_contnetLabel autoSetDimension:ALDimensionWidth toSize:[_contnetLabel.text stringWidthWithFont:kFont_13 height:15]];

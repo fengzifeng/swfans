@@ -23,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationBackButtonDefault];
-    
+    self.title = @"主题";
+
     if (_forum_id.length) [_tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
     [_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
@@ -94,8 +95,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FFPostDetailViewController *vc = [FFPostDetailViewController viewController];
+    FFNewListItemModel *model = _dataArray[indexPath.row];
+    vc.postId = model.tid;
+    
     [self.navigationController pushViewController:vc animated:YES];
-
 }
 
 - (void)requestData

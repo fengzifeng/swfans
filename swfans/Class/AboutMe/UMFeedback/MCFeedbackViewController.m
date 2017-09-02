@@ -81,7 +81,7 @@
     NSString *osVersion = [[UIDevice currentDevice] systemVersion];
     NSString *clinetVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [_feedbackClient setRemarkInfo:@{@"iOS":osVersion,@"越狱":[UIDevice jailbroken]?@"是":@"否"}];
-    [_feedbackClient updateUserInfo:@{@"contact": @{@"uid":_loginUser.uid?:@"visitor",@"name":_loginUser.nickname?:@"游客",@"version":clinetVersion}}];
+    [_feedbackClient updateUserInfo:@{@"contact": @{@"uid":_loginUser.uid?:@"visitor",@"name":_loginUser.username?:@"游客",@"version":clinetVersion}}];
     
     timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(checkFeedback)  userInfo:nil repeats:YES];
     

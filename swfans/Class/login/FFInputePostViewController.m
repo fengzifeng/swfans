@@ -45,7 +45,6 @@
 
 }
 
-
 - (void)clickRight
 {
     
@@ -86,6 +85,18 @@
     
     
     return YES;
+}
+
+- (IBAction)clickChoose:(id)sender
+{
+    USActionSheet *actionSheet = [USActionSheet initWithTitle:nil cancelButtonTitle:@"取消" otherButtonTitles:@"重试", @"删除上传失败的照片", nil];
+    [actionSheet showWithCompletionBlock:^(NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+        }
+        else if (buttonIndex == 1) {
+        }
+    }];
+
 }
 
 

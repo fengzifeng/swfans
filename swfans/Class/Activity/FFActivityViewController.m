@@ -9,6 +9,7 @@
 #import "FFActivityViewController.h"
 #import "FFActivityListCell.h"
 #import "FFActivityModel.h"
+#import "FFPostDetailViewController.h"
 
 @interface FFActivityViewController ()
 
@@ -65,8 +66,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    FFPostDetailViewController *vc = [FFPostDetailViewController viewController];
+    FFActivityItemModel *model = _dataArray[indexPath.row];
+    vc.postId = model.tid;
     
-    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

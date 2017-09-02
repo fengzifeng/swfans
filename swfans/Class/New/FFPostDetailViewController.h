@@ -7,7 +7,13 @@
 //
 
 #import "MCViewController.h"
+#import "DrKeyBoardView.h"
 
 @interface FFPostDetailViewController : MCViewController
+
+@property (nonatomic, copy) NSString *postId;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) DrKeyBoardView *boardView;
+
 
 @end

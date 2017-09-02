@@ -8,31 +8,47 @@
 
 #import "FFPostDetailCell.h"
 #import "ZYPAttributeLabel.h"
+#import "FFPostModel.h"
+#import "FFPostDetailViewController.h"
 
 @implementation FFPostDetailCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    _contLabel.isHtml = YES;
+
 }
 
-- (void)updateCell
+- (void)updateCell:(FFPostItemModel *)model
 {
     _contLabel.textcolor = HexColor(0x5a5a5a);
     _contLabel.textfont = [UIFont systemFontOfSize:14];
+    _contLabel.text1 = model.message;
+    [_contLabel autoSetDimension:ALDimensionHeight toSize:model.contentHeight];
 
-    _contLabel.text1 = @"你的苦难福克斯地方开始疯狂妇女卡萨诺疯狂胜负难料卡释放能量快；你是否开始你发开始";
 }
 
-+ (CGFloat)getCellHeight
++ (CGFloat)getCellHeight:(FFPostItemModel *)model
 {
+
     CGFloat height = 70;
     ZYPAttributeLabel *label = [[ZYPAttributeLabel alloc] init];
     label.isHtml = YES;
     CGSize size;
-    size = [label sizeWithWidth:SCREEN_WIDTH - 20 attstr:@"你的苦难福克斯地方开始疯狂妇女卡萨诺疯狂胜负难料卡释放能量快；你是否开始你发开始" textFont:[UIFont systemFontOfSize:14]];
-    height += size.height + 68;
+    if (model.message.length) size = [label sizeWithWidth:SCREEN_WIDTH - 20 attstr:model.message textFont:[UIFont systemFontOfSize:14]];
+    
+    if (model.isComment) {
+        height += size.height + 12;
+    } else {
+        height += size.height + 52;
+    }
     
     return height;
+}
+
+- (IBAction)clickPost:(id)sender
+{
+    [((FFPostDetailViewController *)self.nearsetViewController).boardView.textView becomeFirstResponder];
 }
 @end

@@ -56,8 +56,9 @@
     UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 148)/2.0, 42, 148, 51)];
     iconImageView.image = [UIImage imageNamed:@"login_logo"];
     [headView addSubview:iconImageView];
-    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(6, 0, 30, 30)];
-    [closeButton setImage:[UIImage imageNamed:@"login_close"] forState:UIControlStateNormal];
+    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 30, 30)];
+    UIImage *image = [UIImage imageNamed:@"login_close"];
+    [closeButton setImage:[image imageScaledToSize:CGSizeMake(20, 20)]  forState:UIControlStateNormal];
     [closeButton addTarget:self action:@selector(clickClose) forControlEvents:UIControlEventTouchUpInside];
     [headView addSubview:closeButton];
     
@@ -151,9 +152,32 @@
 
 - (void)login
 {
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/%@",url_register,_loginObj.username,_loginObj.password,_loginObj.email];
+    if (_isLogin) requestUrl = [NSString stringWithFormat:@"%@%@/%@",url_login,_loginObj.username,_loginObj.password];
     
-    [AuthData loginSuccess:@{@"uid":@"1",@"nickname":@"深刻觉得脚九分裤"}];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        if (successed) {
+            FFLoginUser *user = [FFLoginUser objectWithKeyValues:response.payload[@"data"]];
+            if ([user.status integerValue] == 1) {
+                if (!_isLogin) {
+                    [self clickSwitch];
+                } else {
+                    [AuthData loginSuccess:@{@"uid":user.uid,@"username":user.username,@"signCode":user.signCode}];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }
+            } else {
+                NSString *str = response.payload[@"data"][@"message"];
+                if (str.length) [USSuspensionView showWithMessage:str];
+            }
+        }
+    }];
+    
+
+    if (_isLogin) {
+        
+    } else {
+    }
+//    [AuthData loginSuccess:@{@"uid":@"1",@"nickname":@"深刻觉得脚九分裤"}];
     
 
 }

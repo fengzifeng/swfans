@@ -63,6 +63,7 @@
             <connections>
                 <outlet property="_lineLabel" destination="St6-mv-aIe" id="A9L-5y-MbG"/>
                 <outlet property="_titleLabel" destination="Plh-8G-FIc" id="pCD-cF-1QG"/>
+                <outlet property="contLabel" destination="sUu-kk-Vmo" id="fXE-dq-rLx"/>
             </connections>
         </tableViewCell>
     </objects>

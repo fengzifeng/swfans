@@ -33,7 +33,17 @@
 
 - (void)loginSuccess
 {
-    _titleArray = @[@[@"我的收藏",@"最近浏览"],@[@"联系代理商",@"投诉建议"]];
+    self.parentViewController.title = _loginUser?_loginUser.username:@"个人主页";
+    _titleArray = @[@[@"我的收藏",@"最近浏览"],@[@"联系代理商",@"投诉建议",@"退出登录"]];
+    _tableView.tableHeaderView = [self createHeadView];
+    [_tableView reloadData];
+}
+
+- (void)quitLogin
+{
+    self.parentViewController.title = @"登录";
+    _titleArray = nil;
+    [AuthData removeLoginUser];
     _tableView.tableHeaderView = [self createHeadView];
     [_tableView reloadData];
 }
@@ -58,13 +68,13 @@
     _tableView.tableHeaderView = [self createHeadView];
     self.view.backgroundColor = HexColor(0xebecee);
     
-    if (_loginUser) _titleArray = @[@[@"我的收藏",@"最近浏览"],@[@"联系代理商",@"投诉建议"]];
+    if (_loginUser) _titleArray = @[@[@"我的收藏",@"最近浏览"],@[@"联系代理商",@"投诉建议",@"退出登录"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.parentViewController.title = _loginUser?_loginUser.nickname:@"个人主页";
+    self.parentViewController.title = _loginUser?_loginUser.username:@"个人主页";
 }
 
 - (UIView *)getMidView:(NSString *)title image:(UIImage *)image
@@ -191,6 +201,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 1 && indexPath.row == 2) {
+        [self quitLogin];
+    }
 
 }
 

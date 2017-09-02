@@ -199,6 +199,10 @@
 		3765AA511F4EF46F00496299 /* FFPostDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765AA4F1F4EF46F00496299 /* FFPostDetailCell.xib */; };
 		3765AA541F4EFE2400496299 /* ZYPAttributeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765AA531F4EFE2400496299 /* ZYPAttributeLabel.m */; };
 		3765AA571F4EFE6C00496299 /* ImageAttributeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765AA561F4EFE6C00496299 /* ImageAttributeModel.m */; };
+		3779D61D1F5A53790021278B /* FFPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3779D61C1F5A53790021278B /* FFPostModel.m */; };
+		3779D6201F5A70070021278B /* DrKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3779D61F1F5A70070021278B /* DrKeyBoardView.m */; };
+		3779D6251F5AA1A00021278B /* USSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3779D6231F5AA1A00021278B /* USSuspensionView.m */; };
+		3779D6261F5AA1A00021278B /* USSuspensionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3779D6241F5AA1A00021278B /* USSuspensionView.xib */; };
 		37986D951F512B3B005ADAEB /* new_icon_send.png in Resources */ = {isa = PBXBuildFile; fileRef = 37986D941F512B3B005ADAEB /* new_icon_send.png */; };
 		37986D991F513112005ADAEB /* FFInputePostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37986D971F513112005ADAEB /* FFInputePostViewController.m */; };
 		37986D9A1F513112005ADAEB /* FFInputePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37986D981F513112005ADAEB /* FFInputePostViewController.xib */; };
@@ -574,6 +578,13 @@
 		3765AA531F4EFE2400496299 /* ZYPAttributeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPAttributeLabel.m; sourceTree = "<group>"; };
 		3765AA551F4EFE6C00496299 /* ImageAttributeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAttributeModel.h; sourceTree = "<group>"; };
 		3765AA561F4EFE6C00496299 /* ImageAttributeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAttributeModel.m; sourceTree = "<group>"; };
+		3779D61B1F5A53790021278B /* FFPostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPostModel.h; sourceTree = "<group>"; };
+		3779D61C1F5A53790021278B /* FFPostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPostModel.m; sourceTree = "<group>"; };
+		3779D61E1F5A70070021278B /* DrKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrKeyBoardView.h; sourceTree = "<group>"; };
+		3779D61F1F5A70070021278B /* DrKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrKeyBoardView.m; sourceTree = "<group>"; };
+		3779D6221F5AA1A00021278B /* USSuspensionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USSuspensionView.h; sourceTree = "<group>"; };
+		3779D6231F5AA1A00021278B /* USSuspensionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USSuspensionView.m; sourceTree = "<group>"; };
+		3779D6241F5AA1A00021278B /* USSuspensionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USSuspensionView.xib; sourceTree = "<group>"; };
 		37986D941F512B3B005ADAEB /* new_icon_send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_icon_send.png; sourceTree = "<group>"; };
 		37986D961F513112005ADAEB /* FFInputePostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFInputePostViewController.h; sourceTree = "<group>"; };
 		37986D971F513112005ADAEB /* FFInputePostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFInputePostViewController.m; sourceTree = "<group>"; };
@@ -786,6 +797,7 @@
 		373757781D00001200582ECD /* FZFCommon */ = {
 			isa = PBXGroup;
 			children = (
+				3779D6211F5AA1A00021278B /* SuspensionView */,
 				37559EE01D2FA7CE0078C374 /* MCAlertController */,
 				379A7EC31D2BB64300757F36 /* Navigation */,
 				373758B91D00343F00582ECD /* SwitchView */,
@@ -1233,6 +1245,10 @@
 				37B642E01F5000C300B06DBB /* FFPostDetailViewController.h */,
 				37B642E11F5000C300B06DBB /* FFPostDetailViewController.m */,
 				37B642E21F5000C300B06DBB /* FFPostDetailViewController.xib */,
+				3779D61B1F5A53790021278B /* FFPostModel.h */,
+				3779D61C1F5A53790021278B /* FFPostModel.m */,
+				3779D61E1F5A70070021278B /* DrKeyBoardView.h */,
+				3779D61F1F5A70070021278B /* DrKeyBoardView.m */,
 				3765AA4D1F4EF46F00496299 /* FFPostDetailCell.h */,
 				3765AA4E1F4EF46F00496299 /* FFPostDetailCell.m */,
 				3765AA4F1F4EF46F00496299 /* FFPostDetailCell.xib */,
@@ -1328,6 +1344,16 @@
 				3765AA3C1F4EAF8400496299 /* login_logo.png */,
 			);
 			path = aboutme;
+			sourceTree = "<group>";
+		};
+		3779D6211F5AA1A00021278B /* SuspensionView */ = {
+			isa = PBXGroup;
+			children = (
+				3779D6221F5AA1A00021278B /* USSuspensionView.h */,
+				3779D6231F5AA1A00021278B /* USSuspensionView.m */,
+				3779D6241F5AA1A00021278B /* USSuspensionView.xib */,
+			);
+			path = SuspensionView;
 			sourceTree = "<group>";
 		};
 		37986DBC1F57C738005ADAEB /* MJRefresh */ = {
@@ -1530,6 +1556,7 @@
 				37559F561D3391960078C374 /* USActShareView.xib in Resources */,
 				374C6F431D2E7581003577CA /* FFAboutMeCell.xib in Resources */,
 				3765AA3D1F4EAF8400496299 /* login_logo.png in Resources */,
+				3779D6261F5AA1A00021278B /* USSuspensionView.xib in Resources */,
 				37559F001D2FBA850078C374 /* USEditUserInfoViewController.xib in Resources */,
 				37E5CB8D1D2E663500842A51 /* USAuthViewController.xib in Resources */,
 				374C6FA51D2F70F4003577CA /* USPicker-Assets-Locked@2x.png in Resources */,
@@ -1635,6 +1662,7 @@
 				37986DCE1F57C738005ADAEB /* MJRefreshBaseView.m in Sources */,
 				37559E9D1D2F9D250078C374 /* RSKTouchView.m in Sources */,
 				3765AA0C1F4576D500496299 /* MJMethod.m in Sources */,
+				3779D6251F5AA1A00021278B /* USSuspensionView.m in Sources */,
 				3765AA201F458ED900496299 /* FFPlateRightCell.m in Sources */,
 				3765A93D1F3C32AC00496299 /* AFImageDownloader.m in Sources */,
 				3765AA251F4E805900496299 /* FFActivityListCell.m in Sources */,
@@ -1676,9 +1704,11 @@
 				373758AD1D000C1800582ECD /* NSObject+Common.m in Sources */,
 				374C6F3D1D2E744E003577CA /* MCAboutMeViewController.m in Sources */,
 				37559F071D3342380078C374 /* MCSettingViewController.m in Sources */,
+				3779D6201F5A70070021278B /* DrKeyBoardView.m in Sources */,
 				3765AA501F4EF46F00496299 /* FFPostDetailCell.m in Sources */,
 				374C6F691D2F495D003577CA /* USAssetItemViewController.m in Sources */,
 				3765A97F1F3C356000496299 /* SDWebImageCompat.m in Sources */,
+				3779D61D1F5A53790021278B /* FFPostModel.m in Sources */,
 				379A7ECB1D2BB64300757F36 /* USNavDelegateHandler.m in Sources */,
 				37B642E31F5000C300B06DBB /* FFPostDetailViewController.m in Sources */,
 				379A7F061D2E2FD000757F36 /* OpenUDID.m in Sources */,

@@ -85,7 +85,7 @@
     if (_dataTag == EDITTYPE_NICKNAME) {
         if (text.length) {
             _editTextField.text = text;
-            _loginUser.nickname = text;
+            _loginUser.username = text;
             [self.navigationController popViewControllerAnimated:true];
         }
         else {
@@ -104,7 +104,7 @@
     [super viewDidLayoutSubviews];
     if (_firstDidLayout) {
         if (_dataTag == EDITTYPE_NICKNAME){
-            _editTextField.text = _loginUser.nickname;
+            _editTextField.text = _loginUser.username;
             [_editTextField becomeFirstResponder];
         }else
         {
