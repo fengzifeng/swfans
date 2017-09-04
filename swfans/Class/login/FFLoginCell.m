@@ -44,10 +44,10 @@
     NSString *string = textField.text;
     if ([_titleContent isEqualToString:@"邮箱"]) {
         _loginObj.email = string;
-    } else if ([_titleContent isEqualToString:@"密码"]) {
+    } else if ([_titleContent isEqualToString:@"密码"] || [_titleContent isEqualToString:@"密码(不少于6位)"]) {
         _loginObj.password = string;
-    } else if ([_titleContent isEqualToString:@"密码"]){
-    
+    } else if ([_titleContent isEqualToString:@"用户名"]){
+        _loginObj.username = string;
     }
 }
 

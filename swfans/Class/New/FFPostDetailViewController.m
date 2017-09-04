@@ -40,6 +40,7 @@
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/page/%@",url_threadlist,_postId,@(pageIndex)];
     
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        [_tableView headerEndRefreshing];
         if (successed) {
             FFPostModel *model = [FFPostModel objectWithKeyValues:response.payload];
             _dataArray = [model.data mutableCopy];

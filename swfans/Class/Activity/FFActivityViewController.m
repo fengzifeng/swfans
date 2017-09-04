@@ -35,6 +35,7 @@
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",url_articles,@(_page)];
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        [_tableView headerEndRefreshing];
         if (successed) {
             FFActivityModel *model = [FFActivityModel objectWithKeyValues:response.payload];
             _dataArray = [model.data mutableCopy];

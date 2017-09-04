@@ -17,6 +17,7 @@
 }
 
 @property (nonatomic, strong) FFLoginUser *loginObj;
+@property (nonatomic, assign) BOOL isLogin;
 
 - (void)updateCell:(NSString *)titleStr;
 

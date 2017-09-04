@@ -13,6 +13,8 @@
 @interface FFPostDetailCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet ZYPAttributeLabel *contLabel;
+@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
+@property (nonatomic, weak) IBOutlet UIButton *faceButton;
 
 - (void)updateCell:(FFPostItemModel *)model;
 

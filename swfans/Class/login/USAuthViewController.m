@@ -101,9 +101,9 @@
 {
     _isLogin = !_isLogin;
     if (_isLogin) {
-        _titleArray = @[@"邮箱",@"密码"];
+        _titleArray = @[@"用户名",@"密码"];
     } else {
-        _titleArray = @[@"用户名",@"邮箱地址",@"密码(不少于6位)"];
+        _titleArray = @[@"用户名",@"邮箱",@"密码(不少于6位)"];
     }
     
     _tableView.tableHeaderView = [self getHeadView];
@@ -127,6 +127,7 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil] firstObject];
         cell.loginObj = _loginObj;
+        cell.isLogin = _isLogin;
     }
     
     [cell updateCell:_titleArray[indexPath.row]];
