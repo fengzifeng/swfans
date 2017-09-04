@@ -17,7 +17,7 @@
 @interface FFPostItemModel : NSObject
 
 @property (nonatomic, copy) NSString *fid;
-@property (nonatomic, copy) NSString *tid;
+@property (nonatomic, copy) NSString *pid;
 @property (nonatomic, copy) NSString *subject;
 @property (nonatomic, copy) NSString *replies;
 @property (nonatomic, copy) NSString *author;

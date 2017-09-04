@@ -13,5 +13,6 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *textField;
 @property (nonatomic, weak) IBOutlet UIPlaceHolderTextView *textView;
+@property (nonatomic, weak) IBOutlet UIButton *chooseBtn;
 
 @end

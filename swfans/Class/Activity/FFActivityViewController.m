@@ -22,8 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self requestData];
+    
+    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+    [_tableView headerBeginRefreshing];
+}
 
+-(void)headerRereshing{
+    [self requestData];
 }
 
 - (void)requestData

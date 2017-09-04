@@ -30,23 +30,31 @@
     [self rightTableView];
     [self requestData];
 
+    [_rightTableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+    
+    [_rightTableView headerBeginRefreshing];
     
     _isRelate = YES;
+}
+-(void)headerRereshing{
+    [self requestData];
 }
 
 - (void)requestData
 {
     [[DrHttpManager defaultManager] getRequestToUrl:url_structedgroups params:nil complete:^(BOOL successed, HttpResponse *response) {
+        [_rightTableView headerEndRefreshing];
+        [_rightTableView removeHeader];
         if (successed) {
             _leftTableView.hidden = NO;
             _rightTableView.hidden = NO;
+            [userDefaults setObject:response.payload forKey:UserDefaultKey_plateData];
             FFPlateModel *model = [FFPlateModel objectWithKeyValues:response.payload];
             _dataArray = model.data;
             [_leftTableView reloadData];
             [_rightTableView reloadData];
         }
     }];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,7 +72,7 @@
         _leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _leftTableView.showsVerticalScrollIndicator = NO;
         _leftTableView.backgroundColor = RGBCOLOR(217, 217, 217);
-        _leftTableView.hidden = YES;
+//        _leftTableView.hidden = YES;
         [self.view addSubview:_leftTableView];
     }
     return _leftTableView;
@@ -76,7 +84,7 @@
         _rightTableView.backgroundColor = [UIColor whiteColor];
         _rightTableView.delegate = self;
         _rightTableView.dataSource = self;
-        _rightTableView.hidden = YES;
+//        _rightTableView.hidden = YES;
         _rightTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_rightTableView];
     }

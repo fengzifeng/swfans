@@ -12,6 +12,7 @@
 
 @interface FFPostDetailViewController () <DrKeyBoardViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, copy) NSString *fid;
 
 @end
 
@@ -24,9 +25,14 @@
     self.title = @"帖子";
     
     self.boardView = [DrKeyBoardView creatKeyBoardWithDelegate:self parentVc:self];
-    [self requestData];
-
+    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+    [_tableView headerBeginRefreshing];
 }
+
+-(void)headerRereshing{
+    [self requestData];
+}
+
 - (void)requestData
 {
     NSUInteger pageIndex = 0;
@@ -37,6 +43,11 @@
         if (successed) {
             FFPostModel *model = [FFPostModel objectWithKeyValues:response.payload];
             _dataArray = [model.data mutableCopy];
+            if (_dataArray.count) {
+                FFPostItemModel *pModel = [_dataArray firstObject];
+                _fid = pModel.fid;
+                self.title = pModel.subject;
+            }
 
             [_tableView reloadData];
         }
@@ -45,17 +56,26 @@
 
 - (void)keyBoardViewHide:(DrKeyBoardView *)aKeyBoardView textView:(UITextView *)contentView
 {
-    [self.boardView resetSendBtnStatus];
-//    NSString *requestUrl = [NSString stringWithFormat:@"%@%@/page/%@",url_submitpost,_postId,@(pageIndex)];
-//    
-//    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
-//        if (successed) {
-//            FFPostModel *model = [FFPostModel objectWithKeyValues:response.payload];
-//            _dataArray = [model.data mutableCopy];
-//            
-//            [_tableView reloadData];
-//        }
-//    }];
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/api/%@/%@/%@",url_submitpost,_loginUser.username,_loginUser.signCode,contentView.text,_fid,_postId];
+
+    requestUrl = [requestUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        if (successed) {
+            [self.boardView resetSendBtnStatus];
+
+            if ([response.payload[@"data"][@"status"] integerValue] == 1) {
+                [self requestData];
+                [USSuspensionView showWithMessage:@"回复成功"];
+
+            } else {
+                [USSuspensionView showWithMessage:@"回复失败"];
+
+            }
+        } else {
+            [USSuspensionView showWithMessage:@"回复失败"];
+        }
+    }];
     
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

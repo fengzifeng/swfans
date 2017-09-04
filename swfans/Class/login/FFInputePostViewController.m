@@ -7,8 +7,12 @@
 //
 
 #import "FFInputePostViewController.h"
+#import "MCAboutMeViewController.h"
+#import "FFPlateModel.h"
 
 @interface FFInputePostViewController ()  <UITextViewDelegate,UITextFieldDelegate>
+
+@property (nonatomic, copy) NSString *fid;
 
 @end
 
@@ -42,12 +46,52 @@
     [self.view setTapActionWithBlock:^{
         [weakSelf.view endEditing:YES];
     }];
+    
+    [self requestData];
+}
 
+- (FFPlateModel *)requestData
+{
+    NSDictionary *dict = [userDefaults objectForKey:UserDefaultKey_plateData];
+
+    if (dict.allKeys.count) return [FFPlateModel objectWithKeyValues:dict];
+;
+    
+    [[DrHttpManager defaultManager] getRequestToUrl:url_structedgroups params:nil complete:^(BOOL successed, HttpResponse *response) {
+        if (successed) {
+            [userDefaults setObject:response.payload forKey:UserDefaultKey_plateData];
+        }
+    }];
+    return nil;
 }
 
 - (void)clickRight
 {
+    [self.view endEditing:YES];
+
+    if (!self.fid.length) {
+        [USSuspensionView showWithMessage:@"请选择分区"];
+        return;
+    } else if (!_textView.text.length) {
+        [USSuspensionView showWithMessage:@"请填写内容"];
+        return;
+    }
     
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/api/%@/%@",url_submitpost,_loginUser.username,_loginUser.signCode,_textView.text,_fid];
+
+    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        if (successed) {
+            if ([response.payload[@"data"][@"status"] integerValue] == 1) {
+                [USSuspensionView showWithMessage:@"发帖成功"];
+                [self dismissViewControllerAnimated:YES completion:nil];
+            } else {
+                [USSuspensionView showWithMessage:@"发帖失败"];
+            }
+            
+        } else {
+            [USSuspensionView showWithMessage:@"发帖失败"];
+        }
+    }];
     
 }
 
@@ -65,7 +109,6 @@
         return;
     }
     
-    NSString *string = textField.text;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -89,13 +132,23 @@
 
 - (IBAction)clickChoose:(id)sender
 {
-    USActionSheet *actionSheet = [USActionSheet initWithTitle:nil cancelButtonTitle:@"取消" otherButtonTitles:@"重试", @"删除上传失败的照片", nil];
-    [actionSheet showWithCompletionBlock:^(NSInteger buttonIndex) {
-        if (buttonIndex == 0) {
+    [self.view endEditing:YES];
+    FFPlateModel * model = [self requestData];
+    NSMutableArray *strArray = [NSMutableArray new];
+    if (model.data.count) {
+        for (FFPlateSectionModel *itemModel in model.data) {
+            [strArray addObject:itemModel.name];
         }
-        else if (buttonIndex == 1) {
-        }
-    }];
+        USActionSheet *actionSheet = [USActionSheet initWithTitle:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitleArray:strArray];
+        [actionSheet showWithCompletionBlock:^(NSInteger buttonIndex) {
+            if (buttonIndex < model.data.count) {
+                FFPlateSectionModel *itemModel = model.data[buttonIndex];
+                self.fid = itemModel.fid;
+                [_chooseBtn setTitle:itemModel.name forState:UIControlStateNormal];
+                [_chooseBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            }
+         }];
+    }
 
 }
 

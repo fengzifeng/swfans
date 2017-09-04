@@ -68,7 +68,7 @@
     if (size.height > 0) {
 
         [UIView animateWithDuration:duration animations:^{
-            self.transform=CGAffineTransformMakeTranslation(0, -size.height - 118);
+            self.boardView.transform=CGAffineTransformMakeTranslation(0, -size.height - 118);
             self.backgroundColor = RGBACOLOR(0, 0, 0, 0.8);
         }];
     }
@@ -82,7 +82,7 @@
 
     if (size.height > 0) {// 百度键盘会调用两次，第一次高度为0
 
-        self.transform=CGAffineTransformIdentity;
+        self.boardView.transform=CGAffineTransformIdentity;
         
         [UIView animateWithDuration:duration animations:^{
             self.backgroundColor = [UIColor clearColor];
@@ -110,6 +110,8 @@
     cancalButton.titleLabel.font = [UIFont systemFontOfSize:16];
     [cancalButton addTarget:self action:@selector(cancalKeyBoard) forControlEvents:UIControlEventTouchUpInside];
     [boardView addSubview:cancalButton];
+    [cancalButton setTitleColor:HexColor(0xa9a9a9) forState:UIControlStateNormal];
+    
     self.cancalButton = cancalButton;
     
     _sendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -129,9 +131,9 @@
     [self.textView setDelegate:self];
     self.textView.font=[UIFont systemFontOfSize:14.0];
     [boardView addSubview:self.textView];
-    self.textView.enablesReturnKeyAutomatically = YES;
-    [self.textView setInputView:nil];
-    [self.textView reloadInputViews];
+//    self.textView.enablesReturnKeyAutomatically = YES;
+//    [self.textView setInputView:nil];
+//    [self.textView reloadInputViews];
 
 }
 

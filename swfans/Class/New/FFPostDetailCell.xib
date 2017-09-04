@@ -96,6 +96,9 @@
                         <state key="normal" title="举报">
                             <color key="titleColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="clickReport:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XtU-Pp-XXP"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

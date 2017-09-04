@@ -77,14 +77,19 @@
     }
     
     
-    for (UIButton *item in _tabButtonCollection) {
-        item.selected = index==item.tag;
-    }
-    
     if (index == 2) {
-        FFInputePostViewController *vc = [FFInputePostViewController viewController];
-        [self presentViewController:vc animated:YES completion:nil];
+        if (_loginUser) {
+            FFInputePostViewController *vc = [FFInputePostViewController viewController];
+            [self presentViewController:vc animated:YES completion:nil];
+        } else {
+            [self swithchTapIndex:4];
+        }
     } else {
+        
+        for (UIButton *item in _tabButtonCollection) {
+            item.selected = index==item.tag;
+        }
+        
         [currentViewController.view removeFromSuperview];
         [currentViewController removeFromParentViewController];
         

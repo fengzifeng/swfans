@@ -15,6 +15,9 @@
 @interface FFNewViewController ()
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, assign) NSInteger page;
+//@property (nonatomic, assign) BOOL isUp;
+//@property (nonatomic, assign) BOOL isDown;
 
 @end
 
@@ -28,33 +31,18 @@
     if (_forum_id.length) [_tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
     [_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
-//    [_tableView headerBeginRefreshing];
-    self.dataArray = [NSMutableArray new];
-    
-    [self requestData];
+    [_tableView headerBeginRefreshing];
 }
 
 -(void)headerRereshing{
+    _page = 0;
     [self requestData];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        // 刷新表格
-//        [_commentListView.commentTable reloadData];
-//        // (最好在刷新表格后调用)调用headerEndRefreshing可以结束刷新状态
-//        [_commentListView.commentTable headerEndRefreshing];
-//    });
 }
 
 - (void)footerRereshing
 {
-    
+    _page++;
     [self requestData];
-    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        // 刷新表格
-//        [_commentListView.commentTable reloadData];
-//        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-//        [_commentListView.commentTable footerEndRefreshing];
-//    });
 }
 
 
@@ -111,10 +99,22 @@
     }
     
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        
+        [_tableView headerEndRefreshing];
+        [_tableView footerEndRefreshing];
+
         if (successed) {
             FFNewListModel *model = [FFNewListModel objectWithKeyValues:response.payload];
-            _dataArray = [model.data mutableCopy];
-            [_tableView reloadData];
+            if (model.data.count) {
+                if (!_page) {
+                    _dataArray = [model.data mutableCopy];
+                } else {
+                    [_dataArray addObjectsFromArray:model.data];
+                }
+                [_tableView reloadData];
+            } else {
+                if (_page) _page--;
+            }
         }
     }];
 }

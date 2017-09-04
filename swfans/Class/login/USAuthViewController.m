@@ -153,7 +153,7 @@
 - (void)login
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/%@",url_register,_loginObj.username,_loginObj.password,_loginObj.email];
-    if (_isLogin) requestUrl = [NSString stringWithFormat:@"%@%@/%@",url_login,_loginObj.username,_loginObj.password];
+    if (_isLogin) requestUrl = [NSString stringWithFormat:@"%@%@/%@",url_login,_loginObj.email,_loginObj.password];
     
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
         if (successed) {

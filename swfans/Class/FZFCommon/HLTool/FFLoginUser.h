@@ -27,7 +27,6 @@
 @property (nonatomic, retain) NSString * status;
 
 
-
 - (void)synchronize;
 
 @end

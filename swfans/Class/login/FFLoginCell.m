@@ -46,6 +46,8 @@
         _loginObj.email = string;
     } else if ([_titleContent isEqualToString:@"密码"]) {
         _loginObj.password = string;
+    } else if ([_titleContent isEqualToString:@"密码"]){
+    
     }
 }
 

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FFInputePostViewController">
             <connections>
+                <outlet property="chooseBtn" destination="tqY-LD-SYE" id="H8V-ZI-7re"/>
                 <outlet property="textField" destination="IZ5-Iv-HvN" id="c4J-aF-clD"/>
                 <outlet property="textView" destination="me2-zx-ZrO" id="jRT-xi-gZh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
