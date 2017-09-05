@@ -35,7 +35,7 @@
     self.navigationBar.hidden = YES;
     
     if (_isLogin) {
-        _titleArray = @[@"邮箱",@"密码"];
+        _titleArray = @[@"用户名",@"密码"];
     } else {
         _titleArray = @[@"用户名",@"邮箱地址",@"密码(不少于6位)"];
     }
@@ -105,7 +105,8 @@
     } else {
         _titleArray = @[@"用户名",@"邮箱",@"密码(不少于6位)"];
     }
-    
+    _loginObj = [[FFLoginUser alloc] init];
+
     _tableView.tableHeaderView = [self getHeadView];
     _tableView.tableFooterView = [self getFootView];
     [_tableView reloadData];
@@ -154,11 +155,14 @@
 - (void)login
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/%@",url_register,_loginObj.username,_loginObj.password,_loginObj.email];
-    if (_isLogin) requestUrl = [NSString stringWithFormat:@"%@%@/%@",url_login,_loginObj.email,_loginObj.password];
+    if (_isLogin) requestUrl = [NSString stringWithFormat:@"%@%@/%@",url_login,_loginObj.username,_loginObj.password];
     
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
         if (successed) {
             FFLoginUser *user = [FFLoginUser objectWithKeyValues:response.payload[@"data"]];
+            NSString *str = response.payload[@"data"][@"message"];
+            if (str.length) [USSuspensionView showWithMessage:str];
+            
             if ([user.status integerValue] == 1) {
                 if (!_isLogin) {
                     [self clickSwitch];
@@ -167,8 +171,8 @@
                     [self dismissViewControllerAnimated:YES completion:nil];
                 }
             } else {
-                NSString *str = response.payload[@"data"][@"message"];
-                if (str.length) [USSuspensionView showWithMessage:str];
+//                NSString *str = response.payload[@"data"][@"message"];
+//                if (str.length) [USSuspensionView showWithMessage:str];
             }
         }
     }];

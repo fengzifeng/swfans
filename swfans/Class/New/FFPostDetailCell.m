@@ -33,6 +33,8 @@
     _contLabel.textfont = [UIFont systemFontOfSize:14];
     _contLabel.text1 = model.message;
     [_contLabel autoSetDimension:ALDimensionHeight toSize:model.contentHeight];
+    [_faceButton sd_setImageWithURL:[NSURL URLWithString:model.userImagePath] forState:UIControlStateNormal];
+    _timeLabel.text = [NSString stringWithFormat:@"发表于 %@",model.dateline];
 
 }
 
