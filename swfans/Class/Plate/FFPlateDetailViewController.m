@@ -60,18 +60,18 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [self.parentViewController setNavigationTitleView:nil];
     self.parentViewController.title = @"板块";
 }
 
 - (UITableView *)leftTableView {
     if (nil == _leftTableView){
         _leftTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 100, SCREEN_HEIGHT - 64 - 49)];
-        _leftTableView.backgroundColor = [UIColor whiteColor];
         _leftTableView.delegate = self;
         _leftTableView.dataSource = self;
         _leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _leftTableView.showsVerticalScrollIndicator = NO;
-        _leftTableView.backgroundColor = RGBCOLOR(217, 217, 217);
+        _leftTableView.backgroundColor = RGBCOLOR(246, 246, 246);
 //        _leftTableView.hidden = YES;
         [self.view addSubview:_leftTableView];
     }

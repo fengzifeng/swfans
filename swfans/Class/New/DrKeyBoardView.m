@@ -131,7 +131,7 @@
     [self.textView setDelegate:self];
     self.textView.font=[UIFont systemFontOfSize:14.0];
     [boardView addSubview:self.textView];
-//    self.textView.enablesReturnKeyAutomatically = YES;
+    self.textView.enablesReturnKeyAutomatically = YES;
 //    [self.textView setInputView:nil];
 //    [self.textView reloadInputViews];
 

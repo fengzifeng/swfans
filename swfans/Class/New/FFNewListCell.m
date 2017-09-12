@@ -20,13 +20,17 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    _upImaegView.image = [_upImaegView.image resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, -5)];
+
 
 }
 
 - (void)updateCell:(FFNewListItemModel *)model
 {
     _currentModel = model;
-    
+    _faceButton.layer.masksToBounds = YES;
+    _faceButton.layer.cornerRadius = 10;
     [_faceButton sd_setImageWithURL:[NSURL URLWithString:model.userImagePath] forState:UIControlStateNormal];
     _nameLabel.text = model.author;
     [_typeLabel setTitle:model.forumName forState:UIControlStateNormal];

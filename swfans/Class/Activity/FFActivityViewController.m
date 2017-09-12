@@ -47,6 +47,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [self.parentViewController setNavigationTitleView:nil];
     self.parentViewController.title = @"活动";
 }
 

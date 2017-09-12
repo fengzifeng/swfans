@@ -14,9 +14,7 @@
 
 #define _loginUser            [AuthData loginUser]
 #define NetManager            [DrHttpManager defaultManager]
-#define TaskManager           [MCTaskManager defaultManager]
 #define Location(titude)      [[userDefaults valueForKey:titude] floatValue]
-#define FaceBookAvatarUlr(faceBookUserId)    [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large",faceBookUserId]
 
 
 #define kFont_10 [UIFont systemFontOfSize:10]
@@ -48,6 +46,8 @@
 #define url_register                GeneralUrl(@"register/")
 #define url_login                   GeneralUrl(@"login/")
 #define url_submitarticle           GeneralUrl(@"submit_article/")
+#define url_search                  GeneralUrl(@"search_threads/page/")
+//http://t.vduor.cn/api.html
 
 #define NAVBAR_TAG 100109
 

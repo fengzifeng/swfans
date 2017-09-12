@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="_tabLineLabel" destination="QfG-fB-d2M" id="yg4-R4-eMT"/>
                 <outlet property="tabBarView" destination="5xz-vX-e5j" id="d3h-FQ-P7G"/>
+                <outlet property="unreadActive" destination="ly6-8U-006" id="Wcf-qt-EP9"/>
+                <outlet property="unreadPlate" destination="XTj-aJ-6Tf" id="tER-an-7kS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="tabButtonCollection" destination="MaT-MA-YCZ" id="Pvs-W1-jjO"/>
                 <outletCollection property="tabButtonCollection" destination="fiL-ry-Tbq" id="K19-Mt-1D4"/>
@@ -95,11 +97,21 @@
                                         <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="aEK-7m-yAd"/>
                                     </connections>
                                 </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-aJ-6Tf">
+                                    <rect key="frame" x="45.5" y="3" width="8" height="8"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.2181982177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="8" id="3Nt-pL-w2Q"/>
+                                        <constraint firstAttribute="width" constant="8" id="AYv-tn-Hj3"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="XTj-aJ-6Tf" firstAttribute="top" secondItem="Fcs-sR-TNJ" secondAttribute="top" constant="3" id="1SM-Ad-xuQ"/>
                                 <constraint firstItem="fiL-ry-Tbq" firstAttribute="centerX" secondItem="Fcs-sR-TNJ" secondAttribute="centerX" id="JWe-rK-up2"/>
                                 <constraint firstAttribute="height" constant="49" id="Wod-ZT-3LF"/>
+                                <constraint firstItem="XTj-aJ-6Tf" firstAttribute="centerX" secondItem="Fcs-sR-TNJ" secondAttribute="centerX" constant="12" id="dJq-em-jXW"/>
                                 <constraint firstAttribute="bottom" secondItem="fiL-ry-Tbq" secondAttribute="bottom" id="tPN-dn-tSs"/>
                             </constraints>
                         </view>
@@ -159,12 +171,22 @@
                                         <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="8jM-vc-cPm"/>
                                     </connections>
                                 </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-8U-006">
+                                    <rect key="frame" x="45.5" y="3" width="8" height="8"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.2181982177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="8" id="5bg-gJ-ceA"/>
+                                        <constraint firstAttribute="height" constant="8" id="ZQE-Q7-xa8"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="5Y0-d0-Rxb" secondAttribute="bottom" id="HIR-fd-KSB"/>
                                 <constraint firstAttribute="height" constant="49" id="MP6-Kj-zc8"/>
+                                <constraint firstItem="ly6-8U-006" firstAttribute="centerX" secondItem="Iqd-4l-Vqb" secondAttribute="centerX" constant="12" id="jFh-T4-6qN"/>
                                 <constraint firstItem="5Y0-d0-Rxb" firstAttribute="centerX" secondItem="Iqd-4l-Vqb" secondAttribute="centerX" id="lKe-6a-rsy"/>
+                                <constraint firstItem="ly6-8U-006" firstAttribute="top" secondItem="Iqd-4l-Vqb" secondAttribute="top" constant="3" id="zZR-tC-Sda"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mep-we-1wi">

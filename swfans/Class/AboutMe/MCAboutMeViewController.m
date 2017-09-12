@@ -34,7 +34,7 @@
 - (void)loginSuccess
 {
     self.parentViewController.title = _loginUser?_loginUser.username:@"个人主页";
-    _titleArray = @[@[@"我的收藏",@"最近浏览"],@[@"联系代理商",@"投诉建议",@"退出登录"]];
+    _titleArray = @[@"联系代理商",@"投诉建议",@"退出登录"];
     _tableView.tableHeaderView = [self createHeadView];
     [_tableView reloadData];
 }
@@ -64,16 +64,18 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.backgroundColor = HexColor(0xebecee);
+    _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
+//    HexColor(0xebecee);
     _tableView.tableHeaderView = [self createHeadView];
-    self.view.backgroundColor = HexColor(0xebecee);
+    self.view.backgroundColor = RGBCOLOR(242, 244, 247);
     
-    if (_loginUser) _titleArray = @[@[@"我的收藏",@"最近浏览"],@[@"联系代理商",@"投诉建议",@"退出登录"]];
+    if (_loginUser) _titleArray = @[@"联系代理商",@"投诉建议",@"退出登录"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [self.parentViewController setNavigationTitleView:nil];
     self.parentViewController.title = _loginUser?_loginUser.username:@"个人主页";
 }
 
@@ -89,7 +91,6 @@
     [view addSubview:postLabel];
     UIButton *leftBUtton = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBUtton.frame = CGRectMake((view.width - 45)/2.0, CGRectGetMaxY(postLabel.frame) + 17, 45, 45);
-    leftBUtton.backgroundColor = [UIColor grayColor];
     [leftBUtton setImage:image forState:UIControlStateNormal];
     [view addSubview:leftBUtton];
 
@@ -104,7 +105,6 @@
     UIView *upBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0)];
     upBgView.backgroundColor = HexColor(0xaa2d1b);
     [headView addSubview:upBgView];
-    
 
     if (_loginUser) {
         upBgView.height = 110;
@@ -114,20 +114,30 @@
         faceBUtton.layer.cornerRadius = 71/2.0;
         faceBUtton.backgroundColor = [UIColor whiteColor];
         [headView addSubview:faceBUtton];
+        [faceBUtton setImage:[UIImage imageNamed:@"about_avatar"] forState:UIControlStateNormal];
 
-        UIView *midLeftView = [self getMidView:@"我的发帖" image:nil];
+        UIView *midLeftView = [self getMidView:@"我的发帖" image:[UIImage imageNamed:@"about_post"]];
         midLeftView.origin = CGPointMake(0, CGRectGetMaxY(upBgView.frame));
         [headView addSubview:midLeftView];
-        UIView *midRightView = [self getMidView:@"我的回帖" image:nil];
+        UIView *midRightView = [self getMidView:@"我的回帖" image:[UIImage imageNamed:@"about_mypost"]];
         midRightView.origin = CGPointMake(SCREEN_WIDTH/2.0, CGRectGetMaxY(upBgView.frame));
         [headView addSubview:midRightView];
         
-        UIView *downView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(midLeftView.frame) + 10, SCREEN_WIDTH, 117)];
-        FFAboutDownHeadView *FFView = [[[NSBundle mainBundle] loadNibNamed:@"FFAboutDownHeadView" owner:self options:nil] firstObject];
-        [downView addSubview:FFView];
-        [FFView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-        [headView addSubview:downView];
-        headView.height = 117 + 117 + 110 + 10;
+//        UIView *downView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(midLeftView.frame) + 10, SCREEN_WIDTH, 117)];
+//        FFAboutDownHeadView *FFView = [[[NSBundle mainBundle] loadNibNamed:@"FFAboutDownHeadView" owner:self options:nil] firstObject];
+//        [downView addSubview:FFView];
+//        [FFView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+//        [headView addSubview:downView];
+        headView.height = 117 + 110;
+        
+//        midRightView.layer.shadowOpacity = 0.5;// 阴影透明度
+//    
+//        _lineLabel.layer.shadowColor = [UIColor redColor].CGColor;// 阴影的颜色
+//    
+//        _lineLabel.layer.shadowRadius = 3;// 阴影扩散的范围控制
+//    
+//        _lineLabel.layer.shadowOffset = CGSizeMake(1, 1);
+
     } else {
         upBgView.height = 224;
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 65, SCREEN_WIDTH, 15)];
@@ -173,12 +183,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return _titleArray.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_titleArray[section] count];
+    return _titleArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -188,9 +198,29 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil] firstObject];
     }
+    if (indexPath.row == 2) {
+        cell.arrImageView.hidden = YES;
+    } else {
+        cell.arrImageView.hidden = NO;
+    }
     
-    [cell updateCell:_titleArray[indexPath.section][indexPath.row]];
+    [cell updateCell:_titleArray[indexPath.row]];
     return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 5)];
+    [view addSubview:imageView];
+    imageView.image = [UIImage imageNamed:@"new_post_bg.png"];
+    imageView.image = [imageView.image resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, -5)];
+    
+    
+    return view;
+
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -202,7 +232,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.section == 1 && indexPath.row == 2) {
+    if (indexPath.row == 2) {
         [self quitLogin];
     }
 

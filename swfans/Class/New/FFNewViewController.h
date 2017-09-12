@@ -15,6 +15,7 @@
 
 @property (nonatomic, copy) NSString *forum_id;
 @property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSString *searchStr;
 
 - (void)requestData;
 

@@ -26,7 +26,6 @@
         _contLabel.hidden = NO;;
 
     }
-
 }
 
 

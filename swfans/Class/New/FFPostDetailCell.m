@@ -23,12 +23,18 @@
     [super awakeFromNib];
     // Initialization code
     _contLabel.isHtml = YES;
+    _upImaegView.image = [_upImaegView.image resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, -5)];
 
 }
 
 - (void)updateCell:(FFPostItemModel *)model
 {
     _model = model;
+    _postButton.layer.masksToBounds = YES;
+    _postButton.layer.cornerRadius = 5;
+    _faceButton.layer.masksToBounds = YES;
+    _faceButton.layer.cornerRadius = 10;
+    _nameLabel.text = model.author;
     _contLabel.textcolor = HexColor(0x5a5a5a);
     _contLabel.textfont = [UIFont systemFontOfSize:14];
     _contLabel.text1 = model.message;
@@ -58,6 +64,7 @@
 
 - (IBAction)clickPost:(id)sender
 {
+    ((FFPostDetailViewController *)self.nearsetViewController).boardView.top = 0;
     [((FFPostDetailViewController *)self.nearsetViewController).boardView.textView becomeFirstResponder];
 }
 

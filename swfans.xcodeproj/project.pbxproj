@@ -224,6 +224,13 @@
 		379A7F061D2E2FD000757F36 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7F051D2E2FD000757F36 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		37B642E31F5000C300B06DBB /* FFPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B642E11F5000C300B06DBB /* FFPostDetailViewController.m */; };
 		37B642E41F5000C300B06DBB /* FFPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B642E21F5000C300B06DBB /* FFPostDetailViewController.xib */; };
+		37CEDC121F67BF4D004682F7 /* FFSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CEDC111F67BF4D004682F7 /* FFSearchTextField.m */; };
+		37CEDC141F67C25B004682F7 /* new_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEDC131F67C25B004682F7 /* new_search.png */; };
+		37CEDC171F67C386004682F7 /* FFSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CEDC161F67C386004682F7 /* FFSearchView.m */; };
+		37CEDC1E1F67E232004682F7 /* about_arrar.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEDC1A1F67E232004682F7 /* about_arrar.png */; };
+		37CEDC1F1F67E232004682F7 /* about_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEDC1B1F67E232004682F7 /* about_avatar.png */; };
+		37CEDC201F67E232004682F7 /* about_mypost.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEDC1C1F67E232004682F7 /* about_mypost.png */; };
+		37CEDC211F67E232004682F7 /* about_post.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEDC1D1F67E232004682F7 /* about_post.png */; };
 		37E5CB5C1D2E61D500842A51 /* MCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E5CB5B1D2E61D500842A51 /* MCHomeViewController.m */; };
 		37E5CB631D2E63FE00842A51 /* MCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E5CB621D2E63FE00842A51 /* MCHomeViewController.xib */; };
 		37E5CB791D2E650800842A51 /* main_tabBar_circle_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E5CB681D2E650800842A51 /* main_tabBar_circle_highlight@2x.png */; };
@@ -623,6 +630,15 @@
 		37B642E01F5000C300B06DBB /* FFPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPostDetailViewController.h; sourceTree = "<group>"; };
 		37B642E11F5000C300B06DBB /* FFPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPostDetailViewController.m; sourceTree = "<group>"; };
 		37B642E21F5000C300B06DBB /* FFPostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPostDetailViewController.xib; sourceTree = "<group>"; };
+		37CEDC101F67BF4D004682F7 /* FFSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSearchTextField.h; sourceTree = "<group>"; };
+		37CEDC111F67BF4D004682F7 /* FFSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSearchTextField.m; sourceTree = "<group>"; };
+		37CEDC131F67C25B004682F7 /* new_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_search.png; sourceTree = "<group>"; };
+		37CEDC151F67C386004682F7 /* FFSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSearchView.h; sourceTree = "<group>"; };
+		37CEDC161F67C386004682F7 /* FFSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSearchView.m; sourceTree = "<group>"; };
+		37CEDC1A1F67E232004682F7 /* about_arrar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_arrar.png; sourceTree = "<group>"; };
+		37CEDC1B1F67E232004682F7 /* about_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_avatar.png; sourceTree = "<group>"; };
+		37CEDC1C1F67E232004682F7 /* about_mypost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_mypost.png; sourceTree = "<group>"; };
+		37CEDC1D1F67E232004682F7 /* about_post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_post.png; sourceTree = "<group>"; };
 		37E5CB5A1D2E61D500842A51 /* MCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCHomeViewController.h; sourceTree = "<group>"; };
 		37E5CB5B1D2E61D500842A51 /* MCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHomeViewController.m; sourceTree = "<group>"; };
 		37E5CB621D2E63FE00842A51 /* MCHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCHomeViewController.xib; sourceTree = "<group>"; };
@@ -1259,6 +1275,10 @@
 				3765AA531F4EFE2400496299 /* ZYPAttributeLabel.m */,
 				3765AA551F4EFE6C00496299 /* ImageAttributeModel.h */,
 				3765AA561F4EFE6C00496299 /* ImageAttributeModel.m */,
+				37CEDC101F67BF4D004682F7 /* FFSearchTextField.h */,
+				37CEDC111F67BF4D004682F7 /* FFSearchTextField.m */,
+				37CEDC151F67C386004682F7 /* FFSearchView.h */,
+				37CEDC161F67C386004682F7 /* FFSearchView.m */,
 			);
 			path = New;
 			sourceTree = "<group>";
@@ -1333,6 +1353,7 @@
 			children = (
 				3765AA161F4586F600496299 /* new_post_bg.png */,
 				37986D941F512B3B005ADAEB /* new_icon_send.png */,
+				37CEDC131F67C25B004682F7 /* new_search.png */,
 			);
 			path = new;
 			sourceTree = "<group>";
@@ -1342,6 +1363,10 @@
 			children = (
 				3765AA3E1F4EAFFE00496299 /* login_close.png */,
 				3765AA3C1F4EAF8400496299 /* login_logo.png */,
+				37CEDC1A1F67E232004682F7 /* about_arrar.png */,
+				37CEDC1B1F67E232004682F7 /* about_avatar.png */,
+				37CEDC1C1F67E232004682F7 /* about_mypost.png */,
+				37CEDC1D1F67E232004682F7 /* about_post.png */,
 			);
 			path = aboutme;
 			sourceTree = "<group>";
@@ -1509,6 +1534,7 @@
 				3765A9D31F4457DE00496299 /* FFActivityViewController.xib in Resources */,
 				374C6FA81D2F70F4003577CA /* USPicker-Checkmark-Selected@2x.png in Resources */,
 				3765A99D1F44312800496299 /* main_tabBar_add.png in Resources */,
+				37CEDC141F67C25B004682F7 /* new_search.png in Resources */,
 				3765AA4C1F4EB10100496299 /* FFLoginCell.xib in Resources */,
 				373757D11D00001200582ECD /* MCRootViewController.xib in Resources */,
 				3765AA261F4E805900496299 /* FFActivityListCell.xib in Resources */,
@@ -1533,10 +1559,12 @@
 				37559F311D3362D10078C374 /* UMFeedbackTableCell.xib in Resources */,
 				37559E991D2F9D250078C374 /* RSKImageCropperStrings.bundle in Resources */,
 				37559EFB1D2FB9E80078C374 /* MCEditViewController.xib in Resources */,
+				37CEDC1E1F67E232004682F7 /* about_arrar.png in Resources */,
 				37559F2F1D3362D10078C374 /* MCFeedbackViewController.xib in Resources */,
 				37E5CB631D2E63FE00842A51 /* MCHomeViewController.xib in Resources */,
 				3765AA1C1F458ECA00496299 /* FFPlateLeftCell.xib in Resources */,
 				374C6FA91D2F70F4003577CA /* USPicker-Checkmark-Selected@3x.png in Resources */,
+				37CEDC1F1F67E232004682F7 /* about_avatar.png in Resources */,
 				373757281CFFFD5700582ECD /* Assets.xcassets in Resources */,
 				3765AA511F4EF46F00496299 /* FFPostDetailCell.xib in Resources */,
 				37E5CB7A1D2E650800842A51 /* main_tabBar_circle_highlight@3x.png in Resources */,
@@ -1560,6 +1588,7 @@
 				3779D6261F5AA1A00021278B /* USSuspensionView.xib in Resources */,
 				37559F001D2FBA850078C374 /* USEditUserInfoViewController.xib in Resources */,
 				37E5CB8D1D2E663500842A51 /* USAuthViewController.xib in Resources */,
+				37CEDC201F67E232004682F7 /* about_mypost.png in Resources */,
 				374C6FA51D2F70F4003577CA /* USPicker-Assets-Locked@2x.png in Resources */,
 				3765A9951F442E5A00496299 /* main_tabBar_activity_normal.png in Resources */,
 				3765A9A01F44312800496299 /* main_tabBar_new_highlight.png in Resources */,
@@ -1569,6 +1598,7 @@
 				3765AA3F1F4EAFFE00496299 /* login_close.png in Resources */,
 				3765A9941F442E5A00496299 /* main_tabBar_activity_highlight.png in Resources */,
 				3765A9A31F44312800496299 /* main_tabBar_plate_normal.png in Resources */,
+				37CEDC211F67E232004682F7 /* about_post.png in Resources */,
 				37986D9F1F558251005ADAEB /* FFCommentCell.xib in Resources */,
 				374C6FAB1D2F70F4003577CA /* USAssetCollectionCell.xib in Resources */,
 				3755A0FC1D3E1B170078C374 /* pub_nav_white_back@2x.png in Resources */,
@@ -1618,6 +1648,7 @@
 				373758141D00056E00582ECD /* NSObject+YYModel.m in Sources */,
 				373757201CFFFD5700582ECD /* AppDelegate.m in Sources */,
 				373758611D0005CC00582ECD /* HBCoreLabel.m in Sources */,
+				37CEDC171F67C386004682F7 /* FFSearchView.m in Sources */,
 				373757C71D00001200582ECD /* MCHVButton.m in Sources */,
 				373757D01D00001200582ECD /* MCRootViewController.m in Sources */,
 				37986D9E1F558250005ADAEB /* FFCommentCell.m in Sources */,
@@ -1675,6 +1706,7 @@
 				3765A9F11F456E0300496299 /* FFNewListModel.m in Sources */,
 				3765A9E11F445FB700496299 /* FFNewListCell.m in Sources */,
 				37559E9F1D2F9D250078C374 /* UIImage+RSKImageCropper.m in Sources */,
+				37CEDC121F67BF4D004682F7 /* FFSearchTextField.m in Sources */,
 				373758151D00056E00582ECD /* YYClassInfo.m in Sources */,
 				3765AA341F4E80E300496299 /* FFPlateDetailViewController.m in Sources */,
 				37559EDB1D2FA5AC0078C374 /* USEditUserInfoCell.m in Sources */,

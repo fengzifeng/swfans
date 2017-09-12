@@ -28,8 +28,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
-        
         _selectedIndex = -1;
         navArray = @[[self viewControllerWithClass:[FFNewViewController class]],  //
                      [self viewControllerWithClass:[FFPlateDetailViewController class]],    //
@@ -45,6 +43,11 @@
 {
     [super viewDidLoad];
     
+    unreadPlate.layer.masksToBounds = YES;
+    unreadPlate.layer.cornerRadius = 4;
+    unreadActive.layer.masksToBounds = YES;
+    unreadActive.layer.cornerRadius = 4;
+
     int i = 0;
     for (MCHVButton *item in _tabButtonCollection) {
         
@@ -85,6 +88,11 @@
             [self swithchTapIndex:4];
         }
     } else {
+        if (index == 1) {
+            unreadPlate.hidden = YES;
+        } else if (index == 3) {
+            unreadActive.hidden = YES;
+        }
         
         for (UIButton *item in _tabButtonCollection) {
             item.selected = index==item.tag;

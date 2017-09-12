@@ -14,6 +14,7 @@
     IBOutlet UILabel *_lineLabel;
 }
 @property (nonatomic, weak) IBOutlet UILabel *contLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *arrImageView;
 
 - (void)updateCell:(NSString *)titleStr;
 

@@ -19,6 +19,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *desLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *replyLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *upImaegView;
+
 
 - (void)updateCell:(FFNewListItemModel *)model;
 

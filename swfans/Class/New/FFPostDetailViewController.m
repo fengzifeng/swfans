@@ -13,6 +13,8 @@
 @interface FFPostDetailViewController () <DrKeyBoardViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, copy) NSString *fid;
+@property (nonatomic, strong) UIView *headView;
+@property (nonatomic, strong) UILabel *headLabel;
 
 @end
 
@@ -47,12 +49,29 @@
             if (_dataArray.count) {
                 FFPostItemModel *pModel = [_dataArray firstObject];
                 _fid = pModel.fid;
-                self.title = pModel.subject;
+                _tableView.tableHeaderView = [self headView:pModel.subject];
             }
 
             [_tableView reloadData];
         }
     }];
+}
+
+- (UIView *)headView:(NSString *)str
+{
+    if (!_headView) {
+        _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        _headLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, SCREEN_WIDTH - 40, 50)];
+        [_headView addSubview:_headLabel];
+        _headLabel.textColor = [UIColor blackColor];
+        _headLabel.font = [UIFont boldSystemFontOfSize:19];
+
+    }
+    _headLabel.text = str;
+    CGFloat height = [str stringHeightWithFont:_headLabel.font width:_headLabel.width] + 10;
+    _headLabel.height = height>50?height:50;
+    _headView.height = _headLabel.height;
+    return _headView;
 }
 
 - (void)keyBoardViewHide:(DrKeyBoardView *)aKeyBoardView textView:(UITextView *)contentView

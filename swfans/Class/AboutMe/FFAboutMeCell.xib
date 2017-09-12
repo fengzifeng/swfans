@@ -15,11 +15,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plh-8G-FIc">
-                        <rect key="frame" x="28" y="0.0" width="200" height="44"/>
+                        <rect key="frame" x="28" y="0.0" width="200" height="43"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="r1e-qY-gNu"/>
                         </constraints>
@@ -27,8 +27,15 @@
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUu-kk-Vmo">
-                        <rect key="frame" x="258" y="0.0" width="100" height="44"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_arrar.png" translatesAutoresizingMaskIntoConstraints="NO" id="RrB-tW-ARD">
+                        <rect key="frame" x="358" y="16" width="7" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="7" id="Y6O-Vq-Io9"/>
+                            <constraint firstAttribute="height" constant="11.5" id="sIw-Ov-Sd7"/>
+                        </constraints>
+                    </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUu-kk-Vmo">
+                        <rect key="frame" x="258" y="0.0" width="100" height="43"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="eZa-A7-Tlh"/>
                         </constraints>
@@ -54,6 +61,8 @@
                     <constraint firstItem="St6-mv-aIe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ID5-iK-tHj"/>
                     <constraint firstItem="Plh-8G-FIc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="M1x-YY-hpR"/>
                     <constraint firstAttribute="trailing" secondItem="sUu-kk-Vmo" secondAttribute="trailing" constant="17" id="Nfm-4R-Lhr"/>
+                    <constraint firstItem="RrB-tW-ARD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QTI-Pc-2oR"/>
+                    <constraint firstAttribute="trailing" secondItem="RrB-tW-ARD" secondAttribute="trailing" constant="10" id="SNO-0Z-VPZ"/>
                     <constraint firstItem="sUu-kk-Vmo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dBK-fU-vkd"/>
                     <constraint firstAttribute="bottom" secondItem="Plh-8G-FIc" secondAttribute="bottom" id="fEO-al-4Fo"/>
                     <constraint firstAttribute="bottom" secondItem="sUu-kk-Vmo" secondAttribute="bottom" id="p2w-cG-mJM"/>
@@ -63,8 +72,12 @@
             <connections>
                 <outlet property="_lineLabel" destination="St6-mv-aIe" id="A9L-5y-MbG"/>
                 <outlet property="_titleLabel" destination="Plh-8G-FIc" id="pCD-cF-1QG"/>
+                <outlet property="arrImageView" destination="RrB-tW-ARD" id="Lfr-9p-lnX"/>
                 <outlet property="contLabel" destination="sUu-kk-Vmo" id="fXE-dq-rLx"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="about_arrar.png" width="14" height="23"/>
+    </resources>
 </document>

@@ -11,6 +11,9 @@
 @interface MCHomeViewController : MCViewController <UIGestureRecognizerDelegate>
 {
     __weak IBOutlet UILabel *_tabLineLabel;
+    __weak IBOutlet UIImageView *unreadPlate;
+    __weak IBOutlet UIImageView *unreadActive;
+
 }
 
 
