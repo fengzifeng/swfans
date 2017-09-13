@@ -14,6 +14,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *picImageView;
 @property (nonatomic, weak) IBOutlet UILabel *peopleCount;
 @property (nonatomic, weak) IBOutlet UILabel *replyCount;
+@property (nonatomic, weak) IBOutlet UIImageView *upImaegView;
 
 - (void)updateCell:(FFActivityItemModel *)model;
 

@@ -45,7 +45,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="75" height="49"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaT-MA-YCZ" customClass="MCHVButton">
-                                    <rect key="frame" x="5.5" y="0.0" width="64" height="49"/>
+                                    <rect key="frame" x="6" y="0.0" width="64" height="49"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="64" id="7p6-5l-Pyt"/>
                                         <constraint firstAttribute="height" constant="49" id="meh-Na-oAh"/>
@@ -77,7 +77,7 @@
                             <rect key="frame" x="75" y="0.0" width="75" height="49"/>
                             <subviews>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiL-ry-Tbq" customClass="MCHVButton">
-                                    <rect key="frame" x="5.5" y="0.0" width="64" height="49"/>
+                                    <rect key="frame" x="6" y="0.0" width="64" height="49"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="64" id="TbM-4R-xKO"/>
                                         <constraint firstAttribute="height" constant="49" id="uYH-6b-aMI"/>
@@ -98,7 +98,7 @@
                                     </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-aJ-6Tf">
-                                    <rect key="frame" x="45.5" y="3" width="8" height="8"/>
+                                    <rect key="frame" x="46" y="3" width="8" height="8"/>
                                     <color key="backgroundColor" red="1" green="0.0" blue="0.2181982177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="8" id="3Nt-pL-w2Q"/>
@@ -151,7 +151,7 @@
                             <rect key="frame" x="225" y="0.0" width="75" height="49"/>
                             <subviews>
                                 <button opaque="NO" tag="3" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y0-d0-Rxb" customClass="MCHVButton">
-                                    <rect key="frame" x="5.5" y="0.0" width="64" height="49"/>
+                                    <rect key="frame" x="6" y="0.0" width="64" height="49"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="49" id="bEA-iR-3bD"/>
                                         <constraint firstAttribute="width" constant="64" id="hsS-98-g86"/>
@@ -172,7 +172,7 @@
                                     </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-8U-006">
-                                    <rect key="frame" x="45.5" y="3" width="8" height="8"/>
+                                    <rect key="frame" x="46" y="3" width="8" height="8"/>
                                     <color key="backgroundColor" red="1" green="0.0" blue="0.2181982177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="8" id="5bg-gJ-ceA"/>

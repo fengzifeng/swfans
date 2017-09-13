@@ -25,7 +25,9 @@
 
     [self setNavigationBackButtonDefault];
     self.title = @"帖子";
-    
+    _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
+    self.view.backgroundColor = RGBCOLOR(242, 244, 247);
+
     self.boardView = [DrKeyBoardView creatKeyBoardWithDelegate:self parentVc:self];
     [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
     [_tableView headerBeginRefreshing];
@@ -42,7 +44,6 @@
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/page/%@",url_threadlist,_postId,@(pageIndex)];
     
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
-        [_tableView headerEndRefreshing];
         if (successed) {
             FFPostModel *model = [FFPostModel objectWithKeyValues:response.payload];
             _dataArray = [model.data mutableCopy];
@@ -54,6 +55,8 @@
 
             [_tableView reloadData];
         }
+        [_tableView headerEndRefreshing];
+
     }];
 }
 
@@ -61,14 +64,16 @@
 {
     if (!_headView) {
         _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        _headView.backgroundColor = [UIColor whiteColor];
         _headLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, SCREEN_WIDTH - 40, 50)];
         [_headView addSubview:_headLabel];
         _headLabel.textColor = [UIColor blackColor];
         _headLabel.font = [UIFont boldSystemFontOfSize:19];
+        _headLabel.numberOfLines = 0;
 
     }
     _headLabel.text = str;
-    CGFloat height = [str stringHeightWithFont:_headLabel.font width:_headLabel.width] + 10;
+    CGFloat height = [str stringHeightWithFont:_headLabel.font width:_headLabel.width] + 20;
     _headLabel.height = height>50?height:50;
     _headView.height = _headLabel.height;
     return _headView;
@@ -121,6 +126,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return ((FFPostItemModel *)_dataArray[indexPath.row]).height;
+
+}
+
+- (void)dealloc
+{
+    _tableView.header = nil;
+    _tableView.footer = nil;
 
 }
 

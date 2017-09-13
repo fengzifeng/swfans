@@ -21,7 +21,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    _upImaegView.image = [_upImaegView.image resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, -5)];
+    _upImaegView.image = [_upImaegView.image resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 7, -5)];
 
 
 }

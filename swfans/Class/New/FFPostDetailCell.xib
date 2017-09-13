@@ -15,25 +15,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_post_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="vQQ-Sa-rqj">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_post_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="I6X-vQ-hHg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="5" id="Dda-zP-ajL"/>
+                            <constraint firstAttribute="height" constant="5" id="MtP-yK-Q2Y"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-4I-fE3">
-                        <rect key="frame" x="0.0" y="5" width="375" height="5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ni9-7o-siA">
+                        <rect key="frame" x="0.0" y="3" width="375" height="6"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="5" id="vyL-Hu-jNO"/>
+                            <constraint firstAttribute="height" constant="6" id="KTR-gQ-pTb"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </imageView>
                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-aN-fsF">
                         <rect key="frame" x="10" y="20" width="34" height="34"/>
                         <constraints>
@@ -107,37 +104,38 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="vQQ-Sa-rqj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3mb-qp-LOy"/>
                     <constraint firstItem="Gvz-aN-fsF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CaB-GE-KLU"/>
+                    <constraint firstItem="Ni9-7o-siA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FNe-Oi-O1D"/>
                     <constraint firstItem="Gvz-aN-fsF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="GFG-4f-4sS"/>
+                    <constraint firstItem="I6X-vQ-hHg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="I9P-x9-McL"/>
                     <constraint firstItem="bcu-6j-vFu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="J86-o1-dR2"/>
+                    <constraint firstItem="Ni9-7o-siA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="JPz-m3-GyY"/>
                     <constraint firstAttribute="trailing" secondItem="JXT-LS-wl6" secondAttribute="trailing" constant="10" id="M1N-HJ-FCM"/>
-                    <constraint firstAttribute="trailing" secondItem="vQQ-Sa-rqj" secondAttribute="trailing" id="M4n-de-Ftb"/>
                     <constraint firstItem="nZO-y1-M78" firstAttribute="top" secondItem="JXT-LS-wl6" secondAttribute="bottom" constant="20" id="NQp-0m-6cb"/>
-                    <constraint firstItem="VmU-4I-fE3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Od5-ic-u6k"/>
                     <constraint firstItem="JXT-LS-wl6" firstAttribute="top" secondItem="toA-bn-jwY" secondAttribute="bottom" constant="12" id="PSS-NY-pjf"/>
                     <constraint firstItem="e6D-Eh-u6R" firstAttribute="top" secondItem="JXT-LS-wl6" secondAttribute="bottom" constant="20" id="PSh-08-lH9"/>
                     <constraint firstItem="toA-bn-jwY" firstAttribute="top" secondItem="C9F-Ks-5jW" secondAttribute="bottom" constant="3" id="Q1n-Kq-g8H"/>
+                    <constraint firstAttribute="trailing" secondItem="I6X-vQ-hHg" secondAttribute="trailing" id="RRw-fV-TBS"/>
                     <constraint firstAttribute="trailing" secondItem="e6D-Eh-u6R" secondAttribute="trailing" constant="5" id="Rj0-kQ-KRX"/>
-                    <constraint firstAttribute="trailing" secondItem="VmU-4I-fE3" secondAttribute="trailing" id="T1P-ym-EcX"/>
+                    <constraint firstItem="I6X-vQ-hHg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SCF-IV-EkS"/>
                     <constraint firstAttribute="trailing" secondItem="C9F-Ks-5jW" secondAttribute="trailing" constant="10" id="Ue4-yE-Re9"/>
-                    <constraint firstItem="VmU-4I-fE3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="izX-oY-dCl"/>
                     <constraint firstItem="nZO-y1-M78" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="j36-Rw-Htv"/>
                     <constraint firstAttribute="trailing" secondItem="toA-bn-jwY" secondAttribute="trailing" id="l6N-1T-flj"/>
                     <constraint firstItem="bcu-6j-vFu" firstAttribute="leading" secondItem="Gvz-aN-fsF" secondAttribute="trailing" constant="10" id="lg4-rJ-zle"/>
                     <constraint firstItem="JXT-LS-wl6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="q1a-9n-MSI"/>
-                    <constraint firstItem="vQQ-Sa-rqj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rOF-kk-bmS"/>
                     <constraint firstItem="toA-bn-jwY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="taa-IW-RvQ"/>
                     <constraint firstItem="C9F-Ks-5jW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="v9w-3Y-HBF"/>
+                    <constraint firstAttribute="trailing" secondItem="Ni9-7o-siA" secondAttribute="trailing" id="xl1-GO-l1C"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="contLabel" destination="JXT-LS-wl6" id="GkZ-on-hbR"/>
                 <outlet property="faceButton" destination="Gvz-aN-fsF" id="3Ri-Kt-ZTC"/>
                 <outlet property="nameLabel" destination="bcu-6j-vFu" id="wCF-dG-Uyq"/>
                 <outlet property="postButton" destination="nZO-y1-M78" id="xio-iV-iGD"/>
                 <outlet property="timeLabel" destination="C9F-Ks-5jW" id="d2R-Eh-KcH"/>
-                <outlet property="upImaegView" destination="vQQ-Sa-rqj" id="Z7r-yt-GcK"/>
+                <outlet property="upImaegView" destination="I6X-vQ-hHg" id="egw-GL-5wQ"/>
             </connections>
         </tableViewCell>
     </objects>

@@ -2,8 +2,8 @@
 //  USTapControl.m
 //  USEvent
 //
-//  Created by marujun on 15/9/22.
-//  Copyright © 2015年 MaRuJun. All rights reserved.
+//  Created by fengzifeng on 15/9/22.
+//  Copyright © 2015年 fengzifeng. All rights reserved.
 //
 
 #import "USTapControl.h"

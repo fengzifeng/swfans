@@ -231,6 +231,7 @@
 		37CEDC1F1F67E232004682F7 /* about_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEDC1B1F67E232004682F7 /* about_avatar.png */; };
 		37CEDC201F67E232004682F7 /* about_mypost.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEDC1C1F67E232004682F7 /* about_mypost.png */; };
 		37CEDC211F67E232004682F7 /* about_post.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEDC1D1F67E232004682F7 /* about_post.png */; };
+		37CEDC251F6804FD004682F7 /* USTapControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CEDC241F6804FD004682F7 /* USTapControl.m */; };
 		37E5CB5C1D2E61D500842A51 /* MCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E5CB5B1D2E61D500842A51 /* MCHomeViewController.m */; };
 		37E5CB631D2E63FE00842A51 /* MCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E5CB621D2E63FE00842A51 /* MCHomeViewController.xib */; };
 		37E5CB791D2E650800842A51 /* main_tabBar_circle_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E5CB681D2E650800842A51 /* main_tabBar_circle_highlight@2x.png */; };
@@ -639,6 +640,8 @@
 		37CEDC1B1F67E232004682F7 /* about_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_avatar.png; sourceTree = "<group>"; };
 		37CEDC1C1F67E232004682F7 /* about_mypost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_mypost.png; sourceTree = "<group>"; };
 		37CEDC1D1F67E232004682F7 /* about_post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_post.png; sourceTree = "<group>"; };
+		37CEDC231F6804FD004682F7 /* USTapControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTapControl.h; sourceTree = "<group>"; };
+		37CEDC241F6804FD004682F7 /* USTapControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTapControl.m; sourceTree = "<group>"; };
 		37E5CB5A1D2E61D500842A51 /* MCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCHomeViewController.h; sourceTree = "<group>"; };
 		37E5CB5B1D2E61D500842A51 /* MCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHomeViewController.m; sourceTree = "<group>"; };
 		37E5CB621D2E63FE00842A51 /* MCHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCHomeViewController.xib; sourceTree = "<group>"; };
@@ -813,6 +816,7 @@
 		373757781D00001200582ECD /* FZFCommon */ = {
 			isa = PBXGroup;
 			children = (
+				37CEDC221F6804D5004682F7 /* Control */,
 				3779D6211F5AA1A00021278B /* SuspensionView */,
 				37559EE01D2FA7CE0078C374 /* MCAlertController */,
 				379A7EC31D2BB64300757F36 /* Navigation */,
@@ -1427,6 +1431,15 @@
 			path = OpenUDID;
 			sourceTree = "<group>";
 		};
+		37CEDC221F6804D5004682F7 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				37CEDC231F6804FD004682F7 /* USTapControl.h */,
+				37CEDC241F6804FD004682F7 /* USTapControl.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 		37E5CB641D2E64F700842A51 /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -1747,6 +1760,7 @@
 				379A7F061D2E2FD000757F36 /* OpenUDID.m in Sources */,
 				373758661D00093600582ECD /* DataHash.m in Sources */,
 				3765A9871F3C356000496299 /* UIImage+GIF.m in Sources */,
+				37CEDC251F6804FD004682F7 /* USTapControl.m in Sources */,
 				37986DD41F57C738005ADAEB /* UIView+MJExtension.m in Sources */,
 				3765AA2F1F4E809200496299 /* FFSwitchView.m in Sources */,
 				374C6FAA1D2F70F4003577CA /* USAssetCollectionCell.m in Sources */,

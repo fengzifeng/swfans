@@ -16,23 +16,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="231.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_post_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-mN-ybe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="13"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="13" id="bmF-cI-hBb"/>
+                            <constraint firstAttribute="height" constant="7" id="bmF-cI-hBb"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-g9-4Su">
+                        <rect key="frame" x="0.0" y="4" width="375" height="6"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="6" id="Ntq-fW-mrc"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gAp-BH-ud4">
-                        <rect key="frame" x="0.0" y="13" width="375" height="187"/>
+                        <rect key="frame" x="0.0" y="10" width="375" height="187"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="187" id="6IP-8x-4ni"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="参与人数 88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ7-7q-Xjy">
-                        <rect key="frame" x="223" y="207" width="70" height="13"/>
+                        <rect key="frame" x="223" y="204" width="70" height="13"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="qEC-Ag-cik"/>
                             <constraint firstAttribute="width" constant="70" id="tg6-22-kpj"/>
@@ -42,7 +49,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论 222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4m-6l-BHi">
-                        <rect key="frame" x="308" y="207" width="50" height="13"/>
+                        <rect key="frame" x="308" y="204" width="50" height="13"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="2Rq-pn-IYU"/>
                             <constraint firstAttribute="height" constant="13" id="TXo-h3-zWj"/>
@@ -53,22 +60,26 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="r5h-g9-4Su" secondAttribute="trailing" id="1jM-oK-TbX"/>
                     <constraint firstItem="oQ7-7q-Xjy" firstAttribute="top" secondItem="gAp-BH-ud4" secondAttribute="bottom" constant="7" id="4BL-Va-FgL"/>
-                    <constraint firstItem="gAp-BH-ud4" firstAttribute="top" secondItem="OIN-mN-ybe" secondAttribute="bottom" id="9LX-29-ylY"/>
+                    <constraint firstItem="r5h-g9-4Su" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GzC-BV-Q84"/>
                     <constraint firstAttribute="trailing" secondItem="gAp-BH-ud4" secondAttribute="trailing" id="KMk-n8-axx"/>
                     <constraint firstItem="gAp-BH-ud4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QwL-wU-wUn"/>
                     <constraint firstAttribute="trailing" secondItem="OIN-mN-ybe" secondAttribute="trailing" id="X2Y-y6-WXc"/>
                     <constraint firstItem="z4m-6l-BHi" firstAttribute="leading" secondItem="oQ7-7q-Xjy" secondAttribute="trailing" constant="15" id="fRi-fg-OA7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="z4m-6l-BHi" secondAttribute="trailing" constant="9" id="gec-Hg-sCt"/>
+                    <constraint firstItem="gAp-BH-ud4" firstAttribute="top" secondItem="r5h-g9-4Su" secondAttribute="bottom" id="nZy-qD-Usm"/>
                     <constraint firstItem="OIN-mN-ybe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tdb-qr-4ed"/>
                     <constraint firstItem="OIN-mN-ybe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wVv-Qv-ivp"/>
                     <constraint firstItem="z4m-6l-BHi" firstAttribute="top" secondItem="gAp-BH-ud4" secondAttribute="bottom" constant="7" id="wYD-PR-iyk"/>
+                    <constraint firstItem="r5h-g9-4Su" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="y8R-EP-QDP"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="peopleCount" destination="oQ7-7q-Xjy" id="DQo-9Z-pIl"/>
                 <outlet property="picImageView" destination="gAp-BH-ud4" id="3HK-0H-hrG"/>
                 <outlet property="replyCount" destination="z4m-6l-BHi" id="LTv-HM-jQI"/>
+                <outlet property="upImaegView" destination="OIN-mN-ybe" id="wx5-Ng-gWF"/>
             </connections>
         </tableViewCell>
     </objects>

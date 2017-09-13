@@ -22,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
+    self.view.backgroundColor = RGBCOLOR(242, 244, 247);
     [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
     [_tableView headerBeginRefreshing];
 }

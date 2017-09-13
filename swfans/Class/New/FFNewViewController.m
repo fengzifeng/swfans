@@ -29,7 +29,9 @@
     self.title = @"主题";
 
     if (_forum_id.length || _searchStr.length) [_tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
-    
+    _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
+    self.view.backgroundColor = RGBCOLOR(242, 244, 247);
+
     [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
     [_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
     [_tableView headerBeginRefreshing];
@@ -60,6 +62,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    self.parentViewController.title = @"最新";
     [self.parentViewController setNavigationTitleView:_searchView];
     
 }
@@ -93,7 +96,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [((MCViewController *)self.parentViewController).navigationBar endEditing:YES];
+//    [((MCViewController *)self.parentViewController).navigationBar endEditing:YES];
 
     FFPostDetailViewController *vc = [FFPostDetailViewController viewController];
     FFNewListItemModel *model = _dataArray[indexPath.row];
@@ -102,10 +105,10 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    [((MCViewController *)self.parentViewController).navigationBar endEditing:YES];
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    [((MCViewController *)self.parentViewController).navigationBar endEditing:YES];
+//}
 
 - (void)requestData
 {
@@ -122,9 +125,6 @@
     
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
         
-        [_tableView headerEndRefreshing];
-        [_tableView footerEndRefreshing];
-
         if (successed) {
             FFNewListModel *model = [FFNewListModel objectWithKeyValues:response.payload];
             if (model.data.count) {
@@ -133,11 +133,23 @@
                 } else {
                     [_dataArray addObjectsFromArray:model.data];
                 }
-                [_tableView reloadData];
             } else {
                 if (_page) _page--;
             }
         }
+        [_tableView reloadData];
+        [_tableView headerEndRefreshing];
+        [_tableView footerEndRefreshing];
+
     }];
 }
+
+- (void)dealloc
+{
+    _tableView.header = nil;
+    _tableView.footer = nil;
+//    [_tableView headerEndRefreshing];
+//    [_tableView footerEndRefreshing];
+}
+
 @end
