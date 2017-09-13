@@ -32,10 +32,25 @@
     _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
     self.view.backgroundColor = RGBCOLOR(242, 244, 247);
 
-    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-    [_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
-    [_tableView headerBeginRefreshing];
     __weak typeof(self) weakSelf = self;
+    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        _page = 0;
+        [weakSelf requestData];
+    }];
+    self.tableView.mj_header = refreshHeader;
+    
+    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        _page++;
+        [weakSelf requestData];
+    }];
+    footer.automaticallyHidden = YES;
+    self.tableView.mj_footer = footer;
+    [self.tableView.mj_header beginRefreshing];
+
+
+//    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+//    [_tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+//    [_tableView headerBeginRefreshing];
 
     if (!_forum_id.length && !_searchStr.length) {
         FFSearchView *searchView = [FFSearchView showSearchView:^(NSString *text) {
@@ -48,23 +63,29 @@
 
 }
 
--(void)headerRereshing{
-    _page = 0;
-    [self requestData];
-}
-
-- (void)footerRereshing
-{
-    _page++;
-    [self requestData];
-}
+//-(void)headerRereshing{
+//    _page = 0;
+//    [self requestData];
+//}
+//
+//- (void)footerRereshing
+//{
+//    _page++;
+//    [self requestData];
+//}
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self.searchView addNotice];
     [super viewWillDisappear:animated];
     self.parentViewController.title = @"最新";
     [self.parentViewController setNavigationTitleView:_searchView];
     
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.searchView removeNotice];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -133,23 +154,24 @@
                 } else {
                     [_dataArray addObjectsFromArray:model.data];
                 }
+                [_tableView reloadData];
+
             } else {
                 if (_page) _page--;
             }
         }
-        [_tableView reloadData];
-        [_tableView headerEndRefreshing];
-        [_tableView footerEndRefreshing];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
 
     }];
 }
 
-- (void)dealloc
-{
-    _tableView.header = nil;
-    _tableView.footer = nil;
-//    [_tableView headerEndRefreshing];
-//    [_tableView footerEndRefreshing];
-}
+//- (void)dealloc
+//{
+//    _tableView.header = nil;
+//    _tableView.footer = nil;
+////    [_tableView headerEndRefreshing];
+////    [_tableView footerEndRefreshing];
+//}
 
 @end

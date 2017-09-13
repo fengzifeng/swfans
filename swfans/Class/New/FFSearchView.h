@@ -14,5 +14,6 @@ typedef void(^done)(NSString *text);
 
 + (FFSearchView *)showSearchView:(done)done;
 @property (nonatomic, strong) UITextField *textField;
-
+- (void)removeNotice;
+- (void)addNotice;
 @end

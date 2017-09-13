@@ -30,21 +30,27 @@
     [self rightTableView];
     [self requestData];
 
-    [_rightTableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+//    [_rightTableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+//    
+//    [_rightTableView headerBeginRefreshing];
     
-    [_rightTableView headerBeginRefreshing];
+    __weak typeof(self) weakSelf = self;
+    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf requestData];
+    }];
+    self.rightTableView.mj_header = refreshHeader;
+    
+    [self.rightTableView.mj_header beginRefreshing];
     
     _isRelate = YES;
 }
--(void)headerRereshing{
-    [self requestData];
-}
+//-(void)headerRereshing{
+//    [self requestData];
+//}
 
 - (void)requestData
 {
     [[DrHttpManager defaultManager] getRequestToUrl:url_structedgroups params:nil complete:^(BOOL successed, HttpResponse *response) {
-        [_rightTableView headerEndRefreshing];
-        [_rightTableView removeHeader];
         if (successed) {
             _leftTableView.hidden = NO;
             _rightTableView.hidden = NO;
@@ -54,6 +60,9 @@
             [_leftTableView reloadData];
             [_rightTableView reloadData];
         }
+        
+        [self.rightTableView.mj_header endRefreshing];
+        self.rightTableView.mj_header.hidden = YES;
     }];
 }
 

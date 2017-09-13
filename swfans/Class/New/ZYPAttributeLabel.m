@@ -204,7 +204,7 @@
 #pragma mark --- 生成需要展示的属性字符串
 - (NSMutableAttributedString *)getAttributeText:(NSMutableAttributedString *)str font:(UIFont *)font
 {
-    NSLog(@"pppp===: %@",str);
+//    NSLog(@"pppp===: %@",str);
     //此方法多次调用 需清理老数据
     [self.imageModelArr removeAllObjects];
     //正则表达式 搜索[]
@@ -217,7 +217,7 @@
         model.rangePosition = match.range;
 //        model.imageName = [[str.string substringWithRange:match.range] substringWithRange:NSMakeRange(2, match.range.length - 3)];
         model.imageName = [str.string substringWithRange:match.range];
-        NSLog(@"%zd === %zd === %@",match.range.location,match.range.length,model.imageName);
+//        NSLog(@"%zd === %zd === %@",match.range.location,match.range.length,model.imageName);
         [self.imageModelArr addObject:model];
     }
     // 4.遍历图片数组，处理图片相关内容

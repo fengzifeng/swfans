@@ -33,7 +33,7 @@
     _postButton.layer.masksToBounds = YES;
     _postButton.layer.cornerRadius = 5;
     _faceButton.layer.masksToBounds = YES;
-    _faceButton.layer.cornerRadius = 10;
+    _faceButton.layer.cornerRadius = 17;
     _nameLabel.text = model.author;
     _contLabel.textcolor = HexColor(0x5a5a5a);
     _contLabel.textfont = [UIFont systemFontOfSize:14];

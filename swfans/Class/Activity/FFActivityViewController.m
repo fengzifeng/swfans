@@ -24,24 +24,35 @@
     [super viewDidLoad];
     _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
     self.view.backgroundColor = RGBCOLOR(242, 244, 247);
-    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-    [_tableView headerBeginRefreshing];
+    
+    __weak typeof(self) weakSelf = self;
+    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf requestData];
+    }];
+    self.tableView.mj_header = refreshHeader;
+    
+    [self.tableView.mj_header beginRefreshing];
+
+//    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+//    [_tableView headerBeginRefreshing];
 }
 
--(void)headerRereshing{
-    [self requestData];
-}
+//-(void)headerRereshing{
+//    [self requestData];
+//}
 
 - (void)requestData
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@",url_articles,@(_page)];
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
-        [_tableView headerEndRefreshing];
         if (successed) {
             FFActivityModel *model = [FFActivityModel objectWithKeyValues:response.payload];
             _dataArray = [model.data mutableCopy];
             [_tableView reloadData];
         }
+        
+        [self.tableView.mj_header endRefreshing];
+
     }];
 }
 

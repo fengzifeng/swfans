@@ -29,13 +29,18 @@
     self.view.backgroundColor = RGBCOLOR(242, 244, 247);
 
     self.boardView = [DrKeyBoardView creatKeyBoardWithDelegate:self parentVc:self];
-    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-    [_tableView headerBeginRefreshing];
+    __weak typeof(self) weakSelf = self;
+    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf requestData];
+    }];
+    self.tableView.mj_header = refreshHeader;
+    
+    [self.tableView.mj_header beginRefreshing];
 }
 
--(void)headerRereshing{
-    [self requestData];
-}
+//-(void)headerRereshing{
+//    [self requestData];
+//}
 
 - (void)requestData
 {
@@ -55,7 +60,7 @@
 
             [_tableView reloadData];
         }
-        [_tableView headerEndRefreshing];
+        [self.tableView.mj_header endRefreshing];
 
     }];
 }
@@ -131,10 +136,9 @@
 
 - (void)dealloc
 {
-    _tableView.header = nil;
-    _tableView.footer = nil;
+    _tableView.mj_header = nil;
+    _tableView.mj_footer = nil;
 
 }
-
 
 @end
