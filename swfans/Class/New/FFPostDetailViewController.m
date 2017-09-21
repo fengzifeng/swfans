@@ -86,6 +86,10 @@
 
 - (void)keyBoardViewHide:(DrKeyBoardView *)aKeyBoardView textView:(UITextView *)contentView
 {
+    if (!contentView.text.length) {
+        [USSuspensionView showWithMessage:@"请输入内容"];
+        return;
+    }
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/api/%@/%@/%@",url_submitpost,_loginUser.username,_loginUser.signCode,contentView.text,_fid,_postId];
 
     requestUrl = [requestUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

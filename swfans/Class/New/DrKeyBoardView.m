@@ -115,8 +115,8 @@
     self.cancalButton = cancalButton;
     
     _sendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_sendBtn setTitleColor:HexColor(0xa9a9a9) forState:UIControlStateNormal];
-    _sendBtn.enabled = NO;
+    [_sendBtn setTitleColor:HexColor(0xaa2d1b) forState:UIControlStateNormal];
+//    _sendBtn.enabled = NO;
     [_sendBtn setTitle:@"发表" forState:UIControlStateNormal];
     _sendBtn.frame = CGRectMake(SCREEN_WIDTH - 20 - 40, 15, 40, 25);
     [_sendBtn addTarget:self action:@selector(submitAction) forControlEvents:UIControlEventTouchUpInside];
@@ -155,21 +155,21 @@
     return YES;
 }
 
--(void)textViewDidChange:(UITextView *)textView
-{
-    
-    if ([self isBlankString:textView.text]) {
-//        无内容dasdas
-        [_sendBtn setTitleColor:HexColor(0xa9a9a9) forState:UIControlStateNormal];
-        _sendBtn.enabled = NO;
-        
-    }else{
-        [_sendBtn setTitleColor:HexColor(0xaa2d1b) forState:UIControlStateNormal];
-
-        _sendBtn.enabled = YES;
-        
-    }
-}
+//-(void)textViewDidChange:(UITextView *)textView
+//{
+//
+//    if ([self isBlankString:textView.text]) {
+////        无内容dasdas
+//        [_sendBtn setTitleColor:HexColor(0xa9a9a9) forState:UIControlStateNormal];
+//        _sendBtn.enabled = NO;
+//
+//    }else{
+//        [_sendBtn setTitleColor:HexColor(0xaa2d1b) forState:UIControlStateNormal];
+//
+//        _sendBtn.enabled = YES;
+//
+//    }
+//}
 
 
 - (void)submitAction
@@ -210,9 +210,9 @@
 - (void)resetSendBtnStatus
 {
     [_textView resignFirstResponder];
-    _sendBtn.enabled = NO;
+//    _sendBtn.enabled = NO;
     _textView.text = @"";
-    [_sendBtn setTitleColor:HexColor(0xa9a9a9) forState:UIControlStateNormal];
+//    [_sendBtn setTitleColor:HexColor(0xa9a9a9) forState:UIControlStateNormal];
 
 }
 

@@ -29,6 +29,8 @@
 
 - (void)updateCell:(FFPostItemModel *)model
 {
+    _contLabel.isHtml = YES;
+
     _model = model;
     _postButton.layer.masksToBounds = YES;
     _postButton.layer.cornerRadius = 5;
@@ -51,7 +53,7 @@
     ZYPAttributeLabel *label = [[ZYPAttributeLabel alloc] init];
     label.isHtml = YES;
     CGSize size;
-    if (model.message.length) size = [label sizeWithWidth:SCREEN_WIDTH - 20 attstr:model.message textFont:[UIFont systemFontOfSize:14]];
+    if (model.message.length) size = [label sizeWithWidth:SCREEN_WIDTH - 15 attstr:model.message textFont:[UIFont systemFontOfSize:14]];
     
     if (model.isComment) {
         height += size.height + 12;

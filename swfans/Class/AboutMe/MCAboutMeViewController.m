@@ -10,6 +10,7 @@
 #import "FFAboutDownHeadView.h"
 #import "FFAboutMeCell.h"
 #import "USAuthViewController.h"
+#import "FFAboutPostViewController.h"
 
 @interface MCAboutMeViewController ()
 {
@@ -90,11 +91,23 @@
     postLabel.font = [UIFont systemFontOfSize:13];
     [view addSubview:postLabel];
     UIButton *leftBUtton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftBUtton addTarget:self action:@selector(clickPost:) forControlEvents:UIControlEventTouchUpInside];
+    if ([title isEqualToString:@"我的发帖"])  leftBUtton.tag = 1000;
+
     leftBUtton.frame = CGRectMake((view.width - 45)/2.0, CGRectGetMaxY(postLabel.frame) + 17, 45, 45);
     [leftBUtton setImage:image forState:UIControlStateNormal];
     [view addSubview:leftBUtton];
 
     return view;
+}
+
+- (void)clickPost:(UIButton *)button
+{
+    BOOL isPost = NO;;
+    if (button.tag == 1000) isPost = YES;
+    FFAboutPostViewController *vc = [FFAboutPostViewController viewController];
+    vc.isPost = isPost;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

@@ -47,7 +47,6 @@
 
     NSDictionary * dict = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSShadowAttributeName:shadow};
     self.navigationBar.titleTextAttributes = dict;
-
     [self.view addSubview:self.navigationBar];
     [self.navigationBar pushNavigationItem:self.myNavigationItem animated:false];
     [self.navigationBar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];

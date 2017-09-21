@@ -47,6 +47,9 @@
 #define url_login                   GeneralUrl(@"login/")
 #define url_submitarticle           GeneralUrl(@"submit_article/")
 #define url_search                  GeneralUrl(@"search_threads/page/")
+#define url_profile_threads         GeneralUrl(@"profile/threads/")
+#define url_profile_posts           GeneralUrl(@"profile/posts/")
+
 //http://t.vduor.cn/api.html
 
 #define NAVBAR_TAG 100109

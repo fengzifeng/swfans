@@ -23,7 +23,7 @@
 {
     _subject = subject;
     
-    CGFloat tempHeight = [_subject stringHeightWithFont:[UIFont systemFontOfSize:16] width:SCREEN_WIDTH - 20] + 14;
+    CGFloat tempHeight = [_subject stringHeightWithFont:[UIFont systemFontOfSize:16] width:SCREEN_WIDTH - 18] + 14;
     tempHeight = tempHeight > 30?tempHeight:30;
     self.height = tempHeight + 70;
 }

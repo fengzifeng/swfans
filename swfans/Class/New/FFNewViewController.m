@@ -158,7 +158,10 @@
 
             } else {
                 if (_page) _page--;
+                if (_searchStr.length && !_page) [USSuspensionView showWithMessage:@"搜索无结果"];
             }
+        } else {
+            if (_searchStr.length) [USSuspensionView showWithMessage:@"搜索无结果"];
         }
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];

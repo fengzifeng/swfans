@@ -173,9 +173,13 @@
                     [self dismissViewControllerAnimated:YES completion:nil];
                 }
             } else {
+                
+                if (_isLogin && !str.length) [USSuspensionView showWithMessage:@"账号密码不匹配"];
 //                NSString *str = response.payload[@"data"][@"message"];
 //                if (str.length) [USSuspensionView showWithMessage:str];
             }
+        } else {
+            if (_isLogin) [USSuspensionView showWithMessage:@"账号密码不匹配"];
         }
     }];
     

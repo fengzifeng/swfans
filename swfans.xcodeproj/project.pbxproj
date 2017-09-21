@@ -11,6 +11,9 @@
 		37056D351D5C75C9006254D2 /* AuthData.m in Sources */ = {isa = PBXBuildFile; fileRef = 37056D321D5C75C9006254D2 /* AuthData.m */; };
 		37056D361D5C75C9006254D2 /* HLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 37056D341D5C75C9006254D2 /* HLTool.m */; };
 		370B4F491D0820E2000D12FF /* SwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 370B4F481D0820E2000D12FF /* SwitchView.m */; };
+		3730A6901F73816F00071840 /* FFAboutPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3730A68E1F73816F00071840 /* FFAboutPostViewController.m */; };
+		3730A6911F73816F00071840 /* FFAboutPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3730A68F1F73816F00071840 /* FFAboutPostViewController.xib */; };
+		3730A6941F73897E00071840 /* FFAboutPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3730A6931F73897E00071840 /* FFAboutPostModel.m */; };
 		3737571D1CFFFD5600582ECD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3737571C1CFFFD5600582ECD /* main.m */; };
 		373757201CFFFD5700582ECD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3737571F1CFFFD5700582ECD /* AppDelegate.m */; };
 		373757281CFFFD5700582ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373757271CFFFD5700582ECD /* Assets.xcassets */; };
@@ -263,6 +266,11 @@
 		37056D341D5C75C9006254D2 /* HLTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTool.m; sourceTree = "<group>"; };
 		370B4F471D0820E2000D12FF /* SwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchView.h; sourceTree = "<group>"; };
 		370B4F481D0820E2000D12FF /* SwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchView.m; sourceTree = "<group>"; };
+		3730A68D1F73816F00071840 /* FFAboutPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAboutPostViewController.h; sourceTree = "<group>"; };
+		3730A68E1F73816F00071840 /* FFAboutPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAboutPostViewController.m; sourceTree = "<group>"; };
+		3730A68F1F73816F00071840 /* FFAboutPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFAboutPostViewController.xib; sourceTree = "<group>"; };
+		3730A6921F73897E00071840 /* FFAboutPostModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAboutPostModel.h; sourceTree = "<group>"; };
+		3730A6931F73897E00071840 /* FFAboutPostModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAboutPostModel.m; sourceTree = "<group>"; };
 		373757181CFFFD5600582ECD /* swfans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swfans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3737571C1CFFFD5600582ECD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3737571E1CFFFD5600582ECD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -997,6 +1005,11 @@
 				37559F451D3391430078C374 /* Share */,
 				37559F011D2FBAEC0078C374 /* UIPlaceHolderTextView.h */,
 				37559F021D2FBAEC0078C374 /* UIPlaceHolderTextView.m */,
+				3730A6921F73897E00071840 /* FFAboutPostModel.h */,
+				3730A6931F73897E00071840 /* FFAboutPostModel.m */,
+				3730A68D1F73816F00071840 /* FFAboutPostViewController.h */,
+				3730A68E1F73816F00071840 /* FFAboutPostViewController.m */,
+				3730A68F1F73816F00071840 /* FFAboutPostViewController.xib */,
 				374C6F3A1D2E744E003577CA /* MCAboutMeViewController.h */,
 				374C6F3B1D2E744E003577CA /* MCAboutMeViewController.m */,
 				374C6F3C1D2E744E003577CA /* MCAboutMeViewController.xib */,
@@ -1679,6 +1692,7 @@
 				3755A13C1D40CCA70078C374 /* icon_play_hl@2x.png in Resources */,
 				37E5CB791D2E650800842A51 /* main_tabBar_circle_highlight@2x.png in Resources */,
 				37B642E41F5000C300B06DBB /* FFPostDetailViewController.xib in Resources */,
+				3730A6911F73816F00071840 /* FFAboutPostViewController.xib in Resources */,
 				374C6FA71D2F70F4003577CA /* USPicker-Checkbox@3x.png in Resources */,
 				3765A9A11F44312800496299 /* main_tabBar_new_normal.png in Resources */,
 				3765AA171F4586F600496299 /* new_post_bg.png in Resources */,
@@ -1894,10 +1908,12 @@
 				37056D361D5C75C9006254D2 /* HLTool.m in Sources */,
 				379A7ECF1D2BBA1F00757F36 /* ApplicationContext.m in Sources */,
 				374C6FB31D2F70F4003577CA /* USImagePickerController.m in Sources */,
+				3730A6901F73816F00071840 /* FFAboutPostViewController.m in Sources */,
 				373758B31D000C1800582ECD /* UIImage+ImageEffects.m in Sources */,
 				3765A97B1F3C356000496299 /* NSData+ImageContentType.m in Sources */,
 				3765A9411F3C32AC00496299 /* UIImageView+AFNetworking.m in Sources */,
 				3765A9851F3C356000496299 /* SDWebImagePrefetcher.m in Sources */,
+				3730A6941F73897E00071840 /* FFAboutPostModel.m in Sources */,
 				37559EE91D2FA7CE0078C374 /* USAlertView.m in Sources */,
 				3765A9831F3C356000496299 /* SDWebImageManager+MJ.m in Sources */,
 				37056D351D5C75C9006254D2 /* AuthData.m in Sources */,

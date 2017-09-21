@@ -1,20 +1,20 @@
 //
-//  FFNewListModel.h
-//  FZFBase
+//  FFAboutPostModel.h
+//  swfans
 //
-//  Created by fengzifeng on 2017/8/17.
+//  Created by fengzifeng on 2017/9/21.
 //  Copyright © 2017年 fengzifeng. All rights reserved.
 //
 
-#import "FFNewListModel.h"
+#import <Foundation/Foundation.h>
 
-@interface FFNewListModel : NSObject
+@interface FFAboutPostModel : NSObject
 
 @property (nonatomic, strong) NSArray *data;
 
 @end
 
-@interface FFNewListItemModel : NSObject
+@interface FFAboutPostItemModel : NSObject
 
 @property (nonatomic, copy) NSString *fid;
 @property (nonatomic, copy) NSString *tid;
@@ -26,8 +26,5 @@
 @property (nonatomic, copy) NSString *forumName;
 @property (nonatomic, copy) NSString *userImagePath;
 @property (nonatomic, assign) CGFloat height;
-@property (nonatomic, copy) NSString *message;
-@property (nonatomic, copy) NSString *pid;
-
 
 @end
