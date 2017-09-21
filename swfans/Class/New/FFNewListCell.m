@@ -37,7 +37,11 @@
     _upLabel.text = model.subject;
     NSString *str = [HLTool timeInfoWithDateString:model.dateline];
     _timeLabel.text = str;
-    _replyLabel.text =  [NSString stringWithFormat:@"评论 %@",model.replies];
+    if (model.replies.length) {
+        _replyLabel.text = [NSString stringWithFormat:@"评论 %@",model.replies];
+    } else {
+        _replyLabel.text = @"";
+    }
     [self setNeedsLayout];
 }
 
