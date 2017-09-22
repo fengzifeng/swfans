@@ -2,13 +2,14 @@
 //  MCViewController.h
 //  FrictionMakingFriends
 //
-//  Created by FZF on 14-3-11.
-//  Copyright (c) 2014年 FrictionTeam. All rights reserved.
+//  Created by fengzifeng on 14-3-11.
+//  Copyright (c) 2014年 fengzifeng. All rights reserved.
 //
 
 
 #import <UIKit/UIKit.h>
 #import "USTransitionAnimator.h"
+#import "FFNavigationBar.h"
 
 @interface MCViewController : UIViewController
 <UITableViewDataSource, UITableViewDataSource>
@@ -20,7 +21,7 @@
 @property(nonatomic, assign) float topInset;
 //@property(nonatomic, strong) NSString *requestIngURL;
 //
-@property(nonatomic, strong) UINavigationBar *navigationBar;
+@property(nonatomic, strong) FFNavigationBar *navigationBar;
 @property(nonatomic, strong) UINavigationItem *myNavigationItem;
 @property(nonatomic, strong) UIView *amsNavigationBar;
 @property (nonatomic, assign) USNavigationTransitionOption transitionOption;

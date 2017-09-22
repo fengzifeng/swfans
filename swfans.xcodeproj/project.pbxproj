@@ -219,6 +219,7 @@
 		379A7ECF1D2BBA1F00757F36 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7ECE1D2BBA1F00757F36 /* ApplicationContext.m */; };
 		379A7F021D2E2F6300757F36 /* UIDevice+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7F011D2E2F6300757F36 /* UIDevice+Common.m */; };
 		379A7F061D2E2FD000757F36 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7F051D2E2FD000757F36 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37A9BC031F74E2F6009E7E3D /* FFNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9BC021F74E2F6009E7E3D /* FFNavigationBar.m */; };
 		37B642E31F5000C300B06DBB /* FFPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B642E11F5000C300B06DBB /* FFPostDetailViewController.m */; };
 		37B642E41F5000C300B06DBB /* FFPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B642E21F5000C300B06DBB /* FFPostDetailViewController.xib */; };
 		37CEDC121F67BF4D004682F7 /* FFSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CEDC111F67BF4D004682F7 /* FFSearchTextField.m */; };
@@ -638,6 +639,8 @@
 		379A7F011D2E2F6300757F36 /* UIDevice+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Common.m"; sourceTree = "<group>"; };
 		379A7F041D2E2FD000757F36 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		379A7F051D2E2FD000757F36 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		37A9BC011F74E2F6009E7E3D /* FFNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFNavigationBar.h; sourceTree = "<group>"; };
+		37A9BC021F74E2F6009E7E3D /* FFNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFNavigationBar.m; sourceTree = "<group>"; };
 		37B642E01F5000C300B06DBB /* FFPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPostDetailViewController.h; sourceTree = "<group>"; };
 		37B642E11F5000C300B06DBB /* FFPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPostDetailViewController.m; sourceTree = "<group>"; };
 		37B642E21F5000C300B06DBB /* FFPostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPostDetailViewController.xib; sourceTree = "<group>"; };
@@ -878,6 +881,8 @@
 				373757921D00001200582ECD /* MCHVButton */,
 				373757951D00001200582ECD /* MCViewController.h */,
 				373757961D00001200582ECD /* MCViewController.m */,
+				37A9BC011F74E2F6009E7E3D /* FFNavigationBar.h */,
+				37A9BC021F74E2F6009E7E3D /* FFNavigationBar.m */,
 				37056D301D5C75C9006254D2 /* HLTool */,
 				373757971D00001200582ECD /* TCAlertView */,
 				37056D261D5C6F11006254D2 /* CycleScroll */,
@@ -1812,6 +1817,7 @@
 				3765A98E1F3C356000496299 /* UIView+WebCacheOperation.m in Sources */,
 				3765A97A1F3C356000496299 /* MKAnnotationView+WebCache.m in Sources */,
 				373757C91D00001200582ECD /* TCShortAlertView.m in Sources */,
+				37A9BC031F74E2F6009E7E3D /* FFNavigationBar.m in Sources */,
 				3765A9911F3C399F00496299 /* DrBaseWebViewController.m in Sources */,
 				373758B61D000C1800582ECD /* UIView+Common.m in Sources */,
 				3765AA391F4EA31D00496299 /* FFAboutDownHeadView.m in Sources */,

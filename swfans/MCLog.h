@@ -2,8 +2,8 @@
 //  MCLog.h
 //  MCLog
 //
-//  Created by marujun on 15/3/26.
-//  Copyright (c) 2015年 marujun. All rights reserved.
+//  Created by fengzifeng on 15/3/26.
+//  Copyright (c) 2015年 fengzifeng. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,0 +1,31 @@
+//
+//  FFNavigationBar.m
+//  swfans
+//
+//  Created by fengzifeng on 2017/9/22.
+//  Copyright © 2017年 fengzifeng. All rights reserved.
+//
+
+#import "FFNavigationBar.h"
+
+@implementation FFNavigationBar
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    if (ShortSystemVersion >= 11.0) {
+        self.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 64);
+        for (UIView *view in self.subviews) {
+            if([NSStringFromClass([view class]) containsString:@"Background"]) {
+                view.frame = self.bounds;
+            }
+            else if ([NSStringFromClass([view class]) containsString:@"ContentView"]) {
+                CGRect frame = view.frame;
+                frame.origin.y = 20;
+                frame.size.height = self.bounds.size.height - frame.origin.y;
+                view.frame = frame;
+            }
+        }
+    }
+}
+
+@end
