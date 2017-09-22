@@ -33,6 +33,8 @@
 @property (nonatomic, copy) NSString *upName;
 @property (nonatomic, copy) NSString *downName;
 @property (nonatomic, assign) CGFloat height;
+@property (nonatomic, copy) NSString *oriName;
+
 
 
 @end

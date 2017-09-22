@@ -36,6 +36,7 @@
 - (void)setName:(NSString *)name
 {
     _name = name;
+    self.oriName = name;
     self.upName = [[name componentsSeparatedByString:@" "] firstObject];
 
     if ([name rangeOfString:@" "].length) {

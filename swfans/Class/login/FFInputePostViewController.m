@@ -9,6 +9,7 @@
 #import "FFInputePostViewController.h"
 #import "MCAboutMeViewController.h"
 #import "FFPlateModel.h"
+#import "FFActiveChooseView.h"
 
 @interface FFInputePostViewController ()  <UITextViewDelegate,UITextFieldDelegate>
 
@@ -134,20 +135,33 @@
 {
     [self.view endEditing:YES];
     FFPlateModel * model = [self requestData];
-    NSMutableArray *strArray = [NSMutableArray new];
+
     if (model.data.count) {
-        for (FFPlateSectionModel *itemModel in model.data) {
-            [strArray addObject:itemModel.name];
-        }
-        USActionSheet *actionSheet = [USActionSheet initWithTitle:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitleArray:strArray];
-        [actionSheet showWithCompletionBlock:^(NSInteger buttonIndex) {
-            if (buttonIndex < model.data.count) {
-                FFPlateSectionModel *itemModel = model.data[buttonIndex];
-                self.fid = itemModel.fid;
-                [_chooseBtn setTitle:itemModel.name forState:UIControlStateNormal];
-                [_chooseBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        NSMutableArray *strArray = [NSMutableArray new];
+        
+        for (FFPlateSectionModel *sectionModel in model.data) {
+            for (FFPlateItemModel *itemModel in sectionModel.forums) {
+                [strArray addObject:itemModel];
             }
-         }];
+        }
+        
+        [FFActiveChooseView showActiveChooseView:strArray choose:^(FFPlateItemModel *model) {
+            self.fid = model.fid;
+            [_chooseBtn setTitle:model.oriName forState:UIControlStateNormal];
+            [_chooseBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        }];
+//        for (FFPlateSectionModel *itemModel in model.data) {
+//            [strArray addObject:itemModel.name];
+//        }
+//        USActionSheet *actionSheet = [USActionSheet initWithTitle:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitleArray:strArray];
+//        [actionSheet showWithCompletionBlock:^(NSInteger buttonIndex) {
+//            if (buttonIndex < model.data.count) {
+//                FFPlateSectionModel *itemModel = model.data[buttonIndex];
+//                self.fid = itemModel.fid;
+//                [_chooseBtn setTitle:itemModel.name forState:UIControlStateNormal];
+//                [_chooseBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//            }
+//         }];
     }
 
 }

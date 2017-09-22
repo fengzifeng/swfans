@@ -14,6 +14,8 @@
 		3730A6901F73816F00071840 /* FFAboutPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3730A68E1F73816F00071840 /* FFAboutPostViewController.m */; };
 		3730A6911F73816F00071840 /* FFAboutPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3730A68F1F73816F00071840 /* FFAboutPostViewController.xib */; };
 		3730A6941F73897E00071840 /* FFAboutPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3730A6931F73897E00071840 /* FFAboutPostModel.m */; };
+		3730A6971F74B23000071840 /* FFActiveChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3730A6961F74B23000071840 /* FFActiveChooseView.m */; };
+		3730A6991F74B23B00071840 /* FFActiveChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3730A6981F74B23B00071840 /* FFActiveChooseView.xib */; };
 		3737571D1CFFFD5600582ECD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3737571C1CFFFD5600582ECD /* main.m */; };
 		373757201CFFFD5700582ECD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3737571F1CFFFD5700582ECD /* AppDelegate.m */; };
 		373757281CFFFD5700582ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373757271CFFFD5700582ECD /* Assets.xcassets */; };
@@ -271,6 +273,9 @@
 		3730A68F1F73816F00071840 /* FFAboutPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFAboutPostViewController.xib; sourceTree = "<group>"; };
 		3730A6921F73897E00071840 /* FFAboutPostModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAboutPostModel.h; sourceTree = "<group>"; };
 		3730A6931F73897E00071840 /* FFAboutPostModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAboutPostModel.m; sourceTree = "<group>"; };
+		3730A6951F74B23000071840 /* FFActiveChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFActiveChooseView.h; sourceTree = "<group>"; };
+		3730A6961F74B23000071840 /* FFActiveChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFActiveChooseView.m; sourceTree = "<group>"; };
+		3730A6981F74B23B00071840 /* FFActiveChooseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFActiveChooseView.xib; sourceTree = "<group>"; };
 		373757181CFFFD5600582ECD /* swfans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swfans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3737571C1CFFFD5600582ECD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3737571E1CFFFD5600582ECD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1604,6 +1609,9 @@
 				3765AA481F4EB10100496299 /* FFLoginCell.h */,
 				3765AA491F4EB10100496299 /* FFLoginCell.m */,
 				3765AA4A1F4EB10100496299 /* FFLoginCell.xib */,
+				3730A6951F74B23000071840 /* FFActiveChooseView.h */,
+				3730A6961F74B23000071840 /* FFActiveChooseView.m */,
+				3730A6981F74B23B00071840 /* FFActiveChooseView.xib */,
 				37986D961F513112005ADAEB /* FFInputePostViewController.h */,
 				37986D971F513112005ADAEB /* FFInputePostViewController.m */,
 				37986D981F513112005ADAEB /* FFInputePostViewController.xib */,
@@ -1706,6 +1714,7 @@
 				374C6FA91D2F70F4003577CA /* USPicker-Checkmark-Selected@3x.png in Resources */,
 				37CEDC1F1F67E232004682F7 /* about_avatar.png in Resources */,
 				373757281CFFFD5700582ECD /* Assets.xcassets in Resources */,
+				3730A6991F74B23B00071840 /* FFActiveChooseView.xib in Resources */,
 				3765AA511F4EF46F00496299 /* FFPostDetailCell.xib in Resources */,
 				37E5CB7A1D2E650800842A51 /* main_tabBar_circle_highlight@3x.png in Resources */,
 				37986D9A1F513112005ADAEB /* FFInputePostViewController.xib in Resources */,
@@ -1851,6 +1860,7 @@
 				3765A9381F3C32AC00496299 /* AFSecurityPolicy.m in Sources */,
 				373758AC1D000C1800582ECD /* NSDate+Common.m in Sources */,
 				3765A9F11F456E0300496299 /* FFNewListModel.m in Sources */,
+				3730A6971F74B23000071840 /* FFActiveChooseView.m in Sources */,
 				3765A9E11F445FB700496299 /* FFNewListCell.m in Sources */,
 				37559E9F1D2F9D250078C374 /* UIImage+RSKImageCropper.m in Sources */,
 				37CEDC9D1F6934F6004682F7 /* MJRefreshFooter.m in Sources */,
