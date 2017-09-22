@@ -2,8 +2,8 @@
 //  ZYPAttributeLabel.h
 //  QindexTest
 //
-//  Created by zhangyapeng on 17/7/25.
-//  Copyright © 2017年 zhangyapeng. All rights reserved.
+//  Created by fengzifeng on 17/7/25.
+//  Copyright © 2017年 fengzifeng. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,8 +2,8 @@
 //  MCViewController.m
 //  FrictionMakingFriends
 //
-//  Created by FZF on 14-3-11.
-//  Copyright (c) 2014年 FrictionTeam. All rights reserved.
+//  Created by fengzifeng on 14-3-11.
+//  Copyright (c) 2014年 fengzifeng. All rights reserved.
 //
 
 #import "MCViewController.h"
@@ -64,7 +64,7 @@
 {
     _enableScreenEdgePanGesture = YES;
 
-    self.navigationBar = [[UINavigationBar alloc] initForAutoLayout];
+    self.navigationBar = [[FFNavigationBar alloc] initForAutoLayout];
     [self.navigationBar autoSetDimension:ALDimensionHeight toSize:64];
     
     self.myNavigationItem = [[UINavigationItem alloc] initWithTitle:@""];
