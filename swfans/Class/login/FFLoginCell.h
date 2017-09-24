@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIPlaceHolderTextView.h"
+#import "USAuthViewController.h"
 
 @interface FFLoginCell : UITableViewCell
 
@@ -17,7 +18,7 @@
 }
 
 @property (nonatomic, strong) FFLoginUser *loginObj;
-@property (nonatomic, assign) BOOL isLogin;
+@property (nonatomic, assign) authType type;
 
 - (void)updateCell:(NSString *)titleStr;
 

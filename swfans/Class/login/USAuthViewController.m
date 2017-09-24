@@ -34,10 +34,12 @@
     self.view.backgroundColor = [UIColor yellowColor];
     self.navigationBar.hidden = YES;
     
-    if (_isLogin) {
+    if (_type == loginType) {
         _titleArray = @[@"用户名",@"密码"];
+    } else if (_type == reginType){
+        _titleArray = @[@"用户名",@"邮箱",@"密码(不少于6位)"];
     } else {
-        _titleArray = @[@"用户名",@"邮箱地址",@"密码(不少于6位)"];
+        _titleArray = @[@"邮箱"];
     }
     
     _tableView.tableHeaderView = [self getHeadView];
@@ -84,13 +86,17 @@
     downButton.titleLabel.font = [UIFont systemFontOfSize:14];
     [downButton addTarget:self action:@selector(clickSwitch) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:downButton];
+    self.downButton = downButton;
 
-    if (_isLogin) {
+    if (_type == loginType) {
         [button setTitle:@"登录" forState:UIControlStateNormal];
         [downButton setTitle:@"没有账号？立即注册" forState:UIControlStateNormal];
 
-    } else {
+    } else if (_type == reginType) {
         [button setTitle:@"注册" forState:UIControlStateNormal];
+        [downButton setTitle:@"已有账号？立即登录" forState:UIControlStateNormal];
+    } else {
+        [button setTitle:@"发送修改邮箱" forState:UIControlStateNormal];
         [downButton setTitle:@"已有账号？立即登录" forState:UIControlStateNormal];
     }
 
@@ -99,11 +105,25 @@
 
 - (void)clickSwitch
 {
-    _isLogin = !_isLogin;
-    if (_isLogin) {
-        _titleArray = @[@"用户名",@"密码"];
+    if (_type == loginType) {
+        if ([self.downButton.titleLabel.text isEqualToString:@"忘记密码"]) {
+            _type = getPassword;
+        } else {
+            _type = reginType;
+
+        }
+    } else if (_type == reginType) {
+        _type = loginType;
     } else {
+        _type = loginType;
+    }
+    
+    if (_type == loginType) {
+        _titleArray = @[@"用户名",@"密码"];
+    } else if (_type == reginType){
         _titleArray = @[@"用户名",@"邮箱",@"密码(不少于6位)"];
+    } else {
+        _titleArray = @[@"邮箱"];
     }
     _loginObj = [[FFLoginUser alloc] init];
 
@@ -128,7 +148,7 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil] firstObject];
         cell.loginObj = _loginObj;
-        cell.isLogin = _isLogin;
+        cell.type = _type;
     }
     
     [cell updateCell:_titleArray[indexPath.row]];
@@ -157,7 +177,11 @@
 - (void)login
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/%@",url_register,_loginObj.username,_loginObj.password,_loginObj.email];
-    if (_isLogin) requestUrl = [NSString stringWithFormat:@"%@%@/%@",url_login,_loginObj.username,_loginObj.password];
+    if (_type == loginType) {
+        requestUrl = [NSString stringWithFormat:@"%@%@/%@",url_login,_loginObj.username,_loginObj.password];
+    } if (_type == getPassword) {
+        requestUrl = [NSString stringWithFormat:@"%@%@",url_reset_password,_loginObj.email];
+    }
     
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
         if (successed) {
@@ -166,28 +190,44 @@
             if (str.length) [USSuspensionView showWithMessage:str];
             
             if ([user.status integerValue] == 1) {
-                if (!_isLogin) {
+                
+                if (_type != loginType) {
+                    if (_type == getPassword) {
+                        [USSuspensionView showWithMessage:@"发送成功"];
+                    }
                     [self clickSwitch];
                 } else {
                     [AuthData loginSuccess:@{@"uid":user.uid,@"username":user.username,@"signCode":user.signCode}];
                     [self dismissViewControllerAnimated:YES completion:nil];
                 }
             } else {
-                
-                if (_isLogin && !str.length) [USSuspensionView showWithMessage:@"账号密码不匹配"];
+                if (!str.length) {
+                    if (_type == loginType) {
+                        [USSuspensionView showWithMessage:@"账号密码不匹配"];
+                    } else if (_type == getPassword) {
+                        [USSuspensionView showWithMessage:@"邮箱有误，请重试"];
+                    }
+                }
+//                if (_type == loginType && !str.length) [USSuspensionView showWithMessage:@"账号密码不匹配"];
+//                if (_type == loginType && !str.length) [USSuspensionView showWithMessage:@"账号密码不匹配"];
+
 //                NSString *str = response.payload[@"data"][@"message"];
 //                if (str.length) [USSuspensionView showWithMessage:str];
             }
         } else {
-            if (_isLogin) [USSuspensionView showWithMessage:@"账号密码不匹配"];
+            if (_type == loginType) {
+                [USSuspensionView showWithMessage:@"账号密码不匹配"];
+            } else if (_type == getPassword) {
+                [USSuspensionView showWithMessage:@"邮箱有误，请重试"];
+            }
         }
     }];
     
 
-    if (_isLogin) {
-        
-    } else {
-    }
+//    if (_isLogin) {
+//        
+//    } else {
+//    }
 //    [AuthData loginSuccess:@{@"uid":@"1",@"nickname":@"深刻觉得脚九分裤"}];
     
 

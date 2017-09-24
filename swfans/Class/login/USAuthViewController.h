@@ -8,11 +8,19 @@
 
 #import "MCViewController.h"
 
+typedef enum {
+    reginType = 0,
+    loginType,
+    getPassword
+} authType;
+
 @interface USAuthViewController : MCViewController
 {
     IBOutlet UITableView *_tableView;
 }
 
-@property (nonatomic, assign) BOOL isLogin;
+@property (nonatomic, assign) authType type;
+@property (nonatomic, strong) UIButton *downButton;
+
 
 @end

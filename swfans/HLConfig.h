@@ -49,6 +49,7 @@
 #define url_search                  GeneralUrl(@"search_threads/page/")
 #define url_profile_threads         GeneralUrl(@"profile/threads/")
 #define url_profile_posts           GeneralUrl(@"profile/posts/")
+#define url_reset_password           GeneralUrl(@"reset/password/")
 
 //http://t.vduor.cn/api.html
 

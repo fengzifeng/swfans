@@ -23,6 +23,7 @@
     [super awakeFromNib];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShow:) name:UIKeyboardWillShowNotification object:nil];
 
     [_lineLabel autoSetDimension:ALDimensionHeight toSize:0.5];
 }
@@ -49,6 +50,19 @@
     } else if ([_titleContent isEqualToString:@"用户名"]){
         _loginObj.username = string;
     }
+}
+
+- (void)keyboardShow:(NSNotification *)note
+{
+    
+    if (_type == loginType) {
+        [((USAuthViewController *)self.nearsetViewController).downButton setTitle:@"忘记密码" forState:UIControlStateNormal];
+    }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

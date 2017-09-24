@@ -26,7 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:Notification_LoginSuccess object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginRegSwitch:) name:Notification_LoginRegSwitch object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginRegSwitch:) name:Notification_LoginRegSwitch object:nil];
     }
     
     return self;
@@ -49,13 +49,13 @@
     [_tableView reloadData];
 }
 
-- (void)loginRegSwitch:(NSNotification *)noti
-{
-    USAuthViewController *vc = [USAuthViewController viewController];
-    vc.isLogin = [noti.object boolValue];
-    
-    [self presentViewController:vc animated:YES completion:nil];
-}
+//- (void)loginRegSwitch:(NSNotification *)noti
+//{
+//    USAuthViewController *vc = [USAuthViewController viewController];
+//    vc.isLogin = [noti.object boolValue];
+//    
+//    [self presentViewController:vc animated:YES completion:nil];
+//}
 
 
 - (void)viewDidLoad {
@@ -190,7 +190,7 @@
 - (void)clickLogin
 {
     USAuthViewController *vc = [USAuthViewController viewController];
-    vc.isLogin = YES;
+    vc.type = loginType;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
