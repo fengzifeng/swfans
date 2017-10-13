@@ -79,6 +79,7 @@
     }
     
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/api/%@/%@",url_submitpost,_loginUser.username,_loginUser.signCode,_textView.text,_fid];
+    requestUrl = [requestUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
         if (successed) {

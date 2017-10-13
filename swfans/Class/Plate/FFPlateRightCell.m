@@ -106,7 +106,7 @@
     }
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(7.5, [[self class] getCellHeight:model] - 0.5, SCREEN_WIDTH - 100 - 15, 0.5)];
-    label.backgroundColor = HexColor(0x93969b);
+    label.backgroundColor = RGBCOLOR(216, 216, 216);
     [self.contentView addSubview:label];
 }
 

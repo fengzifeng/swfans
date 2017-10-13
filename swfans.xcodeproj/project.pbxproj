@@ -705,6 +705,7 @@
 		37E5CB891D2E663500842A51 /* USAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAuthViewController.h; sourceTree = "<group>"; };
 		37E5CB8A1D2E663500842A51 /* USAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAuthViewController.m; sourceTree = "<group>"; };
 		37E5CB8B1D2E663500842A51 /* USAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USAuthViewController.xib; sourceTree = "<group>"; };
+		37F941511F8C758200254E95 /* noavata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noavata.png; sourceTree = "<group>"; };
 		9F36DD201F5854CB000D76F7 /* FFActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFActivityModel.h; sourceTree = "<group>"; };
 		9F36DD211F5854CB000D76F7 /* FFActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFActivityModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1433,6 +1434,7 @@
 				37CEDC1B1F67E232004682F7 /* about_avatar.png */,
 				37CEDC1C1F67E232004682F7 /* about_mypost.png */,
 				37CEDC1D1F67E232004682F7 /* about_post.png */,
+				37F941511F8C758200254E95 /* noavata.png */,
 			);
 			path = aboutme;
 			sourceTree = "<group>";

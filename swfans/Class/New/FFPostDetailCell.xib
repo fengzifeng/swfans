@@ -25,10 +25,10 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ni9-7o-siA">
-                        <rect key="frame" x="0.0" y="3" width="375" height="6"/>
+                        <rect key="frame" x="0.0" y="3" width="375" height="5"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="6" id="KTR-gQ-pTb"/>
+                            <constraint firstAttribute="height" constant="5" id="KTR-gQ-pTb"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-aN-fsF">
@@ -109,7 +109,7 @@
                     <constraint firstItem="Gvz-aN-fsF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="GFG-4f-4sS"/>
                     <constraint firstItem="I6X-vQ-hHg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="I9P-x9-McL"/>
                     <constraint firstItem="bcu-6j-vFu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="J86-o1-dR2"/>
-                    <constraint firstItem="Ni9-7o-siA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="JPz-m3-GyY"/>
+                    <constraint firstItem="Ni9-7o-siA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2.5" id="JPz-m3-GyY"/>
                     <constraint firstAttribute="trailing" secondItem="JXT-LS-wl6" secondAttribute="trailing" constant="5" id="M1N-HJ-FCM"/>
                     <constraint firstItem="nZO-y1-M78" firstAttribute="top" secondItem="JXT-LS-wl6" secondAttribute="bottom" constant="20" id="NQp-0m-6cb"/>
                     <constraint firstItem="JXT-LS-wl6" firstAttribute="top" secondItem="toA-bn-jwY" secondAttribute="bottom" constant="12" id="PSS-NY-pjf"/>

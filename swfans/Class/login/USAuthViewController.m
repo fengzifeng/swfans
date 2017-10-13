@@ -96,7 +96,7 @@
         [button setTitle:@"注册" forState:UIControlStateNormal];
         [downButton setTitle:@"已有账号？立即登录" forState:UIControlStateNormal];
     } else {
-        [button setTitle:@"发送修改邮箱" forState:UIControlStateNormal];
+        [button setTitle:@"发送至验证邮箱" forState:UIControlStateNormal];
         [downButton setTitle:@"已有账号？立即登录" forState:UIControlStateNormal];
     }
 

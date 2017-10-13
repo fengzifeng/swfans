@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,30 +16,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="231.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_post_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-mN-ybe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="7" id="bmF-cI-hBb"/>
+                            <constraint firstAttribute="height" constant="5" id="bmF-cI-hBb"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-g9-4Su">
-                        <rect key="frame" x="0.0" y="4" width="375" height="6"/>
+                        <rect key="frame" x="0.0" y="2.5" width="375" height="5"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="6" id="Ntq-fW-mrc"/>
+                            <constraint firstAttribute="height" constant="5" id="Ntq-fW-mrc"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gAp-BH-ud4">
-                        <rect key="frame" x="0.0" y="10" width="375" height="187"/>
+                        <rect key="frame" x="0.0" y="7.5" width="375" height="187"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="187" id="6IP-8x-4ni"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="参与人数 88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ7-7q-Xjy">
-                        <rect key="frame" x="223" y="204" width="70" height="13"/>
+                        <rect key="frame" x="223" y="201.5" width="70" height="13"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="qEC-Ag-cik"/>
                             <constraint firstAttribute="width" constant="70" id="tg6-22-kpj"/>
@@ -49,7 +49,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论 222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4m-6l-BHi">
-                        <rect key="frame" x="308" y="204" width="50" height="13"/>
+                        <rect key="frame" x="308" y="201.5" width="50" height="13"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="2Rq-pn-IYU"/>
                             <constraint firstAttribute="height" constant="13" id="TXo-h3-zWj"/>
@@ -72,7 +72,7 @@
                     <constraint firstItem="OIN-mN-ybe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tdb-qr-4ed"/>
                     <constraint firstItem="OIN-mN-ybe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wVv-Qv-ivp"/>
                     <constraint firstItem="z4m-6l-BHi" firstAttribute="top" secondItem="gAp-BH-ud4" secondAttribute="bottom" constant="7" id="wYD-PR-iyk"/>
-                    <constraint firstItem="r5h-g9-4Su" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="y8R-EP-QDP"/>
+                    <constraint firstItem="r5h-g9-4Su" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2.5" id="y8R-EP-QDP"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

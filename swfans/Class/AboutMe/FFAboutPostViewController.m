@@ -83,7 +83,7 @@
 {
     FFPostDetailViewController *vc = [FFPostDetailViewController viewController];
     FFNewListItemModel *model = _dataArray[indexPath.row];
-    vc.postId = model.tid;
+    vc.postId = model.pid;
     
     [self.navigationController pushViewController:vc animated:YES];
 }

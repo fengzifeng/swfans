@@ -35,7 +35,7 @@
 - (void)loginSuccess
 {
     self.parentViewController.title = _loginUser?_loginUser.username:@"个人主页";
-    _titleArray = @[@"联系代理商",@"投诉建议",@"退出登录"];
+    _titleArray = @[@"退出登录"];
     _tableView.tableHeaderView = [self createHeadView];
     [_tableView reloadData];
 }
@@ -70,7 +70,7 @@
     _tableView.tableHeaderView = [self createHeadView];
     self.view.backgroundColor = RGBCOLOR(242, 244, 247);
     
-    if (_loginUser) _titleArray = @[@"联系代理商",@"投诉建议",@"退出登录"];
+    if (_loginUser) _titleArray = @[@"退出登录"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -127,7 +127,8 @@
         faceBUtton.layer.cornerRadius = 71/2.0;
         faceBUtton.backgroundColor = [UIColor whiteColor];
         [headView addSubview:faceBUtton];
-        [faceBUtton setImage:[UIImage imageNamed:@"about_avatar"] forState:UIControlStateNormal];
+        [faceBUtton sd_setBackgroundImageWithURL:[NSURL URLWithString:@"http://fans.solidworks.com.cn/uc_server/avatar.php?uid=24175&size=small"] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"about_avatar"]];
+//        [faceBUtton setBackgroundImage:[UIImage imageNamed:@"about_avatar"] forState:UIControlStateNormal];
 
         UIView *midLeftView = [self getMidView:@"我的发帖" image:[UIImage imageNamed:@"about_post"]];
         midLeftView.origin = CGPointMake(0, CGRectGetMaxY(upBgView.frame));
@@ -171,16 +172,16 @@
         [loginButton addTarget:self action:@selector(clickLogin) forControlEvents:UIControlEventTouchUpInside];
         [upBgView addSubview:loginButton];
         
-        UIButton *downButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        downButton.frame = CGRectMake(0, CGRectGetMaxY(upBgView.frame) + 11, SCREEN_WIDTH, 44);
-        downButton.backgroundColor = [UIColor whiteColor];
-        [headView addSubview:downButton];
-        
-        UILabel *downLabel = [[UILabel alloc] initWithFrame:CGRectMake(26, 0, 200, 44)];
-        downLabel.text = @"联系代理商";
-        downLabel.textColor = HexColor(0x5f5f5f);
-        downLabel.font = [UIFont systemFontOfSize:13];
-        [downButton addSubview:downLabel];
+//        UIButton *downButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        downButton.frame = CGRectMake(0, CGRectGetMaxY(upBgView.frame) + 11, SCREEN_WIDTH, 44);
+//        downButton.backgroundColor = [UIColor whiteColor];
+//        [headView addSubview:downButton];
+//
+//        UILabel *downLabel = [[UILabel alloc] initWithFrame:CGRectMake(26, 0, 200, 44)];
+//        downLabel.text = @"联系代理商";
+//        downLabel.textColor = HexColor(0x5f5f5f);
+//        downLabel.font = [UIFont systemFontOfSize:13];
+//        [downButton addSubview:downLabel];
     }
     
     return headView;
@@ -232,20 +233,36 @@
     
     
     return view;
+}
 
-
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 5)];
+    [view addSubview:imageView];
+    imageView.image = [UIImage imageNamed:@"new_post_bg.png"];
+    imageView.image = [imageView.image resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 5, -5)];
+    
+    
+    return view;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 10;
+    return _titleArray.count?10:0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return _titleArray.count?10:0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 2) {
+    if (indexPath.row == 0) {
         [self quitLogin];
     }
 
