@@ -15,12 +15,9 @@
 
 @property(nonatomic, strong) UIWebView *drWebView;
 
-@property (copy, nonatomic) void (^loadingFinish)(void);
-
 
 - (void)webViewRequest:(NSString*)url;
 
-- (void)showAppInApp:(NSString *)_appId;
 
 + (instancetype)initWithTitle:(NSString *)titleStr url:(NSString *)urlStr;
 

@@ -9,6 +9,7 @@
 #import "FFPostDetailViewController.h"
 #import "FFPostDetailCell.h"
 #import "FFPostModel.h"
+#import "FFCommentDetailCell.h"
 
 @interface FFPostDetailViewController () <DrKeyBoardViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -119,7 +120,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellID = @"FFPostDetailCell";
+    
+    NSString *cellID = indexPath.row?@"FFCommentDetailCell":@"FFPostDetailCell";
     FFPostDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
         cell = [[NSBundle mainBundle] loadNibNamed:cellID owner:self options:nil].lastObject;
@@ -132,10 +134,21 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return ((FFPostItemModel *)_dataArray[indexPath.row]).height;
+//
+//}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return ((FFPostItemModel *)_dataArray[indexPath.row]).height;
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return UITableViewAutomaticDimension ;
 }
 
 - (void)dealloc

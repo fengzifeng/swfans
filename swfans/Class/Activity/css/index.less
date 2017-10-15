@@ -1,0 +1,43 @@
+/*reset*/
+*{margin:0;padding:0;}
+body{font-family: helvetica;}
+/*清除点击 默认阴影*/
+/*a标签默认样式*/
+a {color: #000000;text-decoration: none;}
+a:hover {text-decoration: none;}
+a,input ,button{-webkit-tap-highlight-color:rgba(0,0,0,0);/*全透明*/}
+/*按钮在真机上会显示圆角，清除*/
+input{background:none;  outline:none; border:0px;-webkit-appearance:none;border-radius: 0;}  
+ul,ol,li {list-style: none;}
+/*块元素浮动的  IE6，7的双边锯问题*/
+.fl {float: left;*display: inline;}
+/*块元素浮动的  IE6，7的双边锯问题*/
+.fr {float: right;*display: inline;}
+/*清除浮动*/
+.clearfix:after {content: "";display: block;font-size: 0;height: 0;clear: both;visibility: hidden;}
+*.clearfix {zoom: 1;}
+h1,h2,h3{font-weight:normal;}
+/*img默认样式*/
+address, cite, dfn, em, var,i {font-style:normal;} /* 将斜体扶正 */
+
+/*index*/
+@r: 50rem;
+.wrapper{width:100%;height:1298/@r;background:url('../images/bg.png') no-repeat left top;background-size:contain;position:relative;left:0;top:0;padding-top:285/@r;}
+.prizes-container{position:relative;}
+.img01{width:666/@r;height:666/@r;display: block;margin:0 auto;}
+.draw-btn{position:absolute;width:244/@r;height:244/@r;left:50%;top:50%;margin-left:-122/@r;margin-top:-122/@r; }
+.title{width:619/@r;height:332/@r;position:absolute;top:25/@r;left:50%;z-index:2;margin-left:-310/@r;}
+.mask{position:fixed;left:0;top:0;width:100%;height:100%;background:#333333;z-index:3;opacity:0.6; }
+.tanks{position:absolute;left:50%;top:50%;z-index:4;width:600/@r;height:730/@r;border-radius: 15/@r;-webkit-border-radius:15/@r;overflow: hidden;margin-left:-300/@r;margin-top:-365/@r;}
+.tanks .prize-title{background:#deedf6;width:100%;height:525/@r;text-align: center;position:relative;}
+.tanks .prize-title img{width:400/@r;display: inline-block;position:absolute;left:50%;top:100/@r;margin-left:-200/@r;}
+.tanks .btn{background:#fff;height:205/@r;text-align: center;line-height:205/@r;}
+.tanks .btn a{background:red;display: inline-block;width:300/@r;height:80/@r;color:#fff;font-size:25/@r;vertical-align: middle;line-height:80/@r;border-radius: 10/@r;-webkit-border-radius:10/@r;font-weight:bold;}
+.tanks .choujiang{font-size:50/@r;color:#fff;font-weight:bold;text-align: center;position:absolute;left:0;top:180/@r;width:100%;}
+
+.hide{display:none;}
+
+.success .choujiang{top:150/@r;}
+.success .special{font-size:12/@r;color:#fff;font-weight:normal;top:230/@r;width:100%;}
+.success .title-1{font-size:40/@r;color:#da2926;font-weight:bold;top:350/@r;width:100%;}
+.success .title-2{font-size:12/@r;color:#da2926;font-weight:bold;top:420/@r;width:100%;}

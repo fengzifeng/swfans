@@ -23,5 +23,6 @@
 
 
 - (void)updateCell:(FFNewListItemModel *)model;
++ (NSArray *) getImageurlFromHtml:(NSString *) webString;
 
 @end

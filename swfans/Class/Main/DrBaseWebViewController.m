@@ -34,7 +34,6 @@
 
 
 - (void)dealloc{
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self.drWebView setDelegate:nil];
     [self.drWebView stopLoading];
 }
@@ -42,7 +41,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self setNavigationBackButtonDefault];
+    self.title = @"抽奖";
     [self prepareWebView];
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
+//    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index"
+//                                                          ofType:@"html"];
+//    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
+//                                                    encoding:NSUTF8StringEncoding
+//                                                       error:nil];
+    
+    
+    [self.drWebView loadHTMLString:self.requestURL baseURL:baseURL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,34 +78,20 @@
 }
 
 
-// UIWebViewDelegate
-- (void)webViewDidStartLoad:(UIWebView *)webView{
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-}
-
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    _drWebView.hidden = NO;
-    _loadingFinish?_loadingFinish():nil;
 
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    
 }
 
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    
-    if ([error code] == NSURLErrorCancelled)
-    {
-        return;
-    }
-   [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-}
+
 
 + (instancetype)initWithTitle:(NSString *)titleStr url:(NSString *)urlStr
 {
     DrBaseWebViewController *vc = [[DrBaseWebViewController alloc] init];
-    [vc webViewRequest:urlStr];
+//    [vc webViewRequest:urlStr];
+    vc.requestURL = urlStr;
+
     
     return vc;
 }
@@ -104,7 +101,7 @@
 - (void)prepareWebView{
     if (nil == _drWebView) {
 
-        _drWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0f, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _drWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0f, 64, SCREEN_WIDTH, SCREEN_HEIGHT)];
         _drWebView.delegate = self;
         [_drWebView setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin |
          UIViewAutoresizingFlexibleWidth |
@@ -129,7 +126,6 @@
     self.requestURL = urlString;
     
     [_drWebView loadRequest:[DrBaseWebViewController requestAfterSetHeaderAndCookie:[NSURL URLWithString:urlString]]];
-     _drWebView.hidden = NO;
 }
 
 //设置header，打开cookie
@@ -138,11 +134,11 @@
     NSMutableURLRequest *aRequest = [[NSMutableURLRequest alloc] init];
     [aRequest setURL:url];
     
-    [aRequest setHTTPShouldHandleCookies:YES];
+//    [aRequest setHTTPShouldHandleCookies:YES];
 
 //    设置请求header
-    [DrBaseNetworkManager requestEncryption:aRequest];
-    
+//    [DrBaseNetworkManager requestEncryption:aRequest];
+//    
     
     return aRequest;
 }
@@ -172,60 +168,13 @@
     
     [DrBaseWebViewController requestAfterSetHeaderAndCookie:request.URL];
 
-    NSString *requestUrl = [self URLDecodedString:[request URL].absoluteString];
+//    NSString *requestUrl = [self URLDecodedString:[request URL].absoluteString];
     
     return YES;
     
 }
 
--(NSString *)URLEncodedString:(NSString *)str
-{
-    NSString *encodedString = (NSString *)
-    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                              (CFStringRef)str,
-                                                              NULL,
-                                                              (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                              kCFStringEncodingUTF8));
-    return encodedString;
-}
-
--(NSString *)URLDecodedString:(NSString *)str
-{
-    NSString *decodedString=(__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (__bridge CFStringRef)str, CFSTR(""), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
-    return decodedString;
-}
 
 
-- (void)showAppInApp:(NSString *)_appId {
-    if (!_appId) return;
-    //iOS6以后，苹果提供了在应用内部打开App Store中某一个应用下载页面的方式，提供了 SKStoreProductViewController类进行支持
-    Class isAllow = NSClassFromString(@"SKStoreProductViewController");
-    if (isAllow != nil) {
-        SKStoreProductViewController *sKStoreProductViewController = [[SKStoreProductViewController alloc] init];
-        sKStoreProductViewController.delegate = self;
-        [sKStoreProductViewController loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier: _appId}
-                                                completionBlock:^(BOOL result, NSError *error) {
-                                                    if (result) {
-                                                                                                            }
-                                                    else{
-                                                        NSLog(@"%@",error);
-                                                    }
-                                                }];
-    }
-    
-    return;
-}
-
-//#pragma mark - SKStoreProductViewControllerDelegate
-
-//对视图消失的处理
-- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController {
-    
-    
-    [viewController dismissViewControllerAnimated:YES
-                                       completion:nil];
-    
-    
-}
 
 @end

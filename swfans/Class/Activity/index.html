@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>幸运转盘</title>
+    <script type="text/javascript">
+    (function(argument) {
+        var html = document.documentElement;
+        var hW = html.getBoundingClientRect().width;
+        console.log(hW);
+        html.style.fontSize = hW / 15 + "px";
+    })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="images/title_03.png" class="title" alt="">
+        <div class="prizes-container">
+            <img src="images/prizes_03.png" class="img01" alt="" id="prizes">
+            <img src="images/img_03.png" class="draw-btn" alt="" id="draw-btn">
+        </div>
+    </div>
+    <div class="mask hide"></div>
+    <div class="tanks hide  error">
+        <div class="prize-title">
+            <img src="images/borad_03.png" alt="">
+            <div class="choujiang">谢谢参与</div>
+        </div>
+        <div class="btn"><a href="javascript:;">OK</a></div>
+    </div>
+    <div class="tanks success hide">
+        <div class="prize-title">
+            <img src="images/borad_03.png" alt="">
+            <div class="choujiang" id="get-price"></div>
+            <div class="choujiang special">(当场兑换有效)</div>
+            <div class="choujiang title-1">太幸运啦,恭喜您</div>
+            <div class="choujiang title-2">请找现场工作人员兑换</div>
+        </div>
+        <div class="btn"><a href="javascript:;">OK</a></div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rotarydraw.js"></script>
+    <script>
+    $("#prizes").load(function() {
+        var obj = $("#draw-btn");
+        var hei = $(this).height();
+        var hei2 = obj.height();
+        // obj.css("top", (hei - hei2) / 2);
+    });
+
+    function callbackA(ind) {
+        var ind = parseInt(ind);
+        switch (ind) {
+            case 2:
+            case 4:
+            case 6:
+                $(".mask,.error").toggleClass('hide');
+                break;
+            case 1:
+                $("#get-price").text('充电宝');
+                $(".mask,.success").toggleClass('hide');
+                break;
+            case 3:
+                $("#get-price").text('杯具1');
+                $(".mask,.success").toggleClass('hide');
+                break;
+            case 5:
+                $("#get-price").text('杯具2');
+                $(".mask,.success").toggleClass('hide');
+                break;
+        }
+
+    };
+
+    $(".error a").click(function() {
+        $(".mask,.error").toggleClass('hide');
+    });
+    $(".success a").click(function() {
+        $(".mask,.success").toggleClass('hide');
+    });
+    var newdraw = new turntableDraw('#draw-btn', {
+        share: 6,
+        speed: "3s",
+        velocityCurve: "ease",
+        weeks: 5,
+        callback: function(num) {
+            callbackA(num);
+        },
+    });
+
+    $("#draw-btn").click(function(event) {
+        var num = parseInt(Math.random() * 6) + 1;
+        newdraw.goto(num);
+    });
+    </script>
+</body>
+
+</html>

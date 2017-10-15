@@ -1,0 +1,205 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: helvetica;
+}
+/*清除点击 默认阴影*/
+/*a标签默认样式*/
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a,
+input,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /*全透明*/
+}
+/*按钮在真机上会显示圆角，清除*/
+input {
+  background: none;
+  outline: none;
+  border: 0px;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+/*块元素浮动的  IE6，7的双边锯问题*/
+.fl {
+  float: left;
+  *display: inline;
+}
+/*块元素浮动的  IE6，7的双边锯问题*/
+.fr {
+  float: right;
+  *display: inline;
+}
+/*清除浮动*/
+.clearfix:after {
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+*.clearfix {
+  zoom: 1;
+}
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+/*img默认样式*/
+address,
+cite,
+dfn,
+em,
+var,
+i {
+  font-style: normal;
+}
+/* 将斜体扶正 */
+/*index*/
+.wrapper {
+  width: 100%;
+  height: 25.96rem;
+  background: url('../images/bg.png') no-repeat left top;
+  background-size: contain;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding-top: 5.7rem;
+}
+.prizes-container {
+  position: relative;
+}
+.img01 {
+  width: 13.32rem;
+  height: 13.32rem;
+  display: block;
+  margin: 0 auto;
+}
+.draw-btn {
+  position: absolute;
+  width: 4.88rem;
+  height: 4.88rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -2.44rem;
+  margin-top: -2.44rem;
+}
+.title {
+  width: 12.38rem;
+  height: 6.64rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  z-index: 2;
+  margin-left: -6.2rem;
+}
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  z-index: 3;
+  opacity: 0.6;
+}
+.tanks {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 4;
+  width: 12rem;
+  height: 14.6rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  overflow: hidden;
+  margin-left: -6rem;
+  margin-top: -7.3rem;
+}
+.tanks .prize-title {
+  background: #deedf6;
+  width: 100%;
+  height: 10.5rem;
+  text-align: center;
+  position: relative;
+}
+.tanks .prize-title img {
+  width: 8rem;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  margin-left: -4rem;
+}
+.tanks .btn {
+  background: #fff;
+  height: 4.1rem;
+  text-align: center;
+  line-height: 4.1rem;
+}
+.tanks .btn a {
+  background: red;
+  display: inline-block;
+  width: 6rem;
+  height: 1.6rem;
+  color: #fff;
+  font-size: 0.5rem;
+  vertical-align: middle;
+  line-height: 1.6rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  font-weight: bold;
+}
+.tanks .choujiang {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 3.6rem;
+  width: 100%;
+}
+.hide {
+  display: none;
+}
+.success .choujiang {
+  top: 3rem;
+}
+.success .special {
+  font-size: 0.24rem;
+  color: #fff;
+  font-weight: normal;
+  top: 4.6rem;
+  width: 100%;
+}
+.success .title-1 {
+  font-size: 0.8rem;
+  color: #da2926;
+  font-weight: bold;
+  top: 7rem;
+  width: 100%;
+}
+.success .title-2 {
+  font-size: 0.24rem;
+  color: #da2926;
+  font-weight: bold;
+  top: 8.4rem;
+  width: 100%;
+}

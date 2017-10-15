@@ -82,6 +82,7 @@
             [button addTarget:self action:@selector(clcickBtn:) forControlEvents:UIControlEventTouchUpInside];
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((button.width - 45)/2.0, 10, 45, 45)];
             imageView.tag = 1;
+            imageView.contentMode = UIViewContentModeScaleAspectFit;
             [imageView sd_setImageWithURL:[NSURL URLWithString:itemModel.icon]];
             UILabel *upLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame) + 15, button.width, 10)];
             upLabel.text = itemModel.upName;

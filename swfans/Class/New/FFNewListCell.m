@@ -42,8 +42,57 @@
     } else {
         _replyLabel.text = @"";
     }
+    _picImaegView.backgroundColor = [UIColor yellowColor];
+    NSArray *array = [[self class] getImageurlFromHtml:model.message];
+    if (array.count) {
+        NSString *image = array[0];
+        [_picImaegView sd_setImageWithURL:[NSURL URLWithString:image]];
+        [_picImaegView autoSetDimension:ALDimensionHeight toSize:(SCREEN_WIDTH-20)*337/600.0];
+        _picImaegView.hidden = NO;
+        [_upLabel autoSetDimension:ALDimensionHeight toSize:_currentModel.height - 70 - 5 - (SCREEN_WIDTH-20)*337/600.0];
+
+    } else {
+        [_upLabel autoSetDimension:ALDimensionHeight toSize:_currentModel.height - 70];
+        [_picImaegView autoSetDimension:ALDimensionHeight toSize:0];
+
+        _picImaegView.hidden = YES;
+    }
     [self setNeedsLayout];
 }
+
++ (NSArray *) getImageurlFromHtml:(NSString *) webString
+{
+    NSMutableArray * imageurlArray = [NSMutableArray arrayWithCapacity:1];
+    
+    //标签匹配
+    NSString *parten = @"<img(.*?)>";
+    NSError* error = NULL;
+    NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:parten options:0 error:&error];
+    
+    NSArray* match = [reg matchesInString:webString options:0 range:NSMakeRange(0, [webString length] - 1)];
+    
+    for (NSTextCheckingResult * result in match) {
+        
+        //过去数组中的标签
+        NSRange range = [result range];
+        NSString * subString = [webString substringWithRange:range];
+        
+        
+        //从图片中的标签中提取ImageURL
+        NSRegularExpression *subReg = [NSRegularExpression regularExpressionWithPattern:@"http://(.*?)\"" options:0 error:NULL];
+        NSArray* match = [subReg matchesInString:subString options:0 range:NSMakeRange(0, [subString length] - 1)];
+        NSTextCheckingResult * subRes = match[0];
+        NSRange subRange = [subRes range];
+        subRange.length = subRange.length -1;
+        NSString * imagekUrl = [subString substringWithRange:subRange];
+        
+        //将提取出的图片URL添加到图片数组中
+        [imageurlArray addObject:imagekUrl];
+    }
+    
+    return imageurlArray;
+}
+
 
 - (void)layoutSubviews
 {
@@ -53,7 +102,6 @@
     [_typeLabel autoSetDimension:ALDimensionWidth toSize:typeWidth];
 //    CGFloat replyWidth = [_replyLabel.text stringWidthWithFont:_replyLabel.font height:11] + 2;
 //    [_replyLabel autoSetDimension:ALDimensionWidth toSize:replyWidth];
-    [_upLabel autoSetDimension:ALDimensionHeight toSize:_currentModel.height - 70];
 }
 
 

@@ -6,18 +6,18 @@
 //  Copyright © 2017年 fengzifeng. All rights reserved.
 //
 
-#import "FFPostDetailCell.h"
+#import "FFCommentDetailCell.h"
 #import "ZYPAttributeLabel.h"
 #import "FFPostModel.h"
 #import "FFPostDetailViewController.h"
 
-@interface FFPostDetailCell ()
+@interface FFCommentDetailCell ()
 {
     FFPostItemModel *_model;
 }
 @end
 
-@implementation FFPostDetailCell
+@implementation FFCommentDetailCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -32,9 +32,6 @@
 //    _contLabel.isHtml = YES;
 
     _model = model;
-    _postButton.layer.masksToBounds = YES;
-    _postButton.layer.cornerRadius = 5;
-    _faceButton.layer.masksToBounds = YES;
     _faceButton.layer.cornerRadius = 17;
     _nameLabel.text = model.author;
 //    _contLabel.textcolor = HexColor(0x5a5a5a);
@@ -44,10 +41,9 @@
     [_faceButton sd_setImageWithURL:[NSURL URLWithString:model.userImagePath] forState:UIControlStateNormal];
     _timeLabel.text = [NSString stringWithFormat:@"发表于 %@",model.dateline];
     NSString *newString = [model.message stringByReplacingOccurrencesOfString:@"<img" withString:[NSString stringWithFormat:@"<img width=\"%f\"",SCREEN_WIDTH - 20]];
-    
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[model.message dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
     _contLabel.attributedText = attributedString;
-//    _contLabel.backgroundColor = [UIColor yellowColor];
+
 }
 
 + (CGFloat)getCellHeight:(FFPostItemModel *)model
@@ -68,32 +64,4 @@
     return height;
 }
 
-- (IBAction)clickPost:(id)sender
-{
-    ((FFPostDetailViewController *)self.nearsetViewController).boardView.top = 0;
-    [((FFPostDetailViewController *)self.nearsetViewController).boardView.textView becomeFirstResponder];
-}
-
-- (IBAction)clickReport:(id)sender
-{
-    NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/api/%@",url_submitarticle,_loginUser.username,_loginUser.signCode,_model.message];
-    requestUrl = [requestUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
-    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
-        if (successed) {
-            
-            if ([response.payload[@"data"][@"status"] integerValue] == 1) {
-                [USSuspensionView showWithMessage:@"举报成功"];
-                
-            } else {
-                [USSuspensionView showWithMessage:@"举报失败"];
-                
-            }
-        } else {
-            [USSuspensionView showWithMessage:@"举报失败"];
-        }
-    }];
-
-
-}
 @end

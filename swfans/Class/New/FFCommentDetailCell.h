@@ -10,12 +10,11 @@
 #import "ZYPAttributeLabel.h"
 @class FFPostItemModel;
 
-@interface FFPostDetailCell : UITableViewCell
+@interface FFCommentDetailCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *contLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UIButton *faceButton;
-@property (nonatomic, weak) IBOutlet UIButton *postButton;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *upImaegView;
 

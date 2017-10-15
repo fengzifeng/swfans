@@ -10,6 +10,7 @@
 #import "FFActivityListCell.h"
 #import "FFActivityModel.h"
 #import "FFPostDetailViewController.h"
+#import "DrBaseWebViewController.h"
 
 @interface FFActivityViewController ()
 
@@ -32,9 +33,28 @@
     self.tableView.mj_header = refreshHeader;
     
     [self.tableView.mj_header beginRefreshing];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *image = [UIImage imageNamed:@"200123768.jpg"];
+    [button setImage:image forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    button.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH*image.size.height/image.size.width);
+    _tableView.tableHeaderView = button;
 
 //    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
 //    [_tableView headerBeginRefreshing];
+}
+
+- (void)click
+{
+    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index"
+                                                          ofType:@"html"];
+    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
+                                                    encoding:NSUTF8StringEncoding
+                                                       error:nil];
+    DrBaseWebViewController *vc = [DrBaseWebViewController initWithTitle:@"抽奖" url:htmlCont];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 //-(void)headerRereshing{
@@ -90,6 +110,21 @@
     vc.postId = model.tid;
     
     [self.navigationController pushViewController:vc animated:YES];
+    
+    
+   
+//    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"]];
+//    
+//    DrBaseWebViewController *webView = [DrBaseWebViewController initWithTitle:@"抽奖" url:[url absoluteString]];
+//    
+//    NSString * htmlCont = [NSString stringWithContentsOfFile:url
+//                                                    encoding:NSUTF8StringEncoding
+//                                                       error:nil];
+//    [self.webView loadHTMLString:htmlCont baseURL:baseURL];
+    
+//    [self.navigationController pushViewController:webView animated:YES];
+
+    
 }
 
 @end
