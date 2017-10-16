@@ -16,6 +16,7 @@
 @property (nonatomic, copy) NSString *fid;
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic, strong) UILabel *headLabel;
+@property (nonatomic, assign) BOOL isMiss;
 
 @end
 
@@ -39,6 +40,11 @@
     [self.tableView.mj_header beginRefreshing];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    _isMiss = YES;
+}
+
 //-(void)headerRereshing{
 //    [self requestData];
 //}
@@ -58,8 +64,8 @@
                 _fid = pModel.fid;
                 _tableView.tableHeaderView = [self headView:pModel.subject];
             }
-
-            [_tableView reloadData];
+            if (!_isMiss) [_tableView reloadData];
+            
         }
         [self.tableView.mj_header endRefreshing];
 
