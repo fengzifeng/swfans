@@ -44,8 +44,10 @@
     [self setNavigationBackButtonDefault];
     self.title = @"抽奖";
     [self prepareWebView];
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSURL *baseURL = [NSURL fileURLWithPath:path];
+    [self webViewRequest:self.requestURL];
+
+//    NSString *path = [[NSBundle mainBundle] bundlePath];
+//    NSURL *baseURL = [NSURL fileURLWithPath:path];
 //    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index"
 //                                                          ofType:@"html"];
 //    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
@@ -53,7 +55,7 @@
 //                                                       error:nil];
     
     
-    [self.drWebView loadHTMLString:self.requestURL baseURL:baseURL];
+//    [self.drWebView loadHTMLString:self.requestURL baseURL:baseURL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,7 +91,6 @@
 + (instancetype)initWithTitle:(NSString *)titleStr url:(NSString *)urlStr
 {
     DrBaseWebViewController *vc = [[DrBaseWebViewController alloc] init];
-//    [vc webViewRequest:urlStr];
     vc.requestURL = urlStr;
 
     
@@ -165,8 +166,8 @@
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
     
-    
-    [DrBaseWebViewController requestAfterSetHeaderAndCookie:request.URL];
+//
+//    [DrBaseWebViewController requestAfterSetHeaderAndCookie:request.URL];
 
 //    NSString *requestUrl = [self URLDecodedString:[request URL].absoluteString];
     

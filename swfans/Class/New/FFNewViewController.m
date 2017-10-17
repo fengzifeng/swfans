@@ -154,7 +154,9 @@
                 } else {
                     [_dataArray addObjectsFromArray:model.data];
                 }
-                [_tableView reloadData];
+                if (!(_forum_id.length && self.isMiss)) {
+                    [_tableView reloadData];
+                }
 
             } else {
                 if (_page) _page--;

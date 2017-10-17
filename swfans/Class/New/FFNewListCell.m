@@ -81,6 +81,7 @@
         //从图片中的标签中提取ImageURL
         NSRegularExpression *subReg = [NSRegularExpression regularExpressionWithPattern:@"http://(.*?)\"" options:0 error:NULL];
         NSArray* match = [subReg matchesInString:subString options:0 range:NSMakeRange(0, [subString length] - 1)];
+        if (!match.count) return nil;
         NSTextCheckingResult * subRes = match[0];
         NSRange subRange = [subRes range];
         subRange.length = subRange.length -1;

@@ -208,6 +208,7 @@
 		3779D6201F5A70070021278B /* DrKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3779D61F1F5A70070021278B /* DrKeyBoardView.m */; };
 		3779D6251F5AA1A00021278B /* USSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3779D6231F5AA1A00021278B /* USSuspensionView.m */; };
 		3779D6261F5AA1A00021278B /* USSuspensionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3779D6241F5AA1A00021278B /* USSuspensionView.xib */; };
+		377A64AF1F95E0A9006C3D6D /* USSafariViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377A64AD1F95E0A8006C3D6D /* USSafariViewController.m */; };
 		37986D951F512B3B005ADAEB /* new_icon_send.png in Resources */ = {isa = PBXBuildFile; fileRef = 37986D941F512B3B005ADAEB /* new_icon_send.png */; };
 		37986D991F513112005ADAEB /* FFInputePostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37986D971F513112005ADAEB /* FFInputePostViewController.m */; };
 		37986D9A1F513112005ADAEB /* FFInputePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37986D981F513112005ADAEB /* FFInputePostViewController.xib */; };
@@ -627,6 +628,9 @@
 		3779D6221F5AA1A00021278B /* USSuspensionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USSuspensionView.h; sourceTree = "<group>"; };
 		3779D6231F5AA1A00021278B /* USSuspensionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USSuspensionView.m; sourceTree = "<group>"; };
 		3779D6241F5AA1A00021278B /* USSuspensionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = USSuspensionView.xib; sourceTree = "<group>"; };
+		377A64AC1F95E0A8006C3D6D /* USSafariViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USSafariViewController.h; sourceTree = "<group>"; };
+		377A64AD1F95E0A8006C3D6D /* USSafariViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USSafariViewController.m; sourceTree = "<group>"; };
+		377A64AE1F95E0A9006C3D6D /* USSafariViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = USSafariViewController.xib; sourceTree = "<group>"; };
 		37986D941F512B3B005ADAEB /* new_icon_send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_icon_send.png; sourceTree = "<group>"; };
 		37986D961F513112005ADAEB /* FFInputePostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFInputePostViewController.h; sourceTree = "<group>"; };
 		37986D971F513112005ADAEB /* FFInputePostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFInputePostViewController.m; sourceTree = "<group>"; };
@@ -1408,6 +1412,9 @@
 				3765AA241F4E805900496299 /* FFActivityListCell.xib */,
 				9F36DD201F5854CB000D76F7 /* FFActivityModel.h */,
 				9F36DD211F5854CB000D76F7 /* FFActivityModel.m */,
+				377A64AC1F95E0A8006C3D6D /* USSafariViewController.h */,
+				377A64AD1F95E0A8006C3D6D /* USSafariViewController.m */,
+				377A64AE1F95E0A9006C3D6D /* USSafariViewController.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -1825,6 +1832,7 @@
 				37CEDC9B1F6934F6004682F7 /* MJRefreshBackFooter.m in Sources */,
 				373758B71D000C1800582ECD /* UIViewController+Navigation.m in Sources */,
 				37559EFA1D2FB9E80078C374 /* MCEditViewController.m in Sources */,
+				377A64AF1F95E0A9006C3D6D /* USSafariViewController.m in Sources */,
 				3765A9881F3C356000496299 /* UIImage+MultiFormat.m in Sources */,
 				373758B41D000C1800582ECD /* UIView+Addition.m in Sources */,
 				374C6F421D2E7581003577CA /* FFAboutMeCell.m in Sources */,

@@ -15,6 +15,7 @@
 @property (nonatomic, strong) FFSwitchView *switchView;
 @property (nonatomic, strong) FFNewViewController *currentVC;
 @property (nonatomic, strong) NSArray *controllerArray;
+@property (nonatomic, assign) BOOL isMiss;
 
 @end
 
@@ -37,6 +38,11 @@
 {
     [super viewWillDisappear:animated];
     self.parentViewController.title = @"板块";
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    _isMiss = YES;
 }
 
 - (FFNewViewController *)viewControllerWithClassFromXib:(Class)class
@@ -80,6 +86,7 @@
     }
     ((FFNewViewController *)self.currentVC).type = type;
     ((FFNewViewController *)self.currentVC).forum_id = self.forum_id;
+    ((FFNewViewController *)self.currentVC).isMiss = self.isMiss;
 
     [self addChildViewController:self.currentVC];
     [self.view insertSubview:self.currentVC.view belowSubview:self.switchView];
