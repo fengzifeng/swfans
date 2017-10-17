@@ -35,8 +35,18 @@
     _nameLabel.text = model.author;
     [_typeLabel setTitle:model.forumName forState:UIControlStateNormal];
     _upLabel.text = model.subject;
-    NSString *str = [HLTool timeInfoWithDateString:model.dateline];
-    _timeLabel.text = str;
+    
+    NSString *timeStampString  = model.dateline;
+    
+    NSTimeInterval interval    =[timeStampString doubleValue];
+    NSDate *date               = [NSDate dateWithTimeIntervalSince1970:interval];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dateString       = [formatter stringFromDate: date];
+    
+//    NSString *str = [HLTool timeInfoWithDateString:dateString];
+    _timeLabel.text = dateString;
     if (model.replies.length) {
         _replyLabel.text = [NSString stringWithFormat:@"评论 %@",model.replies];
     } else {

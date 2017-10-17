@@ -98,10 +98,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11小时" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKA-Qs-XC7">
-                        <rect key="frame" x="70" y="83" width="100" height="11"/>
+                        <rect key="frame" x="70" y="83" width="200" height="11"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="11" id="BI5-LM-9gn"/>
-                            <constraint firstAttribute="width" constant="100" id="XkT-EW-mmQ"/>
+                            <constraint firstAttribute="width" constant="200" id="XkT-EW-mmQ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
