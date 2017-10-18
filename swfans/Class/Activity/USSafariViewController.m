@@ -56,12 +56,12 @@
         return;
     }
     
-    //加载本地文件
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if ([fileManager fileExistsAtPath:_url]) {
-        [self startLoadURL:[NSURL fileURLWithPath:_url]];
-        return;
-    }
+//    //加载本地文件
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    if ([fileManager fileExistsAtPath:_url]) {
+//        [self startLoadURL:[NSURL fileURLWithPath:_url]];
+//        return;
+//    }
 
     //加载网络资源
 //    if ([_url hasSuffix:@".jpg"] || [_url hasSuffix:@".png"]) {
@@ -166,6 +166,63 @@
     }
     
     [activityIndicatorView stopAnimating];
+}
+
+- (UIImage *)imageRepresentation{
+    CGFloat scale = [UIScreen mainScreen].scale;
+    
+    CGSize boundsSize = commonWebView.bounds.size;
+    CGFloat boundsWidth = boundsSize.width;
+    CGFloat boundsHeight = boundsSize.height;
+    
+    CGSize contentSize = commonWebView.scrollView.contentSize;
+    CGFloat contentHeight = contentSize.height;
+    
+    CGPoint offset = commonWebView.scrollView.contentOffset;
+    
+    [commonWebView.scrollView setContentOffset:CGPointMake(0, 0)];
+    
+    NSMutableArray *images = [NSMutableArray array];
+    while (contentHeight > 0) {
+        UIGraphicsBeginImageContextWithOptions(boundsSize, NO, 0.0);
+        [commonWebView.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        [images addObject:image];
+        
+        CGFloat offsetY = commonWebView.scrollView.contentOffset.y;
+        [commonWebView.scrollView setContentOffset:CGPointMake(0, offsetY + boundsHeight)];
+        contentHeight -= boundsHeight;
+    }
+    
+    [commonWebView.scrollView setContentOffset:offset];
+    
+    CGSize imageSize = CGSizeMake(contentSize.width * scale,
+                                  contentSize.height * scale);
+    UIGraphicsBeginImageContext(imageSize);
+    [images enumerateObjectsUsingBlock:^(UIImage *image, NSUInteger idx, BOOL *stop) {
+        [image drawInRect:CGRectMake(0,
+                                     scale * boundsHeight * idx,
+                                     scale * boundsWidth,
+                                     scale * boundsHeight)];
+    }];
+    UIImage *fullImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return fullImage;
+}
+
+- (IBAction)click:(id)sender
+{
+    UIImage * image = [self imageRepresentation];
+    NSLog(@"%@",image);
+    UIViewController *vc = [[UIViewController alloc] init];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.frame = self.view.bounds;
+    [vc.view addSubview:imageView];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

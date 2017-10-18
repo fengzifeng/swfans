@@ -213,6 +213,7 @@
 		379A7ECF1D2BBA1F00757F36 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7ECE1D2BBA1F00757F36 /* ApplicationContext.m */; };
 		379A7F021D2E2F6300757F36 /* UIDevice+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7F011D2E2F6300757F36 /* UIDevice+Common.m */; };
 		379A7F061D2E2FD000757F36 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7F051D2E2FD000757F36 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37A2AF031F974030008E8DE2 /* USSafariViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377A64AE1F95E0A9006C3D6D /* USSafariViewController.xib */; };
 		37A9BC031F74E2F6009E7E3D /* FFNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9BC021F74E2F6009E7E3D /* FFNavigationBar.m */; };
 		37B642E31F5000C300B06DBB /* FFPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B642E11F5000C300B06DBB /* FFPostDetailViewController.m */; };
 		37B642E41F5000C300B06DBB /* FFPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B642E21F5000C300B06DBB /* FFPostDetailViewController.xib */; };
@@ -1662,6 +1663,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A2AF031F974030008E8DE2 /* USSafariViewController.xib in Resources */,
 				3765A9D31F4457DE00496299 /* FFActivityViewController.xib in Resources */,
 				374C6FA81D2F70F4003577CA /* USPicker-Checkmark-Selected@2x.png in Resources */,
 				3765A99D1F44312800496299 /* main_tabBar_add.png in Resources */,

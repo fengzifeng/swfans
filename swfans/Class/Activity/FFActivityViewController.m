@@ -11,6 +11,7 @@
 #import "FFActivityModel.h"
 #import "FFPostDetailViewController.h"
 #import "DrBaseWebViewController.h"
+#import "USSafariViewController.h"
 
 @interface FFActivityViewController ()
 
@@ -26,13 +27,13 @@
     _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
     self.view.backgroundColor = RGBCOLOR(242, 244, 247);
     
-    __weak typeof(self) weakSelf = self;
-    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [weakSelf requestData];
-    }];
-    self.tableView.mj_header = refreshHeader;
-    
-    [self.tableView.mj_header beginRefreshing];
+//    __weak typeof(self) weakSelf = self;
+//    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//        [weakSelf requestData];
+//    }];
+//    self.tableView.mj_header = refreshHeader;
+//    
+//    [self.tableView.mj_header beginRefreshing];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *image = [UIImage imageNamed:@"200123768.jpg"];
@@ -47,12 +48,12 @@
 
 - (void)click
 {
-    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index"
-                                                          ofType:@"html"];
-    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
-                                                    encoding:NSUTF8StringEncoding
-                                                       error:nil];
-    DrBaseWebViewController *vc = [DrBaseWebViewController initWithTitle:@"抽奖" url:htmlCont];
+//    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index"
+//                                                          ofType:@"html"];
+//    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
+//                                                    encoding:NSUTF8StringEncoding
+//                                                       error:nil];
+    USSafariViewController *vc = [USSafariViewController initWithTitle:@"抽奖" url:@"assets.solidworks.com.cn/html/turntable"];
     
     [self.navigationController pushViewController:vc animated:YES];
 }
