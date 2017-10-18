@@ -72,13 +72,14 @@
 
 + (NSArray *) getImageurlFromHtml:(NSString *) webString
 {
+    if (!webString.length) return nil;
+
     NSMutableArray * imageurlArray = [NSMutableArray arrayWithCapacity:1];
     
     //标签匹配
     NSString *parten = @"<img(.*?)>";
     NSError* error = NULL;
     NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:parten options:0 error:&error];
-    
     NSArray* match = [reg matchesInString:webString options:0 range:NSMakeRange(0, [webString length] - 1)];
     
     for (NSTextCheckingResult * result in match) {

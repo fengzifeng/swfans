@@ -1688,7 +1688,7 @@
 					373757171CFFFD5600582ECD = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 9AL223S2Y5;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -2034,7 +2034,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2073,7 +2073,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2085,7 +2085,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9AL223S2Y5;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/swfans/PrefixHeader.pch";
@@ -2098,7 +2101,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.solidworks.swfans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5ee69e13-6e1b-410e-a68c-33f9bbd61834";
+				PROVISIONING_PROFILE_SPECIFIER = fengzifengpro;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2106,7 +2111,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9AL223S2Y5;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/swfans/PrefixHeader.pch";
@@ -2119,7 +2127,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.solidworks.swfans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5ee69e13-6e1b-410e-a68c-33f9bbd61834";
+				PROVISIONING_PROFILE_SPECIFIER = fengzifengpro;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
