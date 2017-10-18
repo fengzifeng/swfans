@@ -91,13 +91,6 @@
 		37559F071D3342380078C374 /* MCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37559F051D3342380078C374 /* MCSettingViewController.m */; };
 		37559F081D3342380078C374 /* MCSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37559F061D3342380078C374 /* MCSettingViewController.xib */; };
 		37559F121D334B9E0078C374 /* NSDictionary+KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37559F111D334B9E0078C374 /* NSDictionary+KVC.m */; };
-		37559F2E1D3362D10078C374 /* MCFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37559F291D3362D10078C374 /* MCFeedbackViewController.m */; };
-		37559F2F1D3362D10078C374 /* MCFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37559F2A1D3362D10078C374 /* MCFeedbackViewController.xib */; };
-		37559F301D3362D10078C374 /* UMFeedbackTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37559F2C1D3362D10078C374 /* UMFeedbackTableCell.m */; };
-		37559F311D3362D10078C374 /* UMFeedbackTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37559F2D1D3362D10078C374 /* UMFeedbackTableCell.xib */; };
-		37559F3B1D3363100078C374 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37559F331D3363100078C374 /* libMobClickLibrary.a */; };
-		37559F3C1D3363100078C374 /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37559F341D3363100078C374 /* libUMFeedback.a */; };
-		37559F3D1D3363100078C374 /* UMFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37559F391D3363100078C374 /* UMFeedbackViewController.m */; };
 		37559F3F1D3385830078C374 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37559F3E1D3385830078C374 /* libz.tbd */; };
 		37559F551D3391960078C374 /* USActShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37559F531D3391960078C374 /* USActShareView.m */; };
 		37559F561D3391960078C374 /* USActShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37559F541D3391960078C374 /* USActShareView.xib */; };
@@ -426,20 +419,6 @@
 		37559F091D334B530078C374 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		37559F101D334B9E0078C374 /* NSDictionary+KVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KVC.h"; sourceTree = "<group>"; };
 		37559F111D334B9E0078C374 /* NSDictionary+KVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KVC.m"; sourceTree = "<group>"; };
-		37559F281D3362D10078C374 /* MCFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFeedbackViewController.h; sourceTree = "<group>"; };
-		37559F291D3362D10078C374 /* MCFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFeedbackViewController.m; sourceTree = "<group>"; };
-		37559F2A1D3362D10078C374 /* MCFeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCFeedbackViewController.xib; sourceTree = "<group>"; };
-		37559F2B1D3362D10078C374 /* UMFeedbackTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedbackTableCell.h; sourceTree = "<group>"; };
-		37559F2C1D3362D10078C374 /* UMFeedbackTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMFeedbackTableCell.m; sourceTree = "<group>"; };
-		37559F2D1D3362D10078C374 /* UMFeedbackTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMFeedbackTableCell.xib; sourceTree = "<group>"; };
-		37559F331D3363100078C374 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
-		37559F341D3363100078C374 /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
-		37559F351D3363100078C374 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
-		37559F361D3363100078C374 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
-		37559F371D3363100078C374 /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedback.h; sourceTree = "<group>"; };
-		37559F381D3363100078C374 /* UMFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedbackViewController.h; sourceTree = "<group>"; };
-		37559F391D3363100078C374 /* UMFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMFeedbackViewController.m; sourceTree = "<group>"; };
-		37559F3A1D3363100078C374 /* UMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMRecorder.h; sourceTree = "<group>"; };
 		37559F3E1D3385830078C374 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		37559F521D3391960078C374 /* USActShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USActShareView.h; sourceTree = "<group>"; };
 		37559F531D3391960078C374 /* USActShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USActShareView.m; sourceTree = "<group>"; };
@@ -736,8 +715,6 @@
 			files = (
 				3748F8941D59D33A00BF7EE8 /* CoreData.framework in Frameworks */,
 				37559F3F1D3385830078C374 /* libz.tbd in Frameworks */,
-				37559F3C1D3363100078C374 /* libUMFeedback.a in Frameworks */,
-				37559F3B1D3363100078C374 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,7 +839,6 @@
 				3765A94E1F3C356000496299 /* SDWebImage */,
 				3765A9121F3C32AC00496299 /* AFNetworking3.0 */,
 				3755A12B1D40C76F0078C374 /* TBPlayer */,
-				37559F321D3363100078C374 /* youmeng */,
 				37559E861D2F9D250078C374 /* RSKImageCropper */,
 				374C6F811D2F70F3003577CA /* USImagePickerController */,
 				374C6F441D2F495D003577CA /* USAssetsPageViewController */,
@@ -1061,7 +1037,6 @@
 				37559F041D3342380078C374 /* MCSettingViewController.h */,
 				37559F051D3342380078C374 /* MCSettingViewController.m */,
 				37559F061D3342380078C374 /* MCSettingViewController.xib */,
-				37559F271D3362D10078C374 /* UMFeedback */,
 			);
 			path = AboutMe;
 			sourceTree = "<group>";
@@ -1166,34 +1141,6 @@
 				37559EE61D2FA7CE0078C374 /* USAlertView.m */,
 			);
 			path = MCAlertController;
-			sourceTree = "<group>";
-		};
-		37559F271D3362D10078C374 /* UMFeedback */ = {
-			isa = PBXGroup;
-			children = (
-				37559F281D3362D10078C374 /* MCFeedbackViewController.h */,
-				37559F291D3362D10078C374 /* MCFeedbackViewController.m */,
-				37559F2A1D3362D10078C374 /* MCFeedbackViewController.xib */,
-				37559F2B1D3362D10078C374 /* UMFeedbackTableCell.h */,
-				37559F2C1D3362D10078C374 /* UMFeedbackTableCell.m */,
-				37559F2D1D3362D10078C374 /* UMFeedbackTableCell.xib */,
-			);
-			path = UMFeedback;
-			sourceTree = "<group>";
-		};
-		37559F321D3363100078C374 /* youmeng */ = {
-			isa = PBXGroup;
-			children = (
-				37559F331D3363100078C374 /* libMobClickLibrary.a */,
-				37559F341D3363100078C374 /* libUMFeedback.a */,
-				37559F351D3363100078C374 /* MobClick.h */,
-				37559F361D3363100078C374 /* MobClickSocialAnalytics.h */,
-				37559F371D3363100078C374 /* UMFeedback.h */,
-				37559F381D3363100078C374 /* UMFeedbackViewController.h */,
-				37559F391D3363100078C374 /* UMFeedbackViewController.m */,
-				37559F3A1D3363100078C374 /* UMRecorder.h */,
-			);
-			path = youmeng;
 			sourceTree = "<group>";
 		};
 		37559F451D3391430078C374 /* Share */ = {
@@ -1742,11 +1689,9 @@
 				374C6FA71D2F70F4003577CA /* USPicker-Checkbox@3x.png in Resources */,
 				3765A9A11F44312800496299 /* main_tabBar_new_normal.png in Resources */,
 				3765AA171F4586F600496299 /* new_post_bg.png in Resources */,
-				37559F311D3362D10078C374 /* UMFeedbackTableCell.xib in Resources */,
 				37559E991D2F9D250078C374 /* RSKImageCropperStrings.bundle in Resources */,
 				37559EFB1D2FB9E80078C374 /* MCEditViewController.xib in Resources */,
 				37CEDC1E1F67E232004682F7 /* about_arrar.png in Resources */,
-				37559F2F1D3362D10078C374 /* MCFeedbackViewController.xib in Resources */,
 				37E5CB631D2E63FE00842A51 /* MCHomeViewController.xib in Resources */,
 				3765AA1C1F458ECA00496299 /* FFPlateLeftCell.xib in Resources */,
 				374C6FA91D2F70F4003577CA /* USPicker-Checkmark-Selected@3x.png in Resources */,
@@ -1817,7 +1762,6 @@
 				373758AE1D000C1800582ECD /* NSString+Common.m in Sources */,
 				37559E9A1D2F9D250078C374 /* RSKImageCropViewController.m in Sources */,
 				37CEDCA11F6934F6004682F7 /* MJRefreshAutoStateFooter.m in Sources */,
-				37559F301D3362D10078C374 /* UMFeedbackTableCell.m in Sources */,
 				3765A98B1F3C356000496299 /* UIImageView+MJWebCache.m in Sources */,
 				3765AA0B1F4576D500496299 /* MJMember.m in Sources */,
 				3765A93B1F3C32AC00496299 /* AFURLSessionManager.m in Sources */,
@@ -1871,7 +1815,6 @@
 				3765A93A1F3C32AC00496299 /* AFURLResponseSerialization.m in Sources */,
 				3765AA111F4576D500496299 /* NSObject+MJMember.m in Sources */,
 				3765A98C1F3C356000496299 /* UIImageView+WebCache.m in Sources */,
-				37559F2E1D3362D10078C374 /* MCFeedbackViewController.m in Sources */,
 				3765A9391F3C32AC00496299 /* AFURLRequestSerialization.m in Sources */,
 				9F36DD221F5854CB000D76F7 /* FFActivityModel.m in Sources */,
 				370B4F491D0820E2000D12FF /* SwitchView.m in Sources */,
@@ -1917,7 +1860,6 @@
 				3765A97C1F3C356000496299 /* NSImage+WebCache.m in Sources */,
 				3765AA0E1F4576D500496299 /* MJTypeEncoding.m in Sources */,
 				3765A9841F3C356000496299 /* SDWebImageManager.m in Sources */,
-				37559F3D1D3363100078C374 /* UMFeedbackViewController.m in Sources */,
 				3765A9421F3C32AC00496299 /* UIProgressView+AFNetworking.m in Sources */,
 				37E5CB8C1D2E663500842A51 /* USAuthViewController.m in Sources */,
 				3765A9431F3C32AC00496299 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -2095,10 +2037,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/swfans/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/swfans/ThirdPart/youmeng",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.solidworks.swfans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5ee69e13-6e1b-410e-a68c-33f9bbd61834";
@@ -2121,10 +2060,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/swfans/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/swfans/ThirdPart/youmeng",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.solidworks.swfans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5ee69e13-6e1b-410e-a68c-33f9bbd61834";

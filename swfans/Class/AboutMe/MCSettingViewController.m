@@ -7,7 +7,6 @@
 //
 
 #import "MCSettingViewController.h"
-#import "MCFeedbackViewController.h"
 
 @interface MCSettingViewController ()
 {
@@ -79,8 +78,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 0) {
-        MCFeedbackViewController *vc = [MCFeedbackViewController viewController];
-        [self.navigationController pushViewController:vc animated:YES];
+//        MCFeedbackViewController *vc = [MCFeedbackViewController viewController];
+//        [self.navigationController pushViewController:vc animated:YES];
         
     } else if (indexPath.row == 1) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{

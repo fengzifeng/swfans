@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "MobClick.h"
 @interface AppDelegate ()
 
 @end
@@ -18,18 +17,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    [MobClick startWithAppkey:kAppKey_YouMeng reportPolicy:SEND_INTERVAL channelId:@"App Store"];
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    [MobClick setAppVersion:version];
     NSLog(@"已开启友盟统计");
-    [UMFeedback setLogEnabled:NO];
 //    [application setStatusBarHidden:YES];//启动时隐藏状态栏
 
-    //添加友盟渠道统计(UMtrack)
-    NSString * deviceName = [[[UIDevice currentDevice] name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString * urlString = [NSString stringWithFormat:@"http://log.umtrack.com/ping/%@/?devicename=%@&mac=%@&idfa=%@&idfv=%@",
-                            @"561df3f5e0f55a3593003858", deviceName, @"02:00:00:00:00:00", [UIDevice idfa], [UIDevice idfv]];
-    [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:urlString]] delegate:nil];
+//    //添加友盟渠道统计(UMtrack)
+//    NSString * deviceName = [[[UIDevice currentDevice] name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    NSString * urlString = [NSString stringWithFormat:@"http://log.umtrack.com/ping/%@/?devicename=%@&mac=%@&idfa=%@&idfv=%@",
+//                            @"561df3f5e0f55a3593003858", deviceName, @"02:00:00:00:00:00", [UIDevice idfa], [UIDevice idfv]];
+//    [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:urlString]] delegate:nil];
     
     _rootViewController = [[MCRootViewController alloc] initWithNibName:@"MCRootViewController" bundle:nil];
     self.window.rootViewController = _rootViewController;

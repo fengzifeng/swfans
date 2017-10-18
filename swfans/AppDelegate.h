@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UMFeedback.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,UMFeedbackDataDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) MCRootViewController *rootViewController;

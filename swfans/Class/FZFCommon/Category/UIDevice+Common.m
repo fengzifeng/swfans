@@ -66,18 +66,18 @@ const char* key = "hoolai";
     return nil;
 }
 
-//广告标识符
-+ (NSString *)idfa
-{
-    if([[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled])
-    {
-        NSUUID *IDFA = [[ASIdentifierManager sharedManager] advertisingIdentifier];
-        
-        return [IDFA UUIDString];
-    }
-    
-    return @"";
-}
+////广告标识符
+//+ (NSString *)idfa
+//{
+//    if([[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled])
+//    {
+//        NSUUID *IDFA = [[ASIdentifierManager sharedManager] advertisingIdentifier];
+//        
+//        return [IDFA UUIDString];
+//    }
+//    
+//    return @"";
+//}
 
 + (NSString *)idfv
 {

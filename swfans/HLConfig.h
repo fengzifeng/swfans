@@ -5,7 +5,7 @@
 #define HLMagic_HLConfig_h
 
 //友盟SDK
-#define kAppKey_YouMeng                        @"561df3f5e0f55a3593003858"
+//#define kAppKey_YouMeng                        @"561df3f5e0f55a3593003858"
 
 
 //页面默认背景色
