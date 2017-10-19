@@ -15,10 +15,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    [self requestData];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    NSLog(@"已开启友盟统计");
+//    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+//    NSLog(@"已开启友盟统计");
 //    [application setStatusBarHidden:YES];//启动时隐藏状态栏
 
 //    //添加友盟渠道统计(UMtrack)
@@ -35,6 +39,16 @@
     
     return YES;
 }
+
+- (void)requestData
+{
+    NSString *requestUrl = @"http://attendee.solidworks.com.cn/api/turntable";
+    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        [userDefaults setObject:response.payload[@"data"] forKey:@"jiluapp"];
+//        [userDefaults setObject:@(1) forKey:@"jiluapp"];
+    }];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

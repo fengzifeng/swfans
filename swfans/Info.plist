@@ -38,8 +38,6 @@
 	<string>帮助您更快速，便捷的输入</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>可选择您已有的图片上传</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

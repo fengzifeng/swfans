@@ -22,8 +22,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奖励有本公司提供与苹果公司无关" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idn-hw-yAX">
+                    <rect key="frame" x="0.0" y="64" width="375" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="AK4-Kk-jqp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFD-CS-Ehz">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="77" width="375" height="590"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                     <connections>
@@ -38,14 +47,6 @@
                     </constraints>
                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="64" maxX="0.0" maxY="-64"/>
                 </activityIndicatorView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq5-rN-5BN">
-                    <rect key="frame" x="124" y="318" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="click:" destination="-1" eventType="touchUpInside" id="Thu-G7-kuJ"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -53,8 +54,11 @@
                 <constraint firstAttribute="centerX" secondItem="Hds-ER-c8b" secondAttribute="centerX" id="BrZ-sr-yVl"/>
                 <constraint firstAttribute="trailing" secondItem="fFD-CS-Ehz" secondAttribute="trailing" id="O3K-6s-0eP"/>
                 <constraint firstAttribute="bottom" secondItem="fFD-CS-Ehz" secondAttribute="bottom" id="Q29-Ug-shC"/>
-                <constraint firstItem="fFD-CS-Ehz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="h2S-zL-zf6"/>
+                <constraint firstAttribute="trailing" secondItem="Idn-hw-yAX" secondAttribute="trailing" id="Raf-Ds-CEV"/>
+                <constraint firstItem="fFD-CS-Ehz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="h2S-zL-zf6"/>
                 <constraint firstItem="fFD-CS-Ehz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s94-fi-QRm"/>
+                <constraint firstItem="Idn-hw-yAX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vd2-2O-5kh"/>
+                <constraint firstItem="Idn-hw-yAX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="wgF-Nb-sZl"/>
             </constraints>
         </view>
     </objects>

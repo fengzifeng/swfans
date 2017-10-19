@@ -24,26 +24,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSNumber *flag = [userDefaults objectForKey:@"jiluapp"];
     _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
     self.view.backgroundColor = RGBCOLOR(242, 244, 247);
+    if ([flag integerValue] == 0) {
+        __weak typeof(self) weakSelf = self;
+        MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [weakSelf requestData];
+        }];
+        self.tableView.mj_header = refreshHeader;
     
-//    __weak typeof(self) weakSelf = self;
-//    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-//        [weakSelf requestData];
-//    }];
-//    self.tableView.mj_header = refreshHeader;
-//    
-//    [self.tableView.mj_header beginRefreshing];
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *image = [UIImage imageNamed:@"200123768.jpg"];
-    [button setImage:image forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
-    button.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH*image.size.height/image.size.width);
-    _tableView.tableHeaderView = button;
-
-//    [_tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-//    [_tableView headerBeginRefreshing];
+        [self.tableView.mj_header beginRefreshing];
+    } else {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIImage *image = [UIImage imageNamed:@"200123768.jpg"];
+        [button setImage:image forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+        button.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH*image.size.height/image.size.width);
+        _tableView.tableHeaderView = button;
+    }
 }
 
 - (void)click
