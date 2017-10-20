@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="USAuthViewController">
             <connections>
                 <outlet property="_tableView" destination="yqs-Yq-BpO" id="ni4-zU-i67"/>
+                <outlet property="protocolImageView" destination="c73-DL-e3H" id="8bB-Sz-Ulr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="jwH-tH-JtQ"/>
             </connections>
         </placeholder>
@@ -28,21 +29,83 @@
                         <outlet property="delegate" destination="-1" id="wZo-9g-cja"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我同意并遵守" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quB-kS-Tcy">
+                    <rect key="frame" x="118.5" y="600" width="80" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="9gO-Mz-jQi"/>
+                        <constraint firstAttribute="width" constant="80" id="xeE-Vr-Rue"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgD-8D-2Kb">
+                    <rect key="frame" x="87.5" y="600" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="SCn-JG-E9z"/>
+                        <constraint firstAttribute="width" constant="30" id="fuu-j3-k8x"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickAgreeProtocol:" destination="-1" eventType="touchUpInside" id="VJn-UQ-v0e"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="register_agree_background.png" highlightedImage="register_agree_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="OjG-ry-d9Y">
+                    <rect key="frame" x="98" y="609" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="1DE-ve-Yes"/>
+                        <constraint firstAttribute="height" constant="15" id="ecV-SM-CKs"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="register_agree_check.png" translatesAutoresizingMaskIntoConstraints="NO" id="c73-DL-e3H">
+                    <rect key="frame" x="98" y="609" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="b9H-6k-hbI"/>
+                        <constraint firstAttribute="height" constant="15" id="swH-ZF-6lT"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uf-aY-R7e">
+                    <rect key="frame" x="198.5" y="600" width="98" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="LvV-6b-7m5"/>
+                        <constraint firstAttribute="width" constant="98" id="gPU-mr-FX5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="3D社区使用协议">
+                        <color key="titleColor" red="0.04085352272" green="0.37480330470000001" blue="0.99835759400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clicktongyi:" destination="-1" eventType="touchUpInside" id="U7G-av-dT2"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="2Uf-aY-R7e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="60" id="838-C0-ySM"/>
+                <constraint firstAttribute="bottom" secondItem="c73-DL-e3H" secondAttribute="bottom" constant="43" id="AMI-QU-icf"/>
+                <constraint firstItem="c73-DL-e3H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-82" id="Cdw-df-A5m"/>
                 <constraint firstAttribute="bottom" secondItem="yqs-Yq-BpO" secondAttribute="bottom" id="Gl9-tX-NNy"/>
+                <constraint firstAttribute="bottom" secondItem="OjG-ry-d9Y" secondAttribute="bottom" constant="43" id="PQL-fx-2Uz"/>
+                <constraint firstAttribute="bottom" secondItem="quB-kS-Tcy" secondAttribute="bottom" constant="37" id="PiX-Yq-bBH"/>
+                <constraint firstItem="OjG-ry-d9Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-82" id="YVL-E0-MkZ"/>
+                <constraint firstItem="quB-kS-Tcy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-29" id="aju-ZA-fsY"/>
                 <constraint firstAttribute="trailing" secondItem="yqs-Yq-BpO" secondAttribute="trailing" id="aun-Jx-sZk"/>
+                <constraint firstItem="VgD-8D-2Kb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-85" id="cYk-6a-bak"/>
                 <constraint firstItem="yqs-Yq-BpO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iwk-vE-bqD"/>
                 <constraint firstItem="yqs-Yq-BpO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t4r-4Z-HUn"/>
+                <constraint firstAttribute="bottom" secondItem="2Uf-aY-R7e" secondAttribute="bottom" constant="37" id="vHL-lw-VGA"/>
+                <constraint firstAttribute="bottom" secondItem="VgD-8D-2Kb" secondAttribute="bottom" constant="37" id="wyV-1K-iZL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="544" y="376"/>
+            <point key="canvasLocation" x="543.5" y="375.5"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
+    <resources>
+        <image name="register_agree_background.png" width="29" height="29"/>
+        <image name="register_agree_check.png" width="29" height="29"/>
+    </resources>
 </document>

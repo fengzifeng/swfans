@@ -16,7 +16,9 @@ typedef enum {
 
 @interface USAuthViewController : MCViewController
 {
-    IBOutlet UITableView *_tableView;
+    __weak IBOutlet UITableView *_tableView;
+    __weak IBOutlet UIImageView *protocolImageView;
+
 }
 
 @property (nonatomic, assign) authType type;

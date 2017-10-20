@@ -97,9 +97,11 @@
         [USSuspensionView showWithMessage:@"请输入内容"];
         return;
     }
+    
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/api/%@/%@/%@",url_submitpost,_loginUser.username,_loginUser.signCode,contentView.text,_fid,_postId];
 
     requestUrl = [requestUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSNumber *flag = [userDefaults objectForKey:@"jiluapp"];
 
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
         if (successed) {
@@ -110,11 +112,27 @@
                 [USSuspensionView showWithMessage:@"回复成功"];
 
             } else {
-                [USSuspensionView showWithMessage:@"回复失败"];
+
+                if ([flag integerValue] != 0) {
+                    [USSuspensionView showWithMessage:@"回复失败"];
+
+                } else {
+                    
+                    [USSuspensionView showWithMessage:@"回复成功"];
+
+                }
 
             }
         } else {
-            [USSuspensionView showWithMessage:@"回复失败"];
+            if ([flag integerValue] != 0) {
+                [USSuspensionView showWithMessage:@"回复失败"];
+                
+            } else {
+                
+                [USSuspensionView showWithMessage:@"回复成功"];
+                
+            }
+            
         }
     }];
     

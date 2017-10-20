@@ -8,11 +8,15 @@
 
 #import "USAuthViewController.h"
 #import "FFLoginCell.h"
+#import "DrBaseWebViewController.h"
+#import "FFPlateDetailViewController.h"
 
 @interface USAuthViewController ()
 
 @property (nonatomic, strong) NSArray *titleArray;
 @property (nonatomic, strong) FFLoginUser *loginObj;
+@property (nonatomic, strong) UIButton *logButton;
+
 
 @end
 
@@ -72,7 +76,8 @@
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 102)];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.backgroundColor = HexColor(0xaa2d1b);
+    [button setBackgroundImage:[UIImage imageWithColor:HexColor(0xaa2d1b)] forState:UIControlStateNormal];
+//    button.backgroundColor = HexColor(0xaa2d1b);
     button.frame = CGRectMake(19, 22, SCREEN_WIDTH - 19*2, 42);
     button.titleLabel.font = [UIFont systemFontOfSize:15];
     button.layer.masksToBounds = YES;
@@ -87,7 +92,7 @@
     [downButton addTarget:self action:@selector(clickSwitch) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:downButton];
     self.downButton = downButton;
-
+    _logButton = button;
     if (_type == loginType) {
         [button setTitle:@"登录" forState:UIControlStateNormal];
         [downButton setTitle:@"没有账号？立即注册" forState:UIControlStateNormal];
@@ -101,6 +106,19 @@
     }
 
     return view;
+}
+
+- (IBAction)didClickAgreeProtocol:(UIButton *)sender
+{
+    protocolImageView.hidden = !protocolImageView.hidden;
+    _logButton.enabled = !protocolImageView.hidden;
+}
+
+- (IBAction)clicktongyi:(id)sender {
+//    FFPlateDetailViewController *vc = [FFPlateDetailViewController viewController];
+    DrBaseWebViewController *vc = [[DrBaseWebViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)clickSwitch
@@ -171,7 +189,9 @@
 {
     [self.view endEditing:YES];
 
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
 }
 
 - (void)login
@@ -198,7 +218,8 @@
                     [self clickSwitch];
                 } else {
                     [AuthData loginSuccess:@{@"uid":user.uid,@"username":user.username,@"signCode":user.signCode}];
-                    [self dismissViewControllerAnimated:YES completion:nil];
+                    [self.navigationController popToRootViewControllerAnimated:YES];
+//                    [self dismissViewControllerAnimated:YES completion:nil];
                 }
             } else {
                 if (!str.length) {

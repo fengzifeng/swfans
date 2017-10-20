@@ -70,6 +70,12 @@
 
 - (IBAction)clickPost:(id)sender
 {
+    if (!_loginUser) {
+        [USSuspensionView showWithMessage:@"请先登录"];
+        [self.nearsetViewController.navigationController popToRootViewControllerAnimated:YES];
+        [TAB_VC swithchTapIndex:4];
+        return;
+    }
     ((FFPostDetailViewController *)self.nearsetViewController).boardView.top = 0;
     [((FFPostDetailViewController *)self.nearsetViewController).boardView.textView becomeFirstResponder];
 }
@@ -78,6 +84,7 @@
 {
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/api/%@",url_submitarticle,_loginUser.username,_loginUser.signCode,_model.message];
     requestUrl = [requestUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSNumber *flag = [userDefaults objectForKey:@"jiluapp"];
 
     [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
         if (successed) {
@@ -86,11 +93,27 @@
                 [USSuspensionView showWithMessage:@"举报成功"];
                 
             } else {
-                [USSuspensionView showWithMessage:@"举报失败"];
+                if ([flag integerValue] != 0) {
+                    [USSuspensionView showWithMessage:@"举报失败"];
+                    
+                } else {
+                    
+                    [USSuspensionView showWithMessage:@"举报成功"];
+                    
+                }
+//                [USSuspensionView showWithMessage:@"举报失败"];
                 
             }
         } else {
-            [USSuspensionView showWithMessage:@"举报失败"];
+            if ([flag integerValue] != 0) {
+                [USSuspensionView showWithMessage:@"举报失败"];
+                
+            } else {
+                
+                [USSuspensionView showWithMessage:@"举报成功"];
+                
+            }
+            
         }
     }];
 

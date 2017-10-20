@@ -15,6 +15,7 @@
 @interface DrBaseWebViewController () <SKStoreProductViewControllerDelegate>
 
 @property (nonatomic, strong) NSString *requestURL;// 请求时的URL
+@property (nonatomic, strong) UIActivityIndicatorView *fview;// 请求时的URL
 
 /**
  *  初始化webview
@@ -42,20 +43,28 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self setNavigationBackButtonDefault];
-    self.title = @"抽奖";
+    self.title = @"使用条款";
     [self prepareWebView];
-    [self webViewRequest:self.requestURL];
+//    [self webViewRequest:self.requestURL];
+    
+    UIActivityIndicatorView *view = [[UIActivityIndicatorView alloc] init];
+    view.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    view.frame = CGRectMake(0, 0, 20, 20);
+    view.center = self.view.center;
+    [self.view addSubview:view];
+    [view startAnimating];
+    self.fview = view;
 
-//    NSString *path = [[NSBundle mainBundle] bundlePath];
-//    NSURL *baseURL = [NSURL fileURLWithPath:path];
-//    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index"
-//                                                          ofType:@"html"];
-//    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
-//                                                    encoding:NSUTF8StringEncoding
-//                                                       error:nil];
-    
-    
-//    [self.drWebView loadHTMLString:self.requestURL baseURL:baseURL];
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
+    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"shengming"
+                                                          ofType:@"html"];
+    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
+                                                    encoding:NSUTF8StringEncoding
+                                                       error:nil];
+
+
+    [self.drWebView loadHTMLString:htmlCont baseURL:baseURL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,6 +91,8 @@
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [_fview stopAnimating];
+
 
 }
 
@@ -91,7 +102,7 @@
 + (instancetype)initWithTitle:(NSString *)titleStr url:(NSString *)urlStr
 {
     DrBaseWebViewController *vc = [[DrBaseWebViewController alloc] init];
-    vc.requestURL = urlStr;
+//    vc.requestURL = urlStr;
 
     
     return vc;

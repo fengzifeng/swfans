@@ -192,7 +192,8 @@
 {
     USAuthViewController *vc = [USAuthViewController viewController];
     vc.type = loginType;
-    [self presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+//    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

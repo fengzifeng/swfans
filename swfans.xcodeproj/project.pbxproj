@@ -214,6 +214,9 @@
 		379A7F021D2E2F6300757F36 /* UIDevice+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7F011D2E2F6300757F36 /* UIDevice+Common.m */; };
 		379A7F061D2E2FD000757F36 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 379A7F051D2E2FD000757F36 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		37A2AF031F974030008E8DE2 /* USSafariViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377A64AE1F95E0A9006C3D6D /* USSafariViewController.xib */; };
+		37A2AF3A1F98E422008E8DE2 /* register_agree_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A2AF371F98E3E5008E8DE2 /* register_agree_background.png */; };
+		37A2AF3B1F98E42E008E8DE2 /* register_agree_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A2AF381F98E3E6008E8DE2 /* register_agree_check.png */; };
+		37A2AF3C1F98EB1F008E8DE2 /* shengming.html in Resources */ = {isa = PBXBuildFile; fileRef = 37A2AF2F1F98BBAE008E8DE2 /* shengming.html */; };
 		37A9BC031F74E2F6009E7E3D /* FFNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9BC021F74E2F6009E7E3D /* FFNavigationBar.m */; };
 		37B642E31F5000C300B06DBB /* FFPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B642E11F5000C300B06DBB /* FFPostDetailViewController.m */; };
 		37B642E41F5000C300B06DBB /* FFPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B642E21F5000C300B06DBB /* FFPostDetailViewController.xib */; };
@@ -630,6 +633,10 @@
 		379A7F011D2E2F6300757F36 /* UIDevice+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Common.m"; sourceTree = "<group>"; };
 		379A7F041D2E2FD000757F36 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		379A7F051D2E2FD000757F36 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		37A2AF2F1F98BBAE008E8DE2 /* shengming.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = shengming.html; sourceTree = "<group>"; };
+		37A2AF371F98E3E5008E8DE2 /* register_agree_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_agree_background.png; sourceTree = "<group>"; };
+		37A2AF381F98E3E6008E8DE2 /* register_agree_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_agree_check.png; sourceTree = "<group>"; };
+		37A2AF391F98E3F1008E8DE2 /* register_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_female.png; sourceTree = "<group>"; };
 		37A9BC011F74E2F6009E7E3D /* FFNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFNavigationBar.h; sourceTree = "<group>"; };
 		37A9BC021F74E2F6009E7E3D /* FFNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFNavigationBar.m; sourceTree = "<group>"; };
 		37B642E01F5000C300B06DBB /* FFPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPostDetailViewController.h; sourceTree = "<group>"; };
@@ -1354,6 +1361,7 @@
 				3765A9CF1F4457DE00496299 /* FFActivityViewController.h */,
 				3765A9D01F4457DE00496299 /* FFActivityViewController.m */,
 				3765A9D11F4457DE00496299 /* FFActivityViewController.xib */,
+				37A2AF2F1F98BBAE008E8DE2 /* shengming.html */,
 				9F117DD11F9323C300047538 /* 200123768.jpg */,
 				3765AA221F4E805900496299 /* FFActivityListCell.h */,
 				3765AA231F4E805900496299 /* FFActivityListCell.m */,
@@ -1408,7 +1416,10 @@
 			children = (
 				3765AA3E1F4EAFFE00496299 /* login_close.png */,
 				3765AA3C1F4EAF8400496299 /* login_logo.png */,
+				37A2AF371F98E3E5008E8DE2 /* register_agree_background.png */,
+				37A2AF381F98E3E6008E8DE2 /* register_agree_check.png */,
 				37CEDC1A1F67E232004682F7 /* about_arrar.png */,
+				37A2AF391F98E3F1008E8DE2 /* register_female.png */,
 				37CEDC1B1F67E232004682F7 /* about_avatar.png */,
 				37CEDC1C1F67E232004682F7 /* about_mypost.png */,
 				37CEDC1D1F67E232004682F7 /* about_post.png */,
@@ -1663,6 +1674,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A2AF3C1F98EB1F008E8DE2 /* shengming.html in Resources */,
+				37A2AF3B1F98E42E008E8DE2 /* register_agree_check.png in Resources */,
+				37A2AF3A1F98E422008E8DE2 /* register_agree_background.png in Resources */,
 				37A2AF031F974030008E8DE2 /* USSafariViewController.xib in Resources */,
 				3765A9D31F4457DE00496299 /* FFActivityViewController.xib in Resources */,
 				374C6FA81D2F70F4003577CA /* USPicker-Checkmark-Selected@2x.png in Resources */,

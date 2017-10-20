@@ -47,12 +47,7 @@
 
 - (void)click
 {
-//    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"index"
-//                                                          ofType:@"html"];
-//    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
-//                                                    encoding:NSUTF8StringEncoding
-//                                                       error:nil];
-    USSafariViewController *vc = [USSafariViewController initWithTitle:@"抽奖" url:@"assets.solidworks.com.cn/html/turntable"];
+    USSafariViewController *vc = [USSafariViewController initWithTitle:@"使用协议" url:@"assets.solidworks.com.cn/html/turntable"];
     
     [self.navigationController pushViewController:vc animated:YES];
 }
