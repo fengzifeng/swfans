@@ -113,7 +113,7 @@
 - (void)prepareWebView{
     if (nil == _drWebView) {
 
-        _drWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0f, 64, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _drWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0f, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
         _drWebView.delegate = self;
         [_drWebView setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin |
          UIViewAutoresizingFlexibleWidth |

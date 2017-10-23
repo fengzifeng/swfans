@@ -249,6 +249,7 @@
 		37CEDCAC1F6934F6004682F7 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CEDC951F6934F6004682F7 /* UIScrollView+MJExtension.m */; };
 		37CEDCAD1F6934F6004682F7 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CEDC971F6934F6004682F7 /* UIScrollView+MJRefresh.m */; };
 		37CEDCAE1F6934F6004682F7 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CEDC991F6934F6004682F7 /* UIView+MJExtension.m */; };
+		37D39C861F9AFDB00003DEF9 /* noavata.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F941511F8C758200254E95 /* noavata.png */; };
 		37E5CB5C1D2E61D500842A51 /* MCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E5CB5B1D2E61D500842A51 /* MCHomeViewController.m */; };
 		37E5CB631D2E63FE00842A51 /* MCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E5CB621D2E63FE00842A51 /* MCHomeViewController.xib */; };
 		37E5CB791D2E650800842A51 /* main_tabBar_circle_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E5CB681D2E650800842A51 /* main_tabBar_circle_highlight@2x.png */; };
@@ -1647,7 +1648,7 @@
 					373757171CFFFD5600582ECD = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 9AL223S2Y5;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1674,6 +1675,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D39C861F9AFDB00003DEF9 /* noavata.png in Resources */,
 				37A2AF3C1F98EB1F008E8DE2 /* shengming.html in Resources */,
 				37A2AF3B1F98E42E008E8DE2 /* register_agree_check.png in Resources */,
 				37A2AF3A1F98E422008E8DE2 /* register_agree_background.png in Resources */,
@@ -2045,8 +2047,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9AL223S2Y5;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/swfans/PrefixHeader.pch";
@@ -2056,8 +2058,8 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.solidworks.swfans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5ee69e13-6e1b-410e-a68c-33f9bbd61834";
-				PROVISIONING_PROFILE_SPECIFIER = fengzifengpro;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2068,8 +2070,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9AL223S2Y5;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/swfans/PrefixHeader.pch";
@@ -2079,8 +2081,8 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.solidworks.swfans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5ee69e13-6e1b-410e-a68c-33f9bbd61834";
-				PROVISIONING_PROFILE_SPECIFIER = fengzifengpro;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

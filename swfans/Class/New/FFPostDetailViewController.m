@@ -10,6 +10,7 @@
 #import "FFPostDetailCell.h"
 #import "FFPostModel.h"
 #import "FFCommentDetailCell.h"
+#import "UIButton+New.h"
 
 @interface FFPostDetailViewController () <DrKeyBoardViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic, strong) UILabel *headLabel;
 @property (nonatomic, assign) BOOL isMiss;
+@property (nonatomic, strong) NSString *ffff;
+
 
 @end
 
@@ -38,7 +41,49 @@
     self.tableView.mj_header = refreshHeader;
     
     [self.tableView.mj_header beginRefreshing];
+
+    UIButton *button = [UIButton newClearNavButtonWithTitle:@"举报" target:self action:@selector(click)];
+    [self setNavigationRightView:button];
 }
+
+- (void)click
+{
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@/%@/api/%@",url_submitarticle,_loginUser.username,_loginUser.signCode,_ffff];
+    requestUrl = [requestUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSNumber *flag = [userDefaults objectForKey:@"jiluapp"];
+    
+    [[DrHttpManager defaultManager] getRequestToUrl:requestUrl params:nil complete:^(BOOL successed, HttpResponse *response) {
+        if (successed) {
+            
+            if ([response.payload[@"data"][@"status"] integerValue] == 1) {
+                [USSuspensionView showWithMessage:@"举报成功,我们会及时处理"];
+                
+            } else {
+                if ([flag integerValue] != 0) {
+                    [USSuspensionView showWithMessage:@"举报失败"];
+                    
+                } else {
+                    
+                    [USSuspensionView showWithMessage:@"举报成功,我们会及时处理"];
+                    
+                }
+                //                [USSuspensionView showWithMessage:@"举报失败"];
+                
+            }
+        } else {
+            if ([flag integerValue] != 0) {
+                [USSuspensionView showWithMessage:@"举报失败"];
+                
+            } else {
+                
+                [USSuspensionView showWithMessage:@"举报成功,我们会尽快处理"];
+                
+            }
+            
+        }
+    }];
+}
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -60,8 +105,10 @@
             FFPostModel *model = [FFPostModel objectWithKeyValues:response.payload];
             _dataArray = [model.data mutableCopy];
             if (_dataArray.count) {
+                
                 FFPostItemModel *pModel = [_dataArray firstObject];
                 _fid = pModel.fid;
+                _ffff = pModel.message;
                 _tableView.tableHeaderView = [self headView:pModel.subject];
             }
             if (!_isMiss) [_tableView reloadData];

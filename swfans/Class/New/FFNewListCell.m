@@ -52,11 +52,26 @@
     } else {
         _replyLabel.text = @"";
     }
-    _picImaegView.backgroundColor = [UIColor yellowColor];
     NSArray *array = [[self class] getImageurlFromHtml:model.message];
     if (array.count) {
         NSString *image = array[0];
-        [_picImaegView sd_setImageWithURL:[NSURL URLWithString:image]];
+//        _picImaegView.contentMode = UIViewContentModeScaleAspectFill;
+        _picImaegView.image = [UIImage imageNamed:@"about_avatar"];
+        [_picImaegView sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"about_avatar"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            if (image) {
+                _picImaegView.image = image;
+            } else {
+                _picImaegView.image = [UIImage imageNamed:@"about_avatar"];
+            }
+        }];
+//        [_picImaegView sd_setImageWithURL:[NSURL URLWithString:image] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//            if (image) {
+//                _picImaegView.image = image;
+//            } else {
+//                _picImaegView.image = [UIImage imageNamed:@"about_avatar"];
+//            }
+//        }];
+//        [_picImaegView sd_setImageWithURL:[NSURL URLWithString:image]];
         [_picImaegView autoSetDimension:ALDimensionHeight toSize:(SCREEN_WIDTH-20)*337/600.0];
         _picImaegView.hidden = NO;
         [_upLabel autoSetDimension:ALDimensionHeight toSize:_currentModel.height - 70 - 5 - (SCREEN_WIDTH-20)*337/600.0];
