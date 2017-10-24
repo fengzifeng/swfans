@@ -283,7 +283,7 @@
 		3730A6951F74B23000071840 /* FFActiveChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFActiveChooseView.h; sourceTree = "<group>"; };
 		3730A6961F74B23000071840 /* FFActiveChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFActiveChooseView.m; sourceTree = "<group>"; };
 		3730A6981F74B23B00071840 /* FFActiveChooseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFActiveChooseView.xib; sourceTree = "<group>"; };
-		373757181CFFFD5600582ECD /* swfans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swfans.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		373757181CFFFD5600582ECD /* 3D社群.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D社群.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3737571C1CFFFD5600582ECD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3737571E1CFFFD5600582ECD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3737571F1CFFFD5700582ECD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -772,7 +772,7 @@
 			isa = PBXGroup;
 			children = (
 				37056D371D5C77E8006254D2 /* Frameworks */,
-				3737571A1CFFFD5600582ECD /* swfans */,
+				3737571A1CFFFD5600582ECD /* 3D社群 */,
 				373757191CFFFD5600582ECD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -780,12 +780,12 @@
 		373757191CFFFD5600582ECD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				373757181CFFFD5600582ECD /* swfans.app */,
+				373757181CFFFD5600582ECD /* 3D社群.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3737571A1CFFFD5600582ECD /* swfans */ = {
+		3737571A1CFFFD5600582ECD /* 3D社群 */ = {
 			isa = PBXGroup;
 			children = (
 				3737571E1CFFFD5600582ECD /* AppDelegate.h */,
@@ -804,7 +804,7 @@
 				3737572C1CFFFD5700582ECD /* Info.plist */,
 				3737571B1CFFFD5600582ECD /* Supporting Files */,
 			);
-			path = swfans;
+			path = "3D社群";
 			sourceTree = "<group>";
 		};
 		3737571B1CFFFD5600582ECD /* Supporting Files */ = {
@@ -1619,9 +1619,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		373757171CFFFD5600582ECD /* swfans */ = {
+		373757171CFFFD5600582ECD /* 3D社群 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3737572F1CFFFD5700582ECD /* Build configuration list for PBXNativeTarget "swfans" */;
+			buildConfigurationList = 3737572F1CFFFD5700582ECD /* Build configuration list for PBXNativeTarget "3D社群" */;
 			buildPhases = (
 				373757141CFFFD5600582ECD /* Sources */,
 				373757151CFFFD5600582ECD /* Frameworks */,
@@ -1631,9 +1631,9 @@
 			);
 			dependencies = (
 			);
-			name = swfans;
+			name = "3D社群";
 			productName = FZFBase;
-			productReference = 373757181CFFFD5600582ECD /* swfans.app */;
+			productReference = 373757181CFFFD5600582ECD /* 3D社群.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1648,11 +1648,11 @@
 					373757171CFFFD5600582ECD = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 9AL223S2Y5;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = 373757131CFFFD5600582ECD /* Build configuration list for PBXProject "swfans" */;
+			buildConfigurationList = 373757131CFFFD5600582ECD /* Build configuration list for PBXProject "3D社群" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1665,7 +1665,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				373757171CFFFD5600582ECD /* swfans */,
+				373757171CFFFD5600582ECD /* 3D社群 */,
 			);
 		};
 /* End PBXProject section */
@@ -2047,19 +2047,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9AL223S2Y5;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/swfans/PrefixHeader.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/swfans/Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/3D社群/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/3D社群/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.solidworks.swfans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5ee69e13-6e1b-410e-a68c-33f9bbd61834";
+				PROVISIONING_PROFILE_SPECIFIER = fengzifengpro;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2070,19 +2070,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dassault Systemes (Shanghai) Information Technology Co. Ltd. (9AL223S2Y5)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9AL223S2Y5;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/swfans/PrefixHeader.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/swfans/Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/3D社群/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/3D社群/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.solidworks.swfans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5ee69e13-6e1b-410e-a68c-33f9bbd61834";
+				PROVISIONING_PROFILE_SPECIFIER = fengzifengpro;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -2090,7 +2090,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		373757131CFFFD5600582ECD /* Build configuration list for PBXProject "swfans" */ = {
+		373757131CFFFD5600582ECD /* Build configuration list for PBXProject "3D社群" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3737572D1CFFFD5700582ECD /* Debug */,
@@ -2099,7 +2099,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3737572F1CFFFD5700582ECD /* Build configuration list for PBXNativeTarget "swfans" */ = {
+		3737572F1CFFFD5700582ECD /* Build configuration list for PBXNativeTarget "3D社群" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				373757301CFFFD5700582ECD /* Debug */,
