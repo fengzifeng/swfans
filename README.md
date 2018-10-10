@@ -3,6 +3,9 @@
 
 大致页面
 
+! [ ] (https://github.com/chenliangloveyou/EasyShowView/blob/master/show_preview/preview_alert.gif
+)
+
 ! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s1.png)
 
 ! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s2.png)
