@@ -3,19 +3,17 @@
 
 大致页面
 
-! [的话方便的话] (https://github.com/chenliangloveyou/EasyShowView/blob/master/show_preview/preview_alert.gif)
+![ ](https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s1.png)
 
-! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s1.png)
+![ ](https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s2.png)
 
-! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s2.png)
+![ ](https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s3.png)
 
-! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s3.png)
+![ ](https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s4.png)
 
-! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s4.png)
+![ ](https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s5.png)
 
-! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s5.png)
+![ ](https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s6.png)
 
-! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s6.png)
-
-! [ ] (https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s7.png)
+![ ](https://github.com/fengzifeng/swfans/blob/master/3D社群/Resource/githubimage/s7.png)
 
