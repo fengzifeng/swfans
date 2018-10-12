@@ -91,7 +91,7 @@
     [self addChildViewController:self.currentVC];
     [self.view insertSubview:self.currentVC.view belowSubview:self.switchView];
     [self.currentVC.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-    self.currentVC.topConstraint.constant = 64 + 35;
+    self.currentVC.topConstraint.constant = _topInset + 35;
     [self.currentVC.view sizeLayoutToFit];
 }
 

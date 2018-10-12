@@ -37,6 +37,8 @@
     [super viewDidLoad];
     
     _topInset = 64;
+    if (IS_IPHONE_X) _topInset = 88;
+
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationBar.barTintColor = ThemColor;
     self.navigationBar.clipsToBounds = true;
@@ -140,7 +142,7 @@
         _amsNavigationBar.tag = NAVBAR_TAG;
         _amsNavBgView.backgroundColor = [UIColor clearColor];
         [self.view addSubview:_amsNavigationBar];
-        [_amsNavigationBar autoSetDimension:ALDimensionHeight toSize:64];
+        [_amsNavigationBar autoSetDimension:ALDimensionHeight toSize:_topInset];
         [_amsNavigationBar autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
         
         _amsNavBgView = [[UIView alloc] initForAutoLayout];

@@ -75,7 +75,7 @@
 
 - (UITableView *)leftTableView {
     if (nil == _leftTableView){
-        _leftTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 100, SCREEN_HEIGHT - 64 - 49)];
+        _leftTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _topInset, 100, SCREEN_HEIGHT - _topInset - 49)];
         _leftTableView.delegate = self;
         _leftTableView.dataSource = self;
         _leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -89,7 +89,7 @@
 
 - (UITableView *)rightTableView{
     if (nil == _rightTableView){
-        _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(100, 64, SCREEN_WIDTH - 100, SCREEN_HEIGHT - 64 - 49)];
+        _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(100, _topInset, SCREEN_WIDTH - 100, SCREEN_HEIGHT - _topInset - 49)];
         _rightTableView.backgroundColor = [UIColor whiteColor];
         _rightTableView.delegate = self;
         _rightTableView.dataSource = self;

@@ -65,7 +65,9 @@
 - (void)setupViews
 {
     self.tableView.rowHeight = kThumbnailLength + 20;
-    [self.tableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
+    float aa = 64;
+    if (IS_IPHONE_X) aa = 88;
+    [self.tableView setContentInset:UIEdgeInsetsMake(aa, 0, 0, 0)];
     
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain
                                     target:self action:@selector(rightNavButtonAction:)];

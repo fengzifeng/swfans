@@ -139,7 +139,8 @@
     NSString *identifier = NSStringFromClass([USAssetCollectionCell class]);
     UINib *cellNib = [UINib nibWithNibName:identifier bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:identifier];
-    
+    float aa = 64;
+    if (IS_IPHONE_X) aa = 88;
     if(self.picker.allowsMultipleSelection){
         _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
         [self.collectionView addGestureRecognizer:_tapGestureRecognizer];
@@ -149,14 +150,14 @@
         self.countLabel.layer.masksToBounds = YES;
         [self.sendButton setTitleColor:USPickerTintColor forState:UIControlStateNormal];
         [_collectionView autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH];
-        [_collectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(64, 0, self.bottomBar.frame.size.height, 0) excludingEdge:ALEdgeRight];
+        [_collectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(aa, 0, self.bottomBar.frame.size.height, 0) excludingEdge:ALEdgeRight];
 
 //        [self.collectionView setContentInset:UIEdgeInsetsMake(64, 0, self.bottomBar.frame.size.height, 0)];
     }
     else {
         self.bottomBar.hidden = YES;
         [_collectionView autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH];
-        [_collectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(64, 0, 0, 0) excludingEdge:ALEdgeRight];
+        [_collectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(aa, 0, 0, 0) excludingEdge:ALEdgeRight];
 //        [self.collectionView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
     }
     

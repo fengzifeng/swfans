@@ -32,7 +32,7 @@
     self.title = @"帖子";
     _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
     self.view.backgroundColor = RGBCOLOR(242, 244, 247);
-
+    [_tableView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:_topInset];
     self.boardView = [DrKeyBoardView creatKeyBoardWithDelegate:self parentVc:self];
     __weak typeof(self) weakSelf = self;
     MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

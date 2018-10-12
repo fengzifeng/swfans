@@ -31,6 +31,7 @@
     if (_forum_id.length || _searchStr.length) [_tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     _tableView.backgroundColor = RGBCOLOR(242, 244, 247);
     self.view.backgroundColor = RGBCOLOR(242, 244, 247);
+    [_tableView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:_topInset];
 
     __weak typeof(self) weakSelf = self;
     MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

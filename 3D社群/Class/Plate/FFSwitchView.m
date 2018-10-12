@@ -20,8 +20,9 @@
 
 + (instancetype)showSwitchView:(choose)choose
 {
-    
-    FFSwitchView *view = [[FFSwitchView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 35)];
+    float aa = 64;
+    if (IS_IPHONE_X) aa = 88;
+    FFSwitchView *view = [[FFSwitchView alloc] initWithFrame:CGRectMake(0, aa, SCREEN_WIDTH, 35)];
     view.choose = choose;
     view.btnArray = [NSMutableArray new];
     

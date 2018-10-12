@@ -67,6 +67,8 @@
 
 
 #define XcodeBundleVersion  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+#define IS_IPHONE_X (SCREEN_HEIGHT == 812.0f) ? YES : NO
+
 
 
 #endif

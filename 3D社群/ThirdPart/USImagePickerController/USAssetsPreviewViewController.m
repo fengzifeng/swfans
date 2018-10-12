@@ -259,7 +259,9 @@
         if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
             _topHeightConstraint.constant = 44;
         } else {
-            _topHeightConstraint.constant = 64;
+            float aa = 64;
+            if (IS_IPHONE_X) aa = 88;
+            _topHeightConstraint.constant = aa;
         }
         [self.topBar layoutIfNeeded];
     }];
